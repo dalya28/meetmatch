@@ -2,7 +2,10 @@
 /* Wingman: Midnight Black · Electric Cobalt Blue · Acid Lime. Цвета — как в theme.py. */
 :root {--ink:#030407; --cobalt:#1558C9; --cobalt-soft:#EAF0FB; --lime:#D4FF24; --paper:#FFFFFF;
        --surface:#F3F5F9; --line:#E3E6EC; --muted:#5B6170;}
-.stMainBlockContainer {max-width:1180px;padding:3.4rem clamp(18px,4vw,48px) 2.5rem;}
+/* ширина растёт вместе с экраном: ноутбук — 1180 px, большой монитор — до 1760 px */
+.stMainBlockContainer {max-width:clamp(1180px,88vw,1760px);padding:3.4rem clamp(18px,4vw,64px) 2.5rem;}
+/* на больших мониторах весь интерфейс (он на rem) чуть крупнее, чтобы не выглядел мелким островком */
+@media (min-width:1500px) {html {font-size:clamp(16px,calc(8px + .55vw),19px);}}
 .stApp {background:var(--paper);}
 h1,h2,h3,h4 {letter-spacing:-.035em;}
 
@@ -225,23 +228,21 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;}}
 
 /* ---- шрифт «Постер»: Unbounded — широкий, поэтому заголовки чуть меньше ---- */
-.mm-cover h1 {font-family:Unbounded,sans-serif!important;font-size:clamp(2rem,3.6vw,3.3rem)!important;letter-spacing:-.04em!important;}
+.mm-cover h1 {font-family:Unbounded,sans-serif!important;font-size:clamp(2rem,3.6vw,4.4rem)!important;letter-spacing:-.04em!important;}
 .mm-cover h1 em {font-size:1.08em;}
 .mm-person h3,.mm-ev h4 {font-family:Unbounded,sans-serif!important;letter-spacing:-.03em!important;}
 .mm-person h3 {font-size:clamp(1.2rem,2vw,1.6rem)!important;}
 .mm-ev h4 {font-size:1rem!important;}
 @media(max-width:760px){.mm-cover h1 {font-size:clamp(1.8rem,8vw,2.4rem)!important;}}
 
-/* ---- объёмная надпись логотипа: хромированный металл, как у звеньев, синяя грань и лаймовый блик ---- */
-.st-key-brand_home button p {
-  background:linear-gradient(180deg,#FFFFFF 0%,#C9D2E0 20%,#6B7690 41%,#EEF2F8 47%,#4F86F0 58%,#1558C9 78%,#0A2E78 92%,#D4FF24 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;
-  font-weight:800!important;font-size:1.3rem!important;letter-spacing:-.02em!important;
-  /* слои тени — толщина буквы: синяя грань, тёмная грань, мягкая тень снизу */
-  filter:drop-shadow(1px 1px 0 #1558C9) drop-shadow(1px 1px 0 #0A2E78) drop-shadow(0 4px 5px rgba(3,4,7,.35));}
-.st-key-brand_home button:hover p {filter:drop-shadow(1px 1px 0 #1558C9) drop-shadow(1px 1px 0 #0A2E78)
-  drop-shadow(0 0 6px rgba(212,255,36,.75));}
+/* ---- надпись логотипа: чистый чёрный, без глянца и теней ---- */
+.st-key-brand_home button p {color:var(--ink)!important;font-weight:800!important;font-size:1.3rem!important;
+  letter-spacing:-.02em!important;background:none;filter:none;}
+.st-key-brand_home button:hover p {color:var(--cobalt)!important;}
 
 /* ---- название события ведёт на его сайт ---- */
 .mm-ev-link {color:inherit!important;text-decoration:none;}
 .mm-ev-link:hover {color:var(--cobalt)!important;text-decoration:underline;text-underline-offset:3px;}
+/* надпись логотипа не обрезается многоточием */
+.st-key-brand_home [data-testid=stMarkdownContainer], .st-key-brand_home button p {overflow:visible!important;text-overflow:clip!important;white-space:nowrap;}
+@media (max-width:560px) {.st-key-brand_home button p {font-size:1.05rem!important;} .st-key-brand_home button::before {width:36px;height:27px;}}
