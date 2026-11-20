@@ -1,4 +1,4 @@
-"""Офлайн-оценка качества подбора MeetMatch по ручной разметке.
+"""Офлайн-оценка качества подбора Wingman по ручной разметке.
 
     python scripts/evaluate.py pool   собрать пул кандидатов для разметки → tests/labels.csv
     python scripts/evaluate.py eval   метрики, базовые линии, абляция, подбор весов → reports/evaluation.md
@@ -61,7 +61,7 @@ def random5(q: dict, seed: str) -> list[str]:
 
 
 def systems() -> dict:
-    s = {"MeetMatch (текущие веса)": lambda c: top5(c["q"])}
+    s = {"Wingman (текущие веса)": lambda c: top5(c["q"])}
     for comp in COMPONENTS:
         w = normalize({k: (0.0 if k == comp else v) for k, v in WEIGHTS.items()})
         s[f"без компонента «{COMPONENT_RU[comp]}»"] = (lambda w: lambda c: top5(c["q"], w))(w)
@@ -179,7 +179,7 @@ def cmd_eval() -> None:
                      f"{r['hit3'] * 100:.0f}% | {r['judged'] * 100:.0f}% |")
 
     # 2. по целям
-    cur = results["MeetMatch (текущие веса)"]
+    cur = results["Wingman (текущие веса)"]
     lines += ["", "## Текущая система по целям", "", "| Цель | Анкет | P@5 | nDCG@5 | «≥ 3 из 5» |", "|---|---|---|---|---|"]
     by_goal: dict[str, list] = {}
     for c, m in zip(cases, cur["per_case"]):

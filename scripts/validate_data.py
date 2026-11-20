@@ -1,4 +1,4 @@
-"""Проверка качества базы анкет MeetMatch (контракт данных).
+"""Проверка качества базы анкет Wingman (контракт данных).
 
 Что проверяется:
   1. Схема — JSON Schema строится из справочников taxonomy.py, поэтому не расходится с кодом;
@@ -47,7 +47,7 @@ def build_schema() -> dict:
         **({"maxItems": hi} if hi else {})}
     return {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "title": "MeetMatch participant profile",
+        "title": "Wingman participant profile",
         "type": "array",
         "minItems": 100,
         "items": {

@@ -1,78 +1,202 @@
-:root { --pine:#153c34; --forest:#244e3e; --lime:#e4f39e; --paper:#faf9f5; --line:#dcded3; --muted:#52665a; }
-.stMainBlockContainer {max-width:1220px;padding:3.7rem clamp(18px,4vw,54px) 2.5rem;}
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap");
+/* Wingman: Midnight Black · Electric Cobalt Blue · Acid Lime. Цвета — как в theme.py. */
+:root {--ink:#030407; --cobalt:#1558C9; --cobalt-soft:#EAF0FB; --lime:#D4FF24; --paper:#FFFFFF;
+       --surface:#F3F5F9; --line:#E3E6EC; --muted:#5B6170;}
+.stMainBlockContainer {max-width:1180px;padding:3.4rem clamp(18px,4vw,48px) 2.5rem;}
 .stApp {background:var(--paper);}
-.st-key-topbar {padding:0 0 .82rem;border-bottom:1px solid var(--line);}
-.mm-brand,.mm-cover,.mm-person,.mm-reason {font-family:Inter,"Segoe UI",Arial,sans-serif;}
-.mm-brand {display:flex;align-items:center;gap:9px;font-size:1.55rem;letter-spacing:-.065em;font-weight:750;color:var(--pine);line-height:1.15;}
-.mm-mark {width:29px;height:28px;position:relative;display:inline-block;flex-shrink:0;}
-.mm-mark::before,.mm-mark::after {content:"";position:absolute;top:3px;width:16px;height:23px;background:var(--pine);border-radius:65% 65% 60% 60%;transform:rotate(-32deg);left:2px;}
-.mm-mark::after {left:13px;transform:rotate(32deg);background:#80a559;mix-blend-mode:multiply;}
-.st-key-main_page [role=radiogroup] {justify-content:center;gap:.4rem;flex-wrap:nowrap;}
-.st-key-main_page label[data-testid=stRadioOption],.st-key-person_pick label[data-testid=stRadioOption],[class*="st-key-w_goal_"] label[data-testid=stRadioOption] {margin:0!important;position:relative;cursor:pointer;min-height:42px;}
-.st-key-main_page label[data-testid=stRadioOption] > div > div:first-child,.st-key-person_pick label[data-testid=stRadioOption] > div > div:first-child {position:absolute;opacity:0;}
-.st-key-main_page label[data-testid=stRadioOption] {border-radius:999px;padding:6px 13px;}
-.st-key-main_page label[data-testid=stRadioOption]:has(:checked) {background:#e3ebdd;color:#214e36;}
+h1,h2,h3,h4 {letter-spacing:-.035em;}
+
+/* ---- шапка ---- */
+.st-key-topbar {padding:0 0 .8rem;border-bottom:1px solid var(--line);}
+.mm-brand {display:flex;align-items:center;gap:10px;font-size:1.4rem;letter-spacing:-.05em;font-weight:800;color:var(--ink);line-height:1.15;}
+/* знак: два круга-человека, общая часть (линза) — чёрная. Линза = круг B, обрезанный по кругу A */
+.mm-mark {width:34px;height:24px;flex-shrink:0;display:block;position:relative;}
+.mm-mark::before,.mm-mark::after,.mm-lens {content:"";position:absolute;top:1px;width:22px;height:22px;border-radius:50%;}
+.mm-mark::before {left:1px;background:var(--cobalt);}
+.mm-mark::after {left:11px;background:var(--lime);}
+.mm-lens {left:11px;background:var(--ink);z-index:1;border-radius:50%;clip-path:circle(11px at 1px 11px);}
+.st-key-main_page [role=radiogroup] {justify-content:center;gap:.3rem;flex-wrap:nowrap;}
+.st-key-main_page label[data-testid=stRadioOption] {margin:0!important;position:relative;cursor:pointer;min-height:40px;border-radius:999px;padding:6px 14px;}
+.st-key-main_page label[data-testid=stRadioOption] > div > div:first-child {position:absolute;opacity:0;}
+.st-key-main_page label[data-testid=stRadioOption]:has(:checked) {background:var(--cobalt-soft);color:var(--cobalt);}
 .st-key-main_page label[data-testid=stRadioOption] p {font-weight:600;font-size:.88rem;}
-.mm-cover {display:grid;grid-template-columns:1.05fr 1fr;border-radius:24px;overflow:hidden;background:var(--pine);color:#fff;}
-.mm-intro {padding:clamp(24px,3.7vw,56px);align-self:center;}
-.mm-event,.mm-place {font-size:.78rem;font-weight:650;letter-spacing:.025em;}
-.mm-event {display:flex;align-items:center;gap:8px;color:#d8e5cc;}
+
+/* ---- обложка: чёрная плоскость, лайм — только кнопка и точка ---- */
+.mm-cover {display:grid;grid-template-columns:1.1fr 1fr;border-radius:28px;overflow:hidden;background:var(--ink);color:#fff;font-family:Onest,"Segoe UI",Arial,sans-serif;}
+.mm-intro {padding:clamp(26px,4vw,60px);align-self:center;}
+.mm-kicker {display:flex;align-items:center;gap:8px;color:#C9CDD6;font-size:.8rem;font-weight:600;letter-spacing:.02em;}
 .mm-dot {width:8px;height:8px;border-radius:100%;background:var(--lime);}
-.mm-cover h1 {color:white;font-family:inherit;font-size:clamp(2.7rem,4.55vw,4.2rem);letter-spacing:-.065em;line-height:.99;padding:0;margin:22px 0 16px;font-weight:650;}
-.mm-cover h1 em {font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.05em;color:var(--lime);}
-.mm-cover p {color:#e5eee2;font-size:1rem;max-width:34ch;line-height:1.4;margin:0 0 18px;}
-.mm-cover .mm-cta {display:inline-flex;align-items:center;gap:18px;background:var(--lime);color:var(--pine);min-height:42px;padding:8px 16px;border-radius:999px;font-weight:650;font-size:.9rem;text-decoration:none;}
-.mm-cta:hover {background:#f0fbc6;}
-.mm-art {position:relative;min-height:180px;overflow:hidden;}
-.mm-art img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
-.mm-place {position:absolute;bottom:18px;right:18px;background:#f7f5e7;color:var(--pine);border-radius:99px;padding:6px 11px;}
-.st-key-onboarding, [class*="st-key-card_"],[data-testid=stMetric] {background:#fff;border:1px solid var(--line);border-radius:19px;}
-.st-key-onboarding,[class*="st-key-card_"] {padding:clamp(17px,2.3vw,32px)!important;}
-.st-key-onboarding h3,#mm-results {letter-spacing:-.045em;}
-#mm-profile,#mm-results {scroll-margin-top:4rem;}
-.st-key-ex_pick {padding-bottom:.45rem;border-bottom:1px solid var(--line);}
-[class*="st-key-w_goal_"] [role=radiogroup] {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
-[class*="st-key-w_goal_"] label[data-testid=stRadioOption] {background:#f8f9f4;border:1px solid #d9dfd3;border-radius:12px;padding:12px 9px;align-items:center;}
-[class*="st-key-w_goal_"] label[data-testid=stRadioOption]:has(:checked) {border-color:#365c46;background:#e9f1dd;}
-.st-key-person_pick [role=radiogroup] {display:grid;gap:8px;counter-reset:person;}
-.st-key-person_pick label[data-testid=stRadioOption] {background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;align-items:center;counter-increment:person;}
-.st-key-person_pick label[data-testid=stRadioOption]:has(:checked) {background:#e5eddc;border-color:#728b6d;color:var(--pine);}
-.mm-person {display:flex;gap:14px;align-items:center;position:relative;}
-.mm-avatar {flex:none;display:grid;place-items:center;width:54px;height:58px;background:#ecedcf;border-radius:22px 22px 15px 15px;color:#3d5836;font:italic 1.65rem Georgia,serif;}
+.mm-cover h1 {color:#fff;font-family:inherit;font-size:clamp(2.6rem,4.6vw,4.3rem);letter-spacing:-.06em;line-height:1;padding:0;margin:20px 0 16px;font-weight:700;}
+.mm-cover h1 em {font-family:"PT Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.04em;color:var(--lime);}
+.mm-cover p {color:#C9CDD6;font-size:1rem;max-width:36ch;line-height:1.45;margin:0 0 22px;}
+.mm-cta {display:inline-flex;align-items:center;gap:14px;background:var(--lime);color:var(--ink)!important;min-height:46px;padding:8px 20px;border-radius:999px;font-weight:700;font-size:.92rem;text-decoration:none!important;}
+.mm-cta:hover {background:#E4FF7A;}
+/* Алматы в два цвета: снимок в оттенках серого «умножается» на кобальт */
+.mm-art {position:relative;min-height:200px;overflow:hidden;background:var(--cobalt);}
+.mm-art img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15) brightness(1.08);mix-blend-mode:multiply;}
+.mm-place {position:absolute;bottom:18px;left:18px;background:var(--ink);color:#fff;border-radius:99px;padding:7px 13px;font-size:.78rem;font-weight:600;}
+
+/* ---- быстрый пример: строка под обложкой, без отдельной карточки ---- */
+.st-key-onboarding {padding:.9rem 0 0;}
+.st-key-onboarding [data-testid=stWidgetLabel] p {color:var(--muted);font-size:.85rem;}
+
+/* ---- события: сетка одинаковых карточек ---- */
+.st-key-events_head h3 {margin-bottom:0;}
+[class*="st-key-event_"] {background:var(--surface);border-radius:20px;padding:20px!important;gap:.9rem!important;height:100%;border:2px solid transparent;}
+[class*="st-key-event_"].mm-picked, [class*="st-key-event_"]:has(.mm-ev-picked) {border-color:var(--cobalt);background:#fff;}
+.mm-ev {font-family:Onest,"Segoe UI",Arial,sans-serif;}
+.mm-ev-meta {display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:.78rem;font-weight:600;}
+.mm-ev-type {color:var(--ink);text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;}
+.mm-ev-when {color:var(--muted);border:1px solid var(--line);background:#fff;border-radius:999px;padding:2px 10px;white-space:nowrap;}
+.mm-ev-now {background:var(--lime);border-color:var(--lime);color:var(--ink);}
+.mm-ev h4 {font-size:1.12rem;line-height:1.25;font-weight:700;margin:.65rem 0 .4rem;padding:0;color:var(--ink);
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em;}
+.mm-ev-about {font-size:.9rem;line-height:1.4;color:var(--muted);margin:0;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.8em;}
+.mm-ev-foot {font-size:.82rem;color:var(--muted);margin:.8rem 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.mm-ev-foot b {color:var(--ink);font-weight:600;}
+.mm-ev-more {margin-top:.15rem;}
+.mm-ev {position:relative;}
+.mm-fit {color:var(--cobalt)!important;}
+.mm-ev-best {position:absolute;top:-34px;left:-12px;background:var(--lime);color:var(--ink);font:700 .62rem/1 Unbounded,sans-serif;
+  text-transform:uppercase;letter-spacing:.05em;padding:6px 10px;border-radius:999px;transform:rotate(-5deg);}
+.mm-ev-date {display:flex;justify-content:space-between;gap:10px;}
+.mm-ev-date a {color:var(--cobalt);font-weight:600;text-decoration:none;}
+.mm-ev-date a:hover {text-decoration:underline;}
+
+/* ---- результаты ---- */
+.mm-eyebrow {font-size:.82rem;font-weight:600;color:var(--muted);margin:0 0 -.5rem;}
+.mm-eyebrow b {color:var(--ink);}
+#mm-results {scroll-margin-top:4rem;letter-spacing:-.045em;}
+[class*="st-key-card_"], .st-key-group_card, .st-key-survey, [data-testid=stMetric] {background:#fff;border:1px solid var(--line)!important;border-radius:22px;}
+[class*="st-key-card_"], .st-key-group_card {padding:clamp(18px,2.4vw,30px)!important;}
+.mm-person {display:flex;gap:14px;align-items:center;font-family:Onest,"Segoe UI",Arial,sans-serif;}
+.mm-avatar {flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--cobalt-soft);color:var(--cobalt);font-weight:700;font-size:1.05rem;letter-spacing:-.02em;}
 .mm-person-body {min-width:0;flex:1;}
-.mm-person h3 {padding:0;font:650 clamp(1.5rem,2.7vw,2.35rem)/1.08 Inter,"Segoe UI",sans-serif;letter-spacing:-.055em;margin:3px 0;}
-.mm-person p,.mm-person .mm-goal,.mm-position {font-size:.82rem;line-height:1.3;margin:0;color:var(--muted);}
-.mm-goal {font-weight:650;}
+.mm-person h3 {padding:0;font-weight:700;font-size:clamp(1.4rem,2.5vw,2rem);line-height:1.1;letter-spacing:-.045em;margin:4px 0 3px;}
+.mm-person p,.mm-goal,.mm-position {font-size:.82rem;line-height:1.3;margin:0;color:var(--muted);}
+.mm-goal {font-weight:600;}
+.mm-score {display:inline-block;background:var(--lime);color:var(--ink);border-radius:999px;padding:1px 8px;font-size:.76rem;font-weight:700;margin-left:6px;}
 .mm-position {align-self:flex-start;white-space:nowrap;}
-.mm-reason {border-top:1px solid var(--line);margin:1.2rem 0 0;padding:1rem 0 0;}
-.mm-reason strong,.mm-label {font-size:.85rem;font-weight:650;color:var(--forest);}
-.mm-reason p {font-size:1.03rem;line-height:1.48;margin:.35rem 0 0;}
-.mm-label {margin:.2rem 0 -.45rem;}
-.mm-chip {display:inline-block;margin:0 .35rem .2rem 0;border-radius:999px;padding:.18rem .65rem;background:#eaf0e0;color:#334e39;font-size:.8rem;}
-[class*="st-key-card_"] pre {background:#f2f3e7!important;}
-[class*="st-key-card_"] code, [class*="st-key-card_"] code span {font-family:Inter,"Segoe UI",sans-serif!important;font-size:1rem;}
-[data-testid=stMetric] {padding:16px;}
-:is(button,a,input):focus-visible, label[data-testid=stRadioOption]:has(input:focus-visible) {outline:3px solid #38624e;outline-offset:2px;}
+.mm-reason {border-top:1px solid var(--line);margin:1.1rem 0 0;padding:1rem 0 0;font-family:Onest,"Segoe UI",Arial,sans-serif;}
+.mm-reason strong,.mm-label {font-size:.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
+.mm-reason p {font-size:1.02rem;line-height:1.5;margin:.35rem 0 0;color:var(--ink);}
+.mm-label, [data-testid=stMarkdownContainer] p.mm-label {margin:.2rem 0 -.45rem;font-size:.75rem;}
+.mm-chip {display:inline-block;margin:0 .35rem .25rem 0;border-radius:999px;padding:.2rem .7rem;background:var(--surface);color:var(--ink);font-size:.8rem;font-weight:500;}
+[class*="st-key-card_"] pre, .st-key-group_card pre {background:var(--surface)!important;border-radius:14px;}
+[class*="st-key-card_"] code, [class*="st-key-card_"] code span, .st-key-group_card code, .st-key-group_card code span {font-family:Onest,"Segoe UI",sans-serif!important;font-size:1rem;color:var(--ink);}
+[class*="st-key-meet_"] button,[class*="st-key-skip_"] button,.st-key-group_join button,.st-key-group_other button {min-height:46px;}
+[data-testid=stMetric] {padding:16px 18px;}
+:is(button,a,input):focus-visible, label[data-testid=stRadioOption]:has(input:focus-visible) {outline:3px solid var(--cobalt);outline-offset:2px;}
+
+/* ---- пошаговый опрос: один вопрос на экране, крупные ответы ---- */
+.st-key-survey {max-width:740px;margin:0 auto;padding:clamp(18px,3vw,38px)!important;}
+.st-key-survey h3 {font-size:clamp(1.45rem,3.2vw,2.05rem);letter-spacing:-.045em;margin:.2rem 0 .4rem;}
+.st-key-survey [data-testid=stProgress] > div > div {height:5px;border-radius:999px;}
+[class*="st-key-sv_goal_"] button,[class*="st-key-sv_role_"] button,[class*="st-key-sv_experience_"] button,[class*="st-key-sv_format_"] button,[class*="st-key-sv_seeking_"] button {min-height:56px;justify-content:flex-start;text-align:left;border-radius:16px;font-size:1rem;}
+[class*="st-key-sv_"] button[kind=secondary]:hover {border-color:var(--cobalt);color:var(--cobalt);}
+.st-key-sv_back button,.st-key-events_back button {border:none;background:transparent;padding-left:0;color:var(--cobalt);}
+.st-key-survey [data-testid=stPills] button {min-height:40px;}
+
+/* ---- наклейки: повёрнутые плашки, как стикер на бейдже ---- */
+.mm-place {background:var(--lime)!important;color:var(--ink)!important;text-transform:uppercase;letter-spacing:.06em;font-weight:800!important;transform:rotate(-5deg);}
+.mm-ev-now {transform:rotate(-4deg);font-weight:700;}
+
+/* ---- аватар: эмодзи или фото ---- */
+.mm-avatar {font-size:1.7rem;overflow:hidden;cursor:help;}
+.mm-avatar img,.mm-me-face img,.mm-met img {width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;}
+.mm-me {display:flex;align-items:center;gap:18px;margin:.3rem 0 .2rem;font-family:Onest,"Segoe UI",Arial,sans-serif;}
+.mm-me-face {flex:none;width:92px;height:92px;border-radius:50%;background:var(--cobalt-soft);display:grid;place-items:center;font-size:3.3rem;overflow:hidden;animation:mm-wobble 2.4s ease-in-out infinite;}
+.mm-me p {margin:0;font-size:1.05rem;line-height:1.4;color:var(--muted);}
+.mm-me p b {color:var(--ink);}
+@keyframes mm-wobble {0%,100%{transform:rotate(0)} 25%{transform:rotate(-7deg)} 75%{transform:rotate(7deg)}}
+.st-key-sv_avatar_pick button {font-size:1.55rem!important;min-height:52px;min-width:52px;padding:0 8px;}
+/* Streamlit рисует эмодзи-вариант как иконку 16px — увеличиваем саму иконку */
+.st-key-sv_avatar_pick button span:has(> span) {width:auto!important;height:auto!important;}
+.st-key-sv_avatar_pick button span span:not(:has(*)) {font-size:1.6rem!important;line-height:1!important;width:auto!important;height:auto!important;}
+
+/* ---- «Познакомиться»: два аватара съезжаются, между ними рукопожатие ---- */
+.mm-met {display:flex;align-items:center;justify-content:center;gap:6px;height:64px;font-size:2rem;}
+.mm-met > span {display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--cobalt-soft);overflow:hidden;}
+.mm-met .mm-met-h {background:var(--lime);animation:mm-pop .5s .45s both cubic-bezier(.3,1.6,.5,1);}
+.mm-met-a {animation:mm-in-l .5s both ease-out;}
+.mm-met-b {animation:mm-in-r .5s both ease-out;}
+@keyframes mm-in-l {from{transform:translateX(-90px);opacity:0}}
+@keyframes mm-in-r {from{transform:translateX(90px);opacity:0}}
+@keyframes mm-pop {from{transform:scale(0)}}
+[class*="st-key-ice_"] button {padding-left:0;color:var(--cobalt);font-weight:600;}
+
+/* ---- подвал: чёрная полоса с горами Алматы, справочное спрятано в кнопки ---- */
+.st-key-footer {background:var(--ink);border-radius:28px;padding:0 clamp(20px,3vw,40px) 22px!important;margin-top:2.5rem;overflow:hidden;gap:.6rem!important;}
+.mm-ridge {height:46px;margin:22px calc(-1 * clamp(20px,3vw,40px)) 6px;background:var(--cobalt);
+  clip-path:polygon(0 100%,0 62%,7% 38%,12% 55%,19% 18%,26% 50%,33% 30%,40% 60%,48% 8%,55% 46%,61% 26%,68% 58%,76% 22%,83% 52%,90% 34%,96% 56%,100% 44%,100% 100%);}
+.mm-ridge-wrap {background:var(--ink);}
+.mm-foot {color:#fff;margin:.2rem 0 0;font-size:.95rem;}
+.mm-foot-note {color:#9AA0AC;font-size:.8rem;line-height:1.45;margin:.2rem 0 0;max-width:80ch;}
+.st-key-footer [data-testid=stPopover] button {background:transparent;color:#fff;border-color:#3A3F4A;}
+.st-key-footer [data-testid=stPopover] button:hover {border-color:var(--lime);color:var(--lime);}
+.st-key-footer [data-testid=stColumn]:last-child {display:flex;justify-content:flex-end;}
+
+/* «Как работает подбор»: два круга — вы и собеседник, общая часть — совпадения */
+.mm-venn {position:relative;height:160px;width:250px;margin:4px auto 10px;font-family:Onest,"Segoe UI",Arial,sans-serif;}
+.mm-c {position:absolute;top:0;width:160px;height:160px;border-radius:50%;display:flex;align-items:center;font-weight:700;font-size:.8rem;}
+.mm-c1 {left:0;background:var(--cobalt);color:#fff;padding-left:26px;}
+.mm-c2 {right:0;background:var(--lime);color:var(--ink);justify-content:flex-end;padding-right:12px;}
+/* общая часть чёрная, как в логотипе: круг B, обрезанный по кругу A */
+.mm-venn-lens {position:absolute;left:90px;top:0;width:160px;height:160px;background:var(--ink);border-radius:50%;clip-path:circle(80px at -10px 80px);z-index:1;}
+.mm-venn-mid {position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:62px;text-align:center;font-size:.66rem;line-height:1.3;color:#fff;font-weight:600;z-index:2;}
+.mm-how {padding-left:1.2rem;margin:0 0 12px;font-size:.88rem;line-height:1.45;}
+.mm-how li {margin-bottom:4px;}
+.mm-weights {display:flex;border-radius:10px;overflow:hidden;font-size:.68rem;line-height:1.2;}
+.mm-weights span {padding:7px 6px;color:#fff;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.mm-weights b {display:block;font-size:.85rem;}
+.mm-w0 {background:var(--ink);} .mm-w1 {background:var(--cobalt);} .mm-w2 {background:#4F82D9;}
+.mm-w3 {background:#8FB0EA;color:var(--ink)!important;} .mm-w4 {background:var(--lime);color:var(--ink)!important;}
+
+/* ---- взаимность: ожидание — песочные часы и бледный собеседник ---- */
+.mm-wait .mm-met-h {background:var(--surface);animation:mm-tick 1.6s ease-in-out infinite;}
+.mm-wait .mm-met-b {opacity:.45;}
+@keyframes mm-tick {0%,100%{transform:rotate(0)} 50%{transform:rotate(180deg)}}
+
+/* ---- нетворкинг-бинго 3×3 ---- */
+.mm-bingo {display:grid;grid-template-columns:repeat(3,1fr);gap:6px;width:min(330px,80vw);font-family:Onest,"Segoe UI",Arial,sans-serif;}
+.mm-bc {aspect-ratio:1;border:1.5px solid var(--line);border-radius:12px;padding:6px;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;font-size:.74rem;font-weight:600;line-height:1.2;color:var(--ink);}
+.mm-bc small {display:block;margin-top:4px;font-size:.66rem;font-weight:500;color:var(--ink);opacity:.75;}
+.mm-free {border-style:dashed;}
+.mm-done {background:var(--lime);border-color:var(--lime);transform:rotate(-2deg);}
+.mm-done:nth-child(even) {transform:rotate(2deg);}
+
+/* ---- анкета из текста ---- */
+.st-key-af_toggle button {color:var(--cobalt);font-weight:600;padding-left:0;}
+.st-key-af_box {background:var(--surface);border-radius:16px;padding:14px!important;}
+
 @media(max-width:760px) {
- .stMainBlockContainer {padding:3.3rem 15px 1.5rem;}
+ .stMainBlockContainer {padding:3.2rem 16px 1.5rem;}
  .st-key-topbar [data-testid=stHorizontalBlock] {display:grid!important;grid-template-columns:1fr auto;gap:.45rem!important;align-items:center;}
  .st-key-topbar [data-testid=stColumn] {width:auto!important;min-width:0!important;}
  .st-key-topbar [data-testid=stColumn]:nth-child(2) {grid-column:1/-1;grid-row:2;}
  .st-key-topbar [data-testid=stColumn]:last-child {grid-column:2;grid-row:1;}
  .st-key-main_page [role=radiogroup] {justify-content:flex-start;}
- .mm-cover {grid-template-columns:1fr;border-radius:18px;}
- .mm-intro {padding:23px;}
- .mm-cover h1 {font-size:clamp(2.5rem,8vw,3.4rem);margin:13px 0;}
- .mm-art {min-height:115px;max-height:155px;}
- .mm-art img {object-position:50% 53%;}
- .mm-place {bottom:8px;right:10px;}
- .mm-cover p {margin-bottom:12px;}
- .mm-brand {font-size:1.35rem;}
- .st-key-person_pick [role=radiogroup] {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;}
- .st-key-person_pick label[data-testid=stRadioOption] {padding:6px;display:grid;place-items:center;min-width:44px;min-height:44px;}
- .st-key-person_pick label[data-testid=stRadioOption]::before {content:counter(person,decimal-leading-zero);font:600 .82rem/1.2 monospace;color:var(--forest);}
- .st-key-person_pick label[data-testid=stRadioOption] > div:last-child {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
- .mm-avatar {width:40px;height:44px;font-size:1.2rem;}
- .mm-person {gap:9px;}
+ .mm-cover {grid-template-columns:1fr;border-radius:22px;}
+ .mm-intro {padding:24px;}
+ .mm-cover h1 {font-size:clamp(2.4rem,10vw,3.2rem);margin:14px 0 12px;}
+ .mm-art {min-height:120px;max-height:150px;}
+ .mm-place {bottom:10px;left:12px;}
+ .mm-brand {font-size:1.25rem;}
+ .mm-avatar {width:42px;height:42px;font-size:.92rem;}
+ .mm-person {gap:10px;}
+ .mm-ev h4,.mm-ev-about {min-height:0;}
+ .st-key-footer [data-testid=stHorizontalBlock] {flex-wrap:nowrap!important;}
+ .st-key-footer [data-testid=stColumn] {width:auto!important;min-width:0!important;flex:1 1 auto!important;}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;}}
+
+/* ---- шрифт «Постер»: Unbounded — широкий, поэтому заголовки чуть меньше ---- */
+.mm-cover h1 {font-family:Unbounded,sans-serif!important;font-size:clamp(2rem,3.6vw,3.3rem)!important;letter-spacing:-.04em!important;}
+.mm-cover h1 em {font-size:1.08em;}
+.mm-person h3,.mm-ev h4,.mm-brand {font-family:Unbounded,sans-serif!important;letter-spacing:-.03em!important;}
+.mm-person h3 {font-size:clamp(1.2rem,2vw,1.6rem)!important;}
+.mm-ev h4 {font-size:1rem!important;}
+.mm-brand {font-size:1.2rem!important;}
+@media(max-width:760px){.mm-cover h1 {font-size:clamp(1.8rem,8vw,2.4rem)!important;}}

@@ -1,11 +1,21 @@
+# Палитра Wingman: Midnight Black #030407, Electric Cobalt Blue #1558C9, акцент Acid Lime #D4FF24.
+# Лайм — только акцент (на чёрном фоне или как плашка с чёрным текстом): на белом он не читается.
 [theme]
 base = "light"
-primaryColor = "#244E3E"
-backgroundColor = "#FAF9F5"
-secondaryBackgroundColor = "#F1F3EA"
-textColor = "#18382E"
-borderColor = "#DADFD2"
-baseRadius = "0.6rem"
+primaryColor = "#1558C9"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F3F5F9"
+textColor = "#030407"
+borderColor = "#E3E6EC"
+linkColor = "#1558C9"
+codeBackgroundColor = "#F3F5F9"
+codeTextColor = "#030407"
+font = "Onest:https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap"
+headingFont = "Unbounded:https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&display=swap"
+baseRadius = "0.75rem"
+buttonRadius = "full"
+showWidgetBorder = true
+chartCategoricalColors = ["#1558C9", "#030407", "#8FB0EA", "#5B6170", "#D4FF24"]
 
 [client]
 toolbarMode = "minimal"

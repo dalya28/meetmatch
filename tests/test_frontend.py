@@ -7,6 +7,7 @@ import config
 from matcher import Matcher
 from storage import HallStore
 from texts import t
+from survey_helper import complete_survey
 
 
 def test_join_resubmit_and_organizer_clear(tmp_path, monkeypatch):
@@ -22,20 +23,25 @@ def test_join_resubmit_and_organizer_clear(tmp_path, monkeypatch):
         assert not app.exception
 
     try:
-        click("Показать 5 человек")
+        complete_survey(app)
         click("Добавить меня в зал")
         joined = app.session_state["query"]["id"]
-        click("Показать 5 человек")
+        complete_survey(app)
         assert app.session_state["query"]["id"] == joined
         assert not any(b.label == "Добавить меня в зал" for b in app.button)
         assert [p["id"] for p in HallStore().all()] == [joined]
 
-        app.radio(key="main_page").set_value("dash").run()
+        assert not any(r.key == "main_page" for r in app.radio)  # без кода вкладки организатора нет
+        app.text_input(key="org_code").set_value("wrong")
+        click("Войти")
+        assert app.error and app.session_state["organizer"] is None
+        app.text_input(key="org_code").set_value("organizer-test")
+        click("Войти")
+        assert app.session_state["organizer"] == "organizer"
+        assert app.radio(key="main_page").value == "dash"
         assert any(m.label == "Участников в живом зале" and m.value == "1" for m in app.metric)
-        app.text_input[0].set_value("wrong")
-        click("Очистить живой зал")
-        assert app.error and len(HallStore().all()) == 1
-        app.text_input[0].set_value("organizer-test")
+        assert next(b for b in app.button if b.key == "hall_clear_btn").disabled  # сначала подтверждение
+        app.checkbox(key="hall_confirm").check().run()
         click("Очистить живой зал")
         assert HallStore().all() == []
         assert any(m.label == "Участников в живом зале" and m.value == "0" for m in app.metric)
@@ -47,7 +53,7 @@ def test_join_resubmit_and_organizer_clear(tmp_path, monkeypatch):
             def unavailable(*args, **kwargs):
                 raise RuntimeError("test")
             patch.setattr(Matcher, "recommend", unavailable)
-            click("Показать 5 человек")
+            complete_survey(app)
             assert app.error
         click("Повторить подбор")
         assert not app.error

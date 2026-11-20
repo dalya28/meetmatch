@@ -56,7 +56,7 @@ def test_feedback_survives_restart(tmp_path):
     FeedbackStore(path).add("not_fit", "p002", "find_job")
     reopened = FeedbackStore(path)  # «перезапуск» приложения
     assert [e["candidate_id"] for e in reopened.all()] == ["p001", "p002"]
-    assert reopened.stats() == {"total": 2, "met": 1, "not_fit": 1, "met_share": 0.5}
+    assert reopened.stats() == {"total": 2, "met": 1, "not_fit": 1, "groups": 0, "bingo": 0, "met_share": 0.5}
     with pytest.raises(ValueError):
         reopened.add("hacked", "p003", "find_job")
 

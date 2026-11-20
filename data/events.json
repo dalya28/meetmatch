@@ -1,0 +1,167 @@
+[
+ {
+  "id": "metu-ai-hackathon",
+  "type": "hackathon",
+  "title": "AI in Engineering Hackathon 2026",
+  "start": "2026-11-20", "end": "2026-11-21", "time": "10:00",
+  "venue": "МИТУ (METU), ул. Аль-Фараби, 93г/5",
+  "url": "https://hackathon.metu.kz/",
+  "price": null, "status": "confirmed",
+  "about": {
+   "ru": "24-часовой хакатон: ИИ-решения для инженерии, цифровой экономики, умного кампуса и медицины.",
+   "kk": "24 сағаттық хакатон: инженерия, цифрлық экономика, ақылды кампус және медицинаға арналған ЖИ-шешімдер.",
+   "en": "A 24-hour hackathon: AI solutions for engineering, the digital economy, smart campus and healthcare."
+  },
+  "all_profiles": true, "topics": ["ai", "data_science", "healthtech"], "roles": [], "size": 276
+ },
+ {
+  "id": "nfactorial-ai-for-business",
+  "type": "training",
+  "title": "AI for Business — nFactorial School",
+  "start": "2026-11-21", "end": "2026-11-21", "time": "10:00–17:00",
+  "venue": null,
+  "url": "https://choyxona.tech/mw98dxsv/",
+  "price": null, "status": "confirmed",
+  "about": {
+   "ru": "Практический тренинг: как применять искусственный интеллект в работе и бизнесе.",
+   "kk": "Практикалық тренинг: жасанды интеллектті жұмыс пен бизнесте қалай қолдануға болады.",
+   "en": "Hands-on training on using AI in everyday work and business."
+  },
+  "topics": ["ai", "product", "startups", "ecommerce"], "roles": ["pm", "founder", "analyst", "designer", "student"], "size": 60
+ },
+ {
+  "id": "soul-camp-higgsfield",
+  "type": "hackathon",
+  "title": "SOUL CAMP by Higgsfield",
+  "start": "2026-11-21", "end": "2026-11-21", "time": null,
+  "venue": null,
+  "url": "https://choyxona.tech/vbwxsdfn/",
+  "price": null, "status": "confirmed",
+  "about": {
+   "ru": "AI-хакатон с призовым фондом 9 млн тенге.",
+   "kk": "Жүлде қоры 9 млн теңге болатын AI-хакатон.",
+   "en": "An AI hackathon with a 9 million tenge prize pool."
+  },
+  "topics": ["ai", "startups", "data_science", "product"], "roles": ["ml", "backend", "fullstack", "frontend", "designer", "founder"], "size": 90
+ },
+ {
+  "id": "hr-ai-workshop",
+  "type": "workshop",
+  "title": "Воркшоп «C&B vs L&D. AI их помирил»",
+  "start": "2026-11-24", "end": "2026-11-24", "time": null,
+  "venue": null,
+  "url": "https://choyxona.tech/c869ikau/",
+  "price": null, "status": "confirmed",
+  "about": {
+   "ru": "Воркшоп для HR: грейды, компенсации и обучение сотрудников с помощью ИИ.",
+   "kk": "HR-ға арналған воркшоп: грейдтер, өтемақы және қызметкерлерді ЖИ көмегімен оқыту.",
+   "en": "A workshop for HR: grades, compensation and staff training with AI."
+  },
+  "topics": ["ai", "career", "mentorship"], "roles": ["recruiter", "lead", "pm", "analyst"], "size": 40
+ },
+ {
+  "id": "hr-forum-central-asia",
+  "type": "forum",
+  "title": "#HRНАСТЫКЕЭПОХ — Международный HR-форум Центральной Азии",
+  "start": "2026-11-25", "end": "2026-11-26", "time": null,
+  "venue": null,
+  "url": "https://weproject.media/articles/detail/v-almaty-proydet-mezhdunarodnyy-hr-forum-s-uchastiem-bolee-500-spetsialistov/",
+  "price": null, "status": "confirmed",
+  "about": {
+   "ru": "10-й HR-форум: ИИ в HR, дефицит кадров, выгорание и удержание сотрудников. Более 500 участников.",
+   "kk": "10-шы HR-форум: HR-дағы ЖИ, кадр тапшылығы, күйзеліс және қызметкерлерді сақтау. 500-ден астам қатысушы.",
+   "en": "The 10th HR forum: AI in HR, talent shortage, burnout and retention. 500+ attendees."
+  },
+  "topics": ["career", "mentorship", "ai", "remote"], "roles": ["recruiter", "lead", "pm", "founder"], "size": 120
+ },
+ {
+  "id": "servercore-it-besh",
+  "type": "meetup",
+  "title": "IT-беш Servercore",
+  "start": "2026-11-26", "end": "2026-11-26", "time": null,
+  "venue": null,
+  "url": "https://choyxona.tech/g53ifhjn/",
+  "price": null, "status": "confirmed",
+  "about": {
+   "ru": "Митап об ИИ-инфраструктуре: GPU, облака и как их готовить.",
+   "kk": "ЖИ-инфрақұрылым туралы митап: GPU, бұлттар және оларды қалай баптау керек.",
+   "en": "A meetup on AI infrastructure: GPUs, cloud and how to run them."
+  },
+  "topics": ["cloud", "ai", "opensource", "security"], "roles": ["devops", "ml", "data_engineer", "backend", "security"], "size": 50
+ },
+ {
+  "id": "brand-analytics-meetup",
+  "type": "meetup",
+  "title": "Митап Brand Analytics",
+  "start": "2026-11-26", "end": "2026-11-26", "time": null,
+  "venue": null,
+  "url": "https://choyxona.tech/g2aabzqu/",
+  "price": "free", "status": "confirmed",
+  "about": {
+   "ru": "Бесплатный митап об ИИ-аналитике соцсетей и СМИ.",
+   "kk": "Әлеуметтік желілер мен БАҚ-ты ЖИ арқылы талдау туралы тегін митап.",
+   "en": "A free meetup on AI analytics for social media and news."
+  },
+  "topics": ["data_science", "ai", "ecommerce", "product"], "roles": ["analyst", "data", "ml", "pm"], "size": 45
+ },
+ {
+  "id": "cdo-summit-execleaders",
+  "type": "summit",
+  "title": "Саммит CDO ExecLeaders",
+  "start": "2026-11-27", "end": "2026-11-27", "time": null,
+  "venue": null,
+  "url": "https://choyxona.tech/pu7xv8ng/",
+  "price": null, "status": "confirmed",
+  "about": {
+   "ru": "Саммит руководителей по данным: как перейти от ИИ-пилотов к масштабированию.",
+   "kk": "Деректер жөніндегі басшылар саммиті: ЖИ-пилоттардан ауқымды енгізуге қалай көшу керек.",
+   "en": "A summit for data leaders: moving from AI pilots to scale."
+  },
+  "topics": ["data_science", "ai", "cloud", "fintech"], "roles": ["lead", "data", "data_engineer", "pm", "analyst"], "size": 70
+ },
+ {
+  "id": "bcc-hub-system-analysis",
+  "type": "meetup",
+  "title": "Митап BCC HUB по системному анализу",
+  "start": "2026-11-28", "end": "2026-11-28", "time": null,
+  "venue": null,
+  "url": "https://choyxona.tech/udt9ncnf/",
+  "price": "free", "status": "confirmed",
+  "about": {
+   "ru": "Бесплатный митап для системных и бизнес-аналитиков.",
+   "kk": "Жүйелік және бизнес-талдаушыларға арналған тегін митап.",
+   "en": "A free meetup for systems and business analysts."
+  },
+  "topics": ["fintech", "product", "data_science"], "roles": ["analyst", "pm", "backend", "qa"], "size": 50
+ },
+ {
+  "id": "moy-realnyy-biznes",
+  "type": "conference",
+  "title": "Мой реальный бизнес",
+  "start": "2026-12-04", "end": "2026-12-04", "time": null,
+  "venue": "Rahat Palace Hotel, ул. Сатпаева, 29/6",
+  "url": "https://www.moysklad.kz/lp/almaty_031226/",
+  "price": "free", "status": "confirmed",
+  "about": {
+   "ru": "Конференция для владельцев розничного и оптового бизнеса: налоги, продажи, маркировка и ИИ.",
+   "kk": "Бөлшек және көтерме сауда иелеріне арналған конференция: салық, сату, таңбалау және ЖИ.",
+   "en": "A conference for retail and wholesale business owners: taxes, sales, labelling and AI."
+  },
+  "topics": ["ecommerce", "logistics", "ai", "startups"], "roles": ["founder", "pm", "analyst", "lead"], "size": 80
+ },
+ {
+  "id": "echai-startup-mixer",
+  "type": "meetup",
+  "title": "eChai Almaty Startup Mixer",
+  "start": "2026-12-10", "end": "2026-12-10", "time": "18:00–20:00",
+  "venue": null,
+  "url": "https://echai.ventures/events/echai-almaty-startup-mixer-dec-10-2026",
+  "price": null, "status": "proposed",
+  "about": {
+   "ru": "Вечерняя встреча основателей стартапов Алматы.",
+   "kk": "Алматы стартап негізін қалаушыларының кешкі кездесуі.",
+   "en": "An evening mixer for Almaty startup founders."
+  },
+  "topics": ["startups", "product", "fintech"], "roles": ["founder", "pm", "designer", "fullstack"], "size": 35
+ }
+]

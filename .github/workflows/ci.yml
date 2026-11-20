@@ -1,4 +1,4 @@
-name: MeetMatch checks
+name: Wingman checks
 on: [push, pull_request]
 permissions:
   contents: read
