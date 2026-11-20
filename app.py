@@ -4,12 +4,15 @@
 """
 from __future__ import annotations
 
+import base64
 import html
 import json
 import hmac
 import os
 import threading
 import time
+
+from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
@@ -21,37 +24,34 @@ from matcher import Matcher, load_booths, load_profiles, plan_meetings, prepare,
 from storage import FeedbackStore, HallStore
 from taxonomy import (EVENT_SLOTS, GOALS, HIREABLE_ROLES, INTERESTS, LOW_INFO_INTERESTS, ROLES,
                       STACK, goal_label, interest_label, role_label, stack_label, years_ru)
-from texts import GOAL_VERB, LANG_NAMES, RECIPROCITY, UI, t
-from theme import HEATMAP_SCALE, MUTED, PAIR_COLOR, PAIR_OF, PRIMARY, SURFACE, goal_color
+from texts import GOAL_VERB, RECIPROCITY, UI, t
+from theme import HEATMAP_SCALE, PAIR_COLOR, PAIR_OF, PRIMARY
 
-st.set_page_config(page_title="MeetMatch", page_icon="🤝", layout="wide")
+st.set_page_config(page_title="MeetMatch", page_icon="✳️", layout="wide")
+ASSETS = Path(__file__).parent / "assets"
+st.html(ASSETS / "meetmatch.css")
 
-# Карточка — бейдж участника: цветная «лента» слева кодирует пару целей (theme.PAIR_COLOR).
-# Первая фраза — цитата обычным шрифтом, но с кнопкой «копировать» от st.code.
-st.markdown(f"""
-<style>
-.mm-chip {{display:inline-block; padding:2px 10px; margin:0 6px 6px 0; border-radius:999px;
-          background:rgba(18,53,91,.08); color:{PRIMARY}; font-size:.84rem; font-weight:500;}}
-.mm-chip.alt {{background:{SURFACE}; color:{MUTED};}}
-.mm-score {{text-align:right; font-size:1.6rem; font-weight:700; line-height:1.05;
-           font-variant-numeric: tabular-nums;}}
-.mm-score small {{display:block; font-size:.72rem; font-weight:400; color:{MUTED}; white-space:nowrap;}}
-.mm-name {{font-size:1.08rem; font-weight:600; margin:0;}}
-.mm-goal {{font-size:.86rem; font-weight:600; margin:0;}}
-.mm-meta {{color:{MUTED}; font-size:.9rem; margin:0 0 .2rem;}}
-.mm-label {{color:{MUTED}; font-size:.82rem; margin:.3rem 0 -.25rem;}}
-.mm-recip {{border-left:3px solid; padding:.15rem 0 .15rem .7rem; margin:.2rem 0 .6rem;
-           font-size:.95rem;}}
-[class*="st-key-card_"] [data-testid="stCode"] pre {{background:{SURFACE};}}
-[class*="st-key-card_"] [data-testid="stCode"] code,
-[class*="st-key-card_"] [data-testid="stCode"] code span {{
-    font-family:"Source Sans", sans-serif !important; font-size:.98rem; line-height:1.45;}}
-@media (prefers-reduced-motion: reduce) {{ * {{transition:none !important; animation:none !important;}} }}
-#mm-results {{scroll-margin-top:5rem;}}
-#mm-results:focus-visible, :is(button, input, textarea, [role="combobox"]):focus-visible {{
-    outline:3px solid {PRIMARY}; outline-offset:2px;}}
-</style>
-""", unsafe_allow_html=True)
+
+@st.cache_data
+def cover_image() -> str:
+    return base64.b64encode((ASSETS / "almaty.webp").read_bytes()).decode("ascii")
+
+
+def event_cover(lang: str) -> None:
+    st.html(f"""
+        <section class="mm-cover">
+          <div class="mm-intro">
+            <div class="mm-event"><span class="mm-dot"></span> AI in Engineering · METU</div>
+            <h1>{t(lang, 'hero_title')}<br><em>{t(lang, 'hero_accent')}</em></h1>
+            <p>{t(lang, 'hero_copy')}</p>
+            <a class="mm-cta" href="#mm-profile">{t(lang, 'hero_cta')} <span aria-hidden="true">↘</span></a>
+          </div>
+          <div class="mm-art">
+            <img alt="" src="data:image/webp;base64,{cover_image()}">
+            <span class="mm-place">{t(lang, 'city')} &nbsp;·&nbsp; {t(lang, 'dates')}</span>
+          </div>
+        </section>
+    """)
 
 
 # ---------------------------------------------------------------- данные (общие для всех сессий)
@@ -156,6 +156,7 @@ def build_query() -> None:
     if previous_id in get_matcher().by_id:
         query["id"] = previous_id
     st.session_state.query = query
+    st.session_state.pop("person_pick", None)
     st.session_state.focus_results = True
     reset_feedback()
 
@@ -196,9 +197,8 @@ def on_reject(pid: str, role: str) -> None:
 
 
 # ---------------------------------------------------------------- вспомогательное
-def chips(items: list[str], alt: bool = False) -> str:
-    cls = "mm-chip alt" if alt else "mm-chip"
-    return "".join(f'<span class="{cls}">{html.escape(x)}</span>' for x in items)
+def chips(items: list[str]) -> str:
+    return "".join(f'<span class="mm-chip">{html.escape(x)}</span>' for x in items)
 
 
 def exp_short(n: int, lang: str) -> str:
@@ -207,21 +207,23 @@ def exp_short(n: int, lang: str) -> str:
     return years_ru(n) if lang == "ru" else f"{n} жыл" if lang == "kk" else f"{n} yrs"
 
 
-def render_card(m, lang: str) -> None:
-    """Карточка-бейдж: кто → почему → что общего → первая фраза → когда и действия."""
+def render_card(m, lang: str, position: int, count: int) -> None:
     p = m.profile
-    color = goal_color(p["goal"])
+    meta = " · ".join(x for x in (role_label(p["role"], lang), exp_short(p["experience"], lang),
+                                   p.get("company")) if x)
+    initials = "".join(part[0] for part in p["name"].split()[:2])
     with st.container(border=True, key=f"card_{p['id']}"):
-        left, right = st.columns([4, 1])
-        meta = ", ".join(x for x in (role_label(p["role"], lang), exp_short(p["experience"], lang),
-                                     p.get("company")) if x)
-        left.markdown(
-            f"<p class='mm-name'>{html.escape(p['name'])}</p>"
-            f"<p class='mm-goal' style='color:{color}'>{GOAL_VERB[lang][p['goal']]}</p>"
-            f"<p class='mm-meta'>{html.escape(meta)}</p>", unsafe_allow_html=True)
-        right.markdown(f"<div class='mm-score' style='color:{color}'>{round(m.score * 100)}%"
-                       f"<small>{t(lang, 'match')}</small></div>", unsafe_allow_html=True)
-        st.markdown(m.explanation)
+        st.html(f"""
+            <div class="mm-person">
+                <span class="mm-avatar">{html.escape(initials)}</span>
+                <div class="mm-person-body"><span class="mm-goal">{GOAL_VERB[lang][p['goal']]} · {round(m.score * 100)}% {t(lang, 'match')}</span>
+                    <h3>{html.escape(p['name'])}</h3><p>{html.escape(meta)}</p></div>
+                <span class="mm-position">{t(lang, 'card_index', i=position, n=count)}</span>
+            </div>
+            <div class="mm-reason"><strong>{t(lang, 'why')}</strong>
+                <p>{html.escape(m.explanation)}</p></div>
+        """)
+
         tags = [stack_label(s) for s in m.shared_stack[:4]] + \
                [interest_label(i, lang) for i in m.shared_interests[:3]]
         if tags:
@@ -238,51 +240,57 @@ def render_card(m, lang: str) -> None:
 
 
 # ---------------------------------------------------------------- страница подбора
-def page_match(lang: str) -> None:
-    form_col, res_col = st.columns([5, 7], gap="large")
+def profile_form(lang: str) -> None:
+    st.pills(t(lang, "examples"), list(EXAMPLES), format_func=lambda g: t(lang, f"ex_{g}"),
+             key="ex_pick", on_change=pick_example)
+    choose = t(lang, "choose")
+    for field, value in st.session_state.form.items():
+        st.session_state.setdefault(wkey(field, lang), list(value) if isinstance(value, list) else value)
 
-    with form_col:
-        st.subheader(t(lang, "form_title"))
-        st.pills(t(lang, "examples"), list(EXAMPLES), format_func=lambda g: t(lang, f"ex_{g}"),
-                 key="ex_pick", on_change=pick_example)
+    def key(field):
+        return wkey(field, lang)
 
-        choose = t(lang, "choose")
-        form = st.session_state.form
-        for field, value in form.items():
-            st.session_state.setdefault(wkey(field, lang), list(value) if isinstance(value, list) else value)
-        k = lambda field: wkey(field, lang)  # noqa: E731
-
-        # Порядок полей = порядок решений: цель определяет, кого вообще показываем (взаимность),
-        # поэтому она первая и видна целиком, а не спрятана в выпадающем списке.
-        with st.form(f"profile_{lang}", border=False):
+    with st.form(f"profile_{lang}", border=False):
+        goals, profile = st.columns([5, 7], gap="large")
+        with goals:
+            st.markdown(f"#### {t(lang, 'goal_q')}")
             st.radio(t(lang, "goal_q"), list(GOALS), format_func=lambda g: goal_label(g, lang),
-                     key=k("goal"), horizontal=True)
+                     key=key("goal"), horizontal=True, width="stretch", label_visibility="collapsed")
+        with profile:
+            st.markdown(f"#### {t(lang, 'profile_details')}")
             c1, c2 = st.columns([3, 2])
-            c1.selectbox(t(lang, "role"), list(ROLES), format_func=lambda r: role_label(r, lang), key=k("role"))
-            c2.number_input(t(lang, "experience"), min_value=0, max_value=40, step=1, key=k("experience"))
-            st.multiselect(t(lang, "stack"), list(STACK), format_func=stack_label, key=k("stack"),
+            c1.selectbox(t(lang, "role"), list(ROLES), format_func=lambda r: role_label(r, lang), key=key("role"))
+            c2.number_input(t(lang, "experience"), min_value=0, max_value=40, step=1, key=key("experience"))
+            c1, c2 = st.columns(2)
+            c1.multiselect(t(lang, "stack"), list(STACK), format_func=stack_label, key=key("stack"),
                            help=t(lang, "stack_help"), placeholder=choose)
-            st.multiselect(t(lang, "interests"), list(INTERESTS), placeholder=choose,
-                           format_func=lambda i: interest_label(i, lang), key=k("interests"))
-            st.text_area(t(lang, "about"), key=k("about"), placeholder=t(lang, "about_ph"), height=90)
+            c2.multiselect(t(lang, "interests"), list(INTERESTS), placeholder=choose,
+                           format_func=lambda i: interest_label(i, lang), key=key("interests"))
+            st.text_area(t(lang, "about"), key=key("about"), placeholder=t(lang, "about_ph"), height=82)
             with st.expander(t(lang, "more")):
-                st.text_input(t(lang, "name"), key=k("name"))
+                st.text_input(t(lang, "name"), key=key("name"))
                 st.multiselect(t(lang, "seeking"), HIREABLE_ROLES + ["founder"], placeholder=choose,
-                               format_func=lambda r: role_label(r, lang), key=k("seeking_roles"))
-                st.multiselect(t(lang, "slots"), EVENT_SLOTS, key=k("slots"), placeholder=choose)
+                               format_func=lambda r: role_label(r, lang), key=key("seeking_roles"))
+                st.multiselect(t(lang, "slots"), EVENT_SLOTS, key=key("slots"), placeholder=choose)
             if st.form_submit_button(t(lang, "submit"), type="primary", width="stretch"):
-                st.session_state.form = {field: st.session_state[k(field)] for field in FIELDS}
+                st.session_state.form = {field: st.session_state[key(field)] for field in FIELDS}
                 build_query()
+                st.rerun()
 
-    with res_col:
-        q = st.session_state.query
-        if not q:
-            st.subheader(t(lang, "results_title"))
-            st.info(t(lang, "results_empty"))
-            with st.expander(t(lang, "how_title"), expanded=True):
-                st.markdown(t(lang, "how_text"))
-            return
-        render_results(q, lang)
+
+def page_match(lang: str) -> None:
+    q = st.session_state.query
+    if q is None:
+        event_cover(lang)
+        with st.container(border=True, key="onboarding"):
+            st.subheader(t(lang, "form_title"), anchor="mm-profile")
+            profile_form(lang)
+        with st.expander(t(lang, "how_title")):
+            st.markdown(t(lang, "how_text"))
+        return
+    with st.expander(t(lang, "edit_profile"), icon=":material/tune:", key="edit_profile"):
+        profile_form(lang)
+    render_results(q, lang)
 
 
 def render_results(q: dict, lang: str) -> None:
@@ -292,7 +300,8 @@ def render_results(q: dict, lang: str) -> None:
 
     met_ids = [pid for pid, _ in s.met]
     t0 = time.perf_counter()
-    st.subheader(t(lang, "results_title"), anchor="mm-results")
+    st.header(t(lang, "results_title"), anchor="mm-results")
+
     if s.pop("focus_results", False):
         # Уникальный маркер запускает переход и при повторной отправке той же формы.
         st.html(f"""<script>/* {time.monotonic_ns()} */
@@ -324,26 +333,20 @@ def render_results(q: dict, lang: str) -> None:
         return
     elapsed = time.perf_counter() - t0
 
-    # Все 5 кандидатов отвечают цели участника, значит, у них одна пара целей и один цвет «ленты».
-    pair = goal_color(q["goal"])
-    st.markdown(f"<style>[class*='st-key-card_'] {{border-left:6px solid {pair} !important;}}</style>",
-                unsafe_allow_html=True)
-    st.markdown(f"<div class='mm-recip' style='border-color:{pair}'>"
-                f"{RECIPROCITY[lang][q['goal']]}</div>", unsafe_allow_html=True)
-    st.caption(t(lang, "found_in", ms=max(1, round(elapsed * 1000)), n=len(matcher.profiles)))
-    if not q["stack"] and not q["about"].strip():
-        st.warning(t(lang, "need_more"))
-    inferred = [stack_label(x) for x in q["inferred"]["stack"]] + \
-               [interest_label(x, lang) for x in q["inferred"]["interests"]] + \
-               [role_label(x, lang) for x in q["inferred"]["seeking"]] + q["inferred"].get("levels", [])
-    if inferred:
-        st.markdown(f"<div class='mm-meta'>{html.escape(t(lang, 'inferred', tags=''))}</div>"
-                    + chips(inferred, alt=True), unsafe_allow_html=True)
-
-    if not recs:
+    st.caption(RECIPROCITY[lang][q["goal"]])
+    if recs:
+        people, detail = st.columns([4, 8], gap="medium")
+        matches = {m.profile["id"]: m for m in recs}
+        ids = list(matches)
+        if s.get("person_pick") not in matches:
+            s.person_pick = ids[0]
+        with people:
+            selected = st.radio(t(lang, "pick_person"), ids, key="person_pick", width="stretch",
+                                format_func=lambda pid: f'{ids.index(pid) + 1:02d}　{matches[pid].profile["name"]}')
+        with detail:
+            render_card(matches[selected], lang, ids.index(selected) + 1, len(ids))
+    else:
         st.warning(t(lang, "no_more"))
-    for m in recs:
-        render_card(m, lang)
 
     if api_key and pool and (not cached or cached[0] != signature):
         try:
@@ -373,28 +376,36 @@ def render_results(q: dict, lang: str) -> None:
                     log.warning("hall_join_failed", exc_info=True)
                     st.error(t(lang, "hall_error"))
 
-    st.markdown(f"#### {t(lang, 'schedule_title')}")
-    if not q.get("slots"):
-        st.caption(t(lang, "schedule_none"))
-    else:
-        plan, left = plan_meetings(recs)
-        if plan:
-            st.dataframe(pd.DataFrame([{t(lang, "col_time"): slot,
-                                        t(lang, "col_with"): f"{m.profile['name']} — {role_label(m.profile['role'], lang)}"}
-                                       for slot, m in plan]), hide_index=True, width="stretch")
-        if left:
-            st.caption(t(lang, "schedule_left", names=", ".join(m.profile["name"] for m in left)))
+    with st.expander(t(lang, "schedule_title")):
+        if not q.get("slots"):
+            st.caption(t(lang, "schedule_none"))
+        else:
+            plan, left = plan_meetings(recs)
+            if plan:
+                st.dataframe(pd.DataFrame([{t(lang, "col_time"): slot,
+                                            t(lang, "col_with"): f"{m.profile['name']} — {role_label(m.profile['role'], lang)}"}
+                                           for slot, m in plan]), hide_index=True, width="stretch")
+            if left:
+                st.caption(t(lang, "schedule_left", names=", ".join(m.profile["name"] for m in left)))
 
-    st.markdown(f"#### {t(lang, 'booths_title')}")
-    for col, booth in zip(st.columns(2), recommend_booths(q, get_booths())):
-        with col.container(border=True):
-            st.markdown(f"**{booth['name']}**")
-            st.caption(booth["desc"][lang])
-            st.markdown(chips([interest_label(i, lang) for i in booth["interests"][:3]]), unsafe_allow_html=True)
-            if booth["hiring"]:
-                st.caption(t(lang, "booth_hiring", roles=", ".join(role_label(r, lang) for r in booth["hiring"])))
+    with st.expander(t(lang, "booths_title")):
+        for col, booth in zip(st.columns(2), recommend_booths(q, get_booths())):
+            with col.container(border=True):
+                st.markdown(f"**{booth['name']}**")
+                st.caption(booth["desc"][lang])
+                st.markdown(chips([interest_label(i, lang) for i in booth["interests"][:3]]), unsafe_allow_html=True)
+                if booth["hiring"]:
+                    st.caption(t(lang, "booth_hiring", roles=", ".join(role_label(r, lang) for r in booth["hiring"])))
 
     with st.expander(t(lang, "how_title")):
+        st.caption(t(lang, "found_in", ms=max(1, round(elapsed * 1000)), n=len(matcher.profiles)))
+        if not q["stack"] and not q["about"].strip():
+            st.caption(t(lang, "need_more"))
+        inferred = [stack_label(x) for x in q["inferred"]["stack"]] + [
+            interest_label(i, lang) for i in q["inferred"]["interests"]] + [
+            role_label(r, lang) for r in q["inferred"]["seeking"]] + q["inferred"].get("levels", [])
+        if inferred:
+            st.caption(t(lang, "inferred", tags=", ".join(inferred)))
         st.markdown(t(lang, "how_text"))
 
 
@@ -514,23 +525,23 @@ def on_lang_change() -> None:
     clear_widgets()
 
 
-# Язык — в шапке, а не в боковой панели: на телефоне боковая панель скрыта.
-st.session_state.setdefault("lang_pick", st.session_state.lang)
-head, switch = st.columns([3, 2], vertical_alignment="center")
-with switch:
-    st.segmented_control("Тіл · Язык · Language", ["kk", "ru", "en"], format_func=LANG_NAMES.get,
-                         key="lang_pick", on_change=on_lang_change, label_visibility="collapsed")
 lang = st.session_state.lang
-with head:
-    st.title("MeetMatch")
-    st.caption(t(lang, "tagline"))
-
-with st.sidebar:
-    page = st.radio(t(lang, "navigation"), ["match", "dash"], label_visibility="collapsed",
-                    format_func=lambda p: t(lang, "nav_match" if p == "match" else "nav_dash"))
-    st.caption(t(lang, "data_note", n=sum(not p.get("live") for p in matcher.profiles)))
+st.session_state.setdefault("lang_pick", lang)
+with st.container(key="topbar"):
+    brand, nav, language = st.columns([3, 5, 2], vertical_alignment="center")
+    brand.html('<div class="mm-brand"><span class="mm-mark" aria-hidden="true"></span>MeetMatch</div>')
+    with nav:
+        page = st.radio(t(lang, "navigation"), ["match", "dash"], key="main_page",
+                        horizontal=True, label_visibility="collapsed",
+                        format_func=lambda v: t(lang, "match_nav" if v == "match" else "org_nav"))
+    with language:
+        st.segmented_control("Тіл · Язык · Language", ["kk", "ru", "en"], format_func=str.upper,
+                             key="lang_pick", on_change=on_lang_change, label_visibility="collapsed")
 
 if page == "match":
     page_match(lang)
 else:
+    st.header(t(lang, "nav_dash"))
     page_dashboard(lang)
+
+st.caption(t(lang, "data_note", n=sum(not p.get("live") for p in matcher.profiles)))

@@ -30,7 +30,7 @@ def test_join_resubmit_and_organizer_clear(tmp_path, monkeypatch):
         assert not any(b.label == "Добавить меня в зал" for b in app.button)
         assert [p["id"] for p in HallStore().all()] == [joined]
 
-        app.sidebar.radio[0].set_value("dash").run()
+        app.radio(key="main_page").set_value("dash").run()
         assert any(m.label == "Участников в живом зале" and m.value == "1" for m in app.metric)
         app.text_input[0].set_value("wrong")
         click("Очистить живой зал")
@@ -39,7 +39,7 @@ def test_join_resubmit_and_organizer_clear(tmp_path, monkeypatch):
         click("Очистить живой зал")
         assert HallStore().all() == []
         assert any(m.label == "Участников в живом зале" and m.value == "0" for m in app.metric)
-        app.sidebar.radio[0].set_value("match").run()
+        app.radio(key="main_page").set_value("match").run()
         click("Добавить меня в зал")
         assert app.session_state["query"]["id"] != joined
 
