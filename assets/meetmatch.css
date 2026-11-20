@@ -9,10 +9,7 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
 /* ---- шапка ---- */
 .st-key-topbar {padding:0 0 .8rem;border-bottom:1px solid var(--line);}
 .st-key-brand_home button {position:relative;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 3px;border:0;color:var(--ink);}
-.st-key-brand_home button::before {content:"";width:32px;height:22px;flex:none;background:
-  radial-gradient(circle at 11px 11px,var(--cobalt) 10.8px,transparent 11.2px),
-  radial-gradient(circle at 21px 11px,var(--lime) 10.8px,transparent 11.2px);}
-.st-key-brand_home button::after {content:"";position:absolute;left:13px;top:calc(50% - 11px);width:22px;height:22px;border-radius:50%;background:var(--ink);clip-path:circle(11px at 1px 11px);}
+.st-key-brand_home button::before {content:"";width:44px;height:33px;flex:none;background:var(--mm-logo) center/contain no-repeat;}
 .st-key-brand_home button p {font:800 1.2rem/1.15 Unbounded,sans-serif;letter-spacing:-.03em;}
 .st-key-main_page [role=radiogroup] {justify-content:center;gap:.3rem;flex-wrap:nowrap;}
 .st-key-main_page label[data-testid=stRadioOption] {margin:0!important;position:relative;cursor:pointer;min-height:40px;border-radius:999px;padding:6px 14px;}
@@ -234,3 +231,17 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
 .mm-person h3 {font-size:clamp(1.2rem,2vw,1.6rem)!important;}
 .mm-ev h4 {font-size:1rem!important;}
 @media(max-width:760px){.mm-cover h1 {font-size:clamp(1.8rem,8vw,2.4rem)!important;}}
+
+/* ---- объёмная надпись логотипа: хромированный металл, как у звеньев, синяя грань и лаймовый блик ---- */
+.st-key-brand_home button p {
+  background:linear-gradient(180deg,#FFFFFF 0%,#C9D2E0 20%,#6B7690 41%,#EEF2F8 47%,#4F86F0 58%,#1558C9 78%,#0A2E78 92%,#D4FF24 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;
+  font-weight:800!important;font-size:1.3rem!important;letter-spacing:-.02em!important;
+  /* слои тени — толщина буквы: синяя грань, тёмная грань, мягкая тень снизу */
+  filter:drop-shadow(1px 1px 0 #1558C9) drop-shadow(1px 1px 0 #0A2E78) drop-shadow(0 4px 5px rgba(3,4,7,.35));}
+.st-key-brand_home button:hover p {filter:drop-shadow(1px 1px 0 #1558C9) drop-shadow(1px 1px 0 #0A2E78)
+  drop-shadow(0 0 6px rgba(212,255,36,.75));}
+
+/* ---- название события ведёт на его сайт ---- */
+.mm-ev-link {color:inherit!important;text-decoration:none;}
+.mm-ev-link:hover {color:var(--cobalt)!important;text-decoration:underline;text-underline-offset:3px;}

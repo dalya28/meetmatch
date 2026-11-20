@@ -56,7 +56,8 @@ from social import (FREE, bingo_card, bingo_label, bingo_lines, bingo_reach, bin
 from texts import GOAL_VERB, GROUP_TITLE, RECIPROCITY, UI, t
 from theme import HEATMAP_SCALE, PAIR_COLOR, PAIR_OF, PRIMARY
 
-st.set_page_config(page_title="Wingman", page_icon="🤝", layout="wide")
+st.set_page_config(page_title="Wingman", page_icon=str(Path(__file__).parent / "assets" / "favicon.png"),
+                   layout="wide")
 ASSETS = Path(__file__).parent / "assets"
 st.html(ASSETS / "meetmatch.css")
 
@@ -64,6 +65,10 @@ st.html(ASSETS / "meetmatch.css")
 @st.cache_data
 def image_data(name: str) -> str:
     return base64.b64encode((ASSETS / f"{name}.webp").read_bytes()).decode("ascii")
+
+
+# Логотип — уменьшенная 3D-картинка двух сцепленных звеньев (assets/logo-mark.webp).
+st.html(f"<style>:root{{--mm-logo:url(data:image/webp;base64,{image_data('logo-mark')})}}</style>")
 
 
 def section_art(name: str) -> None:
@@ -862,7 +867,8 @@ def event_card(e: dict, lang: str, selected: bool, fit: int | None = None, best:
             <div class="mm-ev{' mm-ev-picked' if selected else ''}">
               <div class="mm-ev-meta"><span class="mm-ev-type">{t(lang, f"ev_{e['type']}")}</span>
                 <span class="mm-ev-when{' mm-ev-now' if now else ''}">{when}</span></div>
-              <h4 title="{html.escape(e['title'])}">{html.escape(e['title'])}</h4>
+              <h4><a class="mm-ev-link" href="{html.escape(e['url'])}" target="_blank" rel="noopener"
+                     title="{html.escape(t(lang, 'event_site'))}: {html.escape(e['title'])}">{html.escape(e['title'])}</a></h4>
               <p class="mm-ev-about">{html.escape(e['about'].get(lang) or e['about']['ru'])}</p>
               <p class="mm-ev-foot mm-ev-date"><b>{event_date(e, lang)}</b>
                 <a href="{html.escape(e['url'])}" target="_blank" rel="noopener">{t(lang, 'event_site')} ↗</a></p>
@@ -973,7 +979,8 @@ def render_results(q: dict | None, lang: str) -> None:
     ev = current_event()
     here = event_attendees(ev)
     # Заголовок, над ним — для какого события подбор; под ним — одна строка управления.
-    st.html(f"<p class='mm-eyebrow'><b>{html.escape(ev['title'])}</b> · {event_date(ev, lang)} · "
+    st.html(f"<p class='mm-eyebrow'><a class='mm-ev-link' href='{html.escape(ev['url'])}' target='_blank' "
+            f"rel='noopener'><b>{html.escape(ev['title'])} ↗</b></a> · {event_date(ev, lang)} · "
             f"{t(lang, 'event_people', n=len(here))}</p>")
     pending = pending_reviews()
     if pending:  # оповещение: встреча была — расскажите, как прошла
@@ -1409,7 +1416,7 @@ persist_attendance()
 st.session_state.setdefault("lang_pick", lang)
 with st.container(key="topbar"):
     brand, nav, language = st.columns([3, 5, 2], vertical_alignment="center")
-    # Знак — два круга-человека; общая часть — то, что их связывает: цель, стек, интересы.
+    # Знак — два сцепленных звена: два человека, которые зацепились друг за друга.
     brand.button("Wingman", key="brand_home", type="tertiary", on_click=brand_home, help=t(lang, "home"))
     page = "match"
     if st.session_state.organizer:  # вкладку видят только те, кому выдан код
