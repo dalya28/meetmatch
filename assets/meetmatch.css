@@ -8,13 +8,12 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
 
 /* ---- шапка ---- */
 .st-key-topbar {padding:0 0 .8rem;border-bottom:1px solid var(--line);}
-.mm-brand {display:flex;align-items:center;gap:10px;font-size:1.4rem;letter-spacing:-.05em;font-weight:800;color:var(--ink);line-height:1.15;}
-/* знак: два круга-человека, общая часть (линза) — чёрная. Линза = круг B, обрезанный по кругу A */
-.mm-mark {width:34px;height:24px;flex-shrink:0;display:block;position:relative;}
-.mm-mark::before,.mm-mark::after,.mm-lens {content:"";position:absolute;top:1px;width:22px;height:22px;border-radius:50%;}
-.mm-mark::before {left:1px;background:var(--cobalt);}
-.mm-mark::after {left:11px;background:var(--lime);}
-.mm-lens {left:11px;background:var(--ink);z-index:1;border-radius:50%;clip-path:circle(11px at 1px 11px);}
+.st-key-brand_home button {position:relative;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 3px;border:0;color:var(--ink);}
+.st-key-brand_home button::before {content:"";width:32px;height:22px;flex:none;background:
+  radial-gradient(circle at 11px 11px,var(--cobalt) 10.8px,transparent 11.2px),
+  radial-gradient(circle at 21px 11px,var(--lime) 10.8px,transparent 11.2px);}
+.st-key-brand_home button::after {content:"";position:absolute;left:13px;top:calc(50% - 11px);width:22px;height:22px;border-radius:50%;background:var(--ink);clip-path:circle(11px at 1px 11px);}
+.st-key-brand_home button p {font:800 1.2rem/1.15 Unbounded,sans-serif;letter-spacing:-.03em;}
 .st-key-main_page [role=radiogroup] {justify-content:center;gap:.3rem;flex-wrap:nowrap;}
 .st-key-main_page label[data-testid=stRadioOption] {margin:0!important;position:relative;cursor:pointer;min-height:40px;border-radius:999px;padding:6px 14px;}
 .st-key-main_page label[data-testid=stRadioOption] > div > div:first-child {position:absolute;opacity:0;}
@@ -22,7 +21,7 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
 .st-key-main_page label[data-testid=stRadioOption] p {font-weight:600;font-size:.88rem;}
 
 /* ---- обложка: чёрная плоскость, лайм — только кнопка и точка ---- */
-.mm-cover {display:grid;grid-template-columns:1.1fr 1fr;border-radius:28px;overflow:hidden;background:var(--ink);color:#fff;font-family:Onest,"Segoe UI",Arial,sans-serif;}
+.mm-cover {--lift:clamp(78px,8.5vw,110px);display:grid;grid-template-columns:1.1fr 1fr;margin-top:var(--lift);border-radius:28px;background:var(--ink);color:#fff;font-family:Onest,"Segoe UI",Arial,sans-serif;}
 .mm-intro {padding:clamp(26px,4vw,60px);align-self:center;}
 .mm-kicker {display:flex;align-items:center;gap:8px;color:#C9CDD6;font-size:.8rem;font-weight:600;letter-spacing:.02em;}
 .mm-dot {width:8px;height:8px;border-radius:100%;background:var(--lime);}
@@ -31,17 +30,44 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
 .mm-cover p {color:#C9CDD6;font-size:1rem;max-width:36ch;line-height:1.45;margin:0 0 22px;}
 .mm-cta {display:inline-flex;align-items:center;gap:14px;background:var(--lime);color:var(--ink)!important;min-height:46px;padding:8px 20px;border-radius:999px;font-weight:700;font-size:.92rem;text-decoration:none!important;}
 .mm-cta:hover {background:#E4FF7A;}
-/* Алматы в два цвета: снимок в оттенках серого «умножается» на кобальт */
-.mm-art {position:relative;min-height:200px;overflow:hidden;background:var(--cobalt);}
-.mm-art img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15) brightness(1.08);mix-blend-mode:multiply;}
-.mm-place {position:absolute;bottom:18px;left:18px;background:var(--ink);color:#fff;border-radius:99px;padding:7px 13px;font-size:.78rem;font-weight:600;}
+.mm-cover-actions {display:flex;align-items:center;flex-wrap:wrap;gap:4px 18px;}
+.mm-browse {display:inline-flex;align-items:center;gap:7px;min-height:44px;color:#fff!important;font-weight:600;font-size:.9rem;text-decoration:none!important;}
+.mm-browse:hover {text-decoration:underline!important;}
+.mm-art {position:relative;min-width:0;min-height:290px;}
+.mm-art img {position:absolute;top:calc(-1 * var(--lift));right:0;width:108%;max-width:none;height:calc(100% + var(--lift) - 60px);object-fit:contain;object-position:right top;pointer-events:none;}
+.mm-place {position:absolute;bottom:24px;right:8%;max-width:90%;border-radius:99px;padding:7px 13px;font-size:.78rem;font-weight:600;}
 
 /* ---- быстрый пример: строка под обложкой, без отдельной карточки ---- */
 .st-key-onboarding {padding:.9rem 0 0;}
 .st-key-onboarding [data-testid=stWidgetLabel] p {color:var(--muted);font-size:.85rem;}
 
 /* ---- события: сетка одинаковых карточек ---- */
+.st-key-events_heading,.st-key-matches_heading {
+  --art-width:clamp(84px,16vw,156px);
+  position:relative;justify-content:center;min-height:clamp(66px,8vw,88px);
+  margin-top:30px;padding:12px 16px 12px calc(var(--art-width) + 24px)!important;
+  background:var(--surface);border-radius:22px;
+}
+.st-key-events_heading h3,.st-key-matches_heading h2 {padding:0;line-height:1.15;}
+.st-key-events_heading [data-testid=stElementContainer]:has(.mm-ticket),
+.st-key-matches_heading [data-testid=stElementContainer]:has(.mm-conversation) {
+  position:absolute;left:12px;top:-26px;width:var(--art-width);pointer-events:none;
+}
+.mm-section-art {display:block;width:100%;height:auto;pointer-events:none;}
+.mm-ticket,.mm-conversation {height:clamp(76px,10vw,108px);object-fit:contain;object-position:center top;}
+@media (max-width:560px) {
+  .st-key-events_heading,.st-key-matches_heading {--art-width:108px;margin-top:42px;padding:52px 16px 16px!important;}
+  .st-key-events_heading [data-testid=stElementContainer]:has(.mm-ticket),
+  .st-key-matches_heading [data-testid=stElementContainer]:has(.mm-conversation) {left:auto;right:16px;top:-38px;}
+  .mm-ticket,.mm-conversation {height:84px;}
+  .st-key-events_heading h3,.st-key-matches_heading h2 {font-size:clamp(1.35rem,6vw,1.8rem);}
+}
 .st-key-events_head h3 {margin-bottom:0;}
+.st-key-event_scope [role=radiogroup] {display:flex;flex-direction:row;flex-wrap:wrap;gap:6px;padding:4px;background:var(--surface);border-radius:18px;}
+.st-key-event_scope label[data-testid=stRadioOption] {padding:9px 15px;margin:0;border-radius:14px;cursor:pointer;min-height:42px;}
+.st-key-event_scope label[data-testid=stRadioOption]:has(input:checked) {background:var(--ink);color:white;}
+.st-key-event_scope label[data-testid=stRadioOption] > div > div:first-child {display:none;}
+.st-key-event_scope label[data-testid=stRadioOption]:has(input:focus-visible) {outline:2px solid var(--cobalt);outline-offset:2px;}
 [class*="st-key-event_"] {background:var(--surface);border-radius:20px;padding:20px!important;gap:.9rem!important;height:100%;border:2px solid transparent;}
 [class*="st-key-event_"].mm-picked, [class*="st-key-event_"]:has(.mm-ev-picked) {border-color:var(--cobalt);background:#fff;}
 .mm-ev {font-family:Onest,"Segoe UI",Arial,sans-serif;}
@@ -67,7 +93,8 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
 /* ---- результаты ---- */
 .mm-eyebrow {font-size:.82rem;font-weight:600;color:var(--muted);margin:0 0 -.5rem;}
 .mm-eyebrow b {color:var(--ink);}
-#mm-results {scroll-margin-top:4rem;letter-spacing:-.045em;}
+#mm-results,#mm-events {scroll-margin-top:10rem;}
+#mm-results {letter-spacing:-.045em;}
 [class*="st-key-card_"], .st-key-group_card, .st-key-survey, [data-testid=stMetric] {background:#fff;border:1px solid var(--line)!important;border-radius:22px;}
 [class*="st-key-card_"], .st-key-group_card {padding:clamp(18px,2.4vw,30px)!important;}
 .mm-person {display:flex;gap:14px;align-items:center;font-family:Onest,"Segoe UI",Arial,sans-serif;}
@@ -90,12 +117,17 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
 :is(button,a,input):focus-visible, label[data-testid=stRadioOption]:has(input:focus-visible) {outline:3px solid var(--cobalt);outline-offset:2px;}
 
 /* ---- пошаговый опрос: один вопрос на экране, крупные ответы ---- */
-.st-key-survey {max-width:740px;margin:0 auto;padding:clamp(18px,3vw,38px)!important;}
+.st-key-survey {position:relative;max-width:740px;margin:36px auto 0;padding:clamp(18px,3vw,38px)!important;}
+.st-key-survey [data-testid=stElementContainer]:has(.mm-badge) {
+  position:absolute;top:-32px;right:clamp(22px,4vw,48px);width:clamp(60px,8vw,82px);
+  transform:rotate(9deg);pointer-events:none;
+}
 .st-key-survey h3 {font-size:clamp(1.45rem,3.2vw,2.05rem);letter-spacing:-.045em;margin:.2rem 0 .4rem;}
 .st-key-survey [data-testid=stProgress] > div > div {height:5px;border-radius:999px;}
 [class*="st-key-sv_goal_"] button,[class*="st-key-sv_role_"] button,[class*="st-key-sv_experience_"] button,[class*="st-key-sv_format_"] button,[class*="st-key-sv_seeking_"] button {min-height:56px;justify-content:flex-start;text-align:left;border-radius:16px;font-size:1rem;}
 [class*="st-key-sv_"] button[kind=secondary]:hover {border-color:var(--cobalt);color:var(--cobalt);}
-.st-key-sv_back button,.st-key-events_back button {border:none;background:transparent;padding-left:0;color:var(--cobalt);}
+.st-key-sv_back button {min-height:44px;padding:6px 14px;border-radius:99px;white-space:nowrap;color:var(--cobalt);}
+.st-key-events_back button {border:none;background:transparent;padding-left:0;color:var(--cobalt);}
 .st-key-survey [data-testid=stPills] button {min-height:40px;}
 
 /* ---- наклейки: повёрнутые плашки, как стикер на бейдже ---- */
@@ -159,9 +191,12 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
 @keyframes mm-tick {0%,100%{transform:rotate(0)} 50%{transform:rotate(180deg)}}
 
 /* ---- нетворкинг-бинго 3×3 ---- */
-.mm-bingo {display:grid;grid-template-columns:repeat(3,1fr);gap:6px;width:min(330px,80vw);font-family:Onest,"Segoe UI",Arial,sans-serif;}
-.mm-bc {aspect-ratio:1;border:1.5px solid var(--line);border-radius:12px;padding:6px;display:flex;flex-direction:column;
-  justify-content:center;align-items:center;text-align:center;font-size:.74rem;font-weight:600;line-height:1.2;color:var(--ink);}
+.st-key-bingo_grid {display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px!important;max-width:640px;align-items:stretch;}
+.st-key-bingo_grid > * {min-width:0;}
+.mm-bc,.st-key-bingo_grid button {min-height:clamp(96px,12vw,130px);border:1px solid var(--line);border-radius:16px;padding:8px;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;font-size:clamp(.77rem,1.15vw,.96rem);font-weight:600;line-height:1.25;color:var(--ink);overflow-wrap:anywhere;}
+.st-key-bingo_grid button {background:var(--cobalt-soft);color:var(--cobalt);width:100%;}
+.st-key-bingo_grid button p {font:inherit;line-height:1.25;}
 .mm-bc small {display:block;margin-top:4px;font-size:.66rem;font-weight:500;color:var(--ink);opacity:.75;}
 .mm-free {border-style:dashed;}
 .mm-done {background:var(--lime);border-color:var(--lime);transform:rotate(-2deg);}
@@ -178,12 +213,12 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
  .st-key-topbar [data-testid=stColumn]:nth-child(2) {grid-column:1/-1;grid-row:2;}
  .st-key-topbar [data-testid=stColumn]:last-child {grid-column:2;grid-row:1;}
  .st-key-main_page [role=radiogroup] {justify-content:flex-start;}
- .mm-cover {grid-template-columns:1fr;border-radius:22px;}
- .mm-intro {padding:24px;}
+ .mm-cover {--lift:clamp(60px,18vw,80px);grid-template-columns:minmax(0,1fr);border-radius:22px;}
+ .mm-intro {padding:12px 24px 24px;}
  .mm-cover h1 {font-size:clamp(2.4rem,10vw,3.2rem);margin:14px 0 12px;}
- .mm-art {min-height:120px;max-height:150px;}
- .mm-place {bottom:10px;left:12px;}
- .mm-brand {font-size:1.25rem;}
+ .mm-art {grid-row:1;min-height:clamp(170px,46vw,225px);}
+ .mm-art img {right:4%;width:92%;height:calc(100% + var(--lift) - 40px);object-position:center top;}
+ .mm-place {bottom:7px;right:6%;font-size:.68rem;}
  .mm-avatar {width:42px;height:42px;font-size:.92rem;}
  .mm-person {gap:10px;}
  .mm-ev h4,.mm-ev-about {min-height:0;}
@@ -195,8 +230,7 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
 /* ---- шрифт «Постер»: Unbounded — широкий, поэтому заголовки чуть меньше ---- */
 .mm-cover h1 {font-family:Unbounded,sans-serif!important;font-size:clamp(2rem,3.6vw,3.3rem)!important;letter-spacing:-.04em!important;}
 .mm-cover h1 em {font-size:1.08em;}
-.mm-person h3,.mm-ev h4,.mm-brand {font-family:Unbounded,sans-serif!important;letter-spacing:-.03em!important;}
+.mm-person h3,.mm-ev h4 {font-family:Unbounded,sans-serif!important;letter-spacing:-.03em!important;}
 .mm-person h3 {font-size:clamp(1.2rem,2vw,1.6rem)!important;}
 .mm-ev h4 {font-size:1rem!important;}
-.mm-brand {font-size:1.2rem!important;}
 @media(max-width:760px){.mm-cover h1 {font-size:clamp(1.8rem,8vw,2.4rem)!important;}}

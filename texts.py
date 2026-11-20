@@ -5,6 +5,15 @@ LANG_NAMES = {"kk": "Қазақша", "ru": "Русский", "en": "English"}
 
 UI = {
     "ru": {
+        "all_events": "Все события",
+        "my_events": "Мои события",
+        "attend": "Я участвую",
+        "remove_event": "Убрать из моих",
+        "browse": "Выбрать событие",
+        "home": "К событиям",
+        "mine_empty": "Здесь появятся события, на которых вы планируете быть. В каталоге нажмите «Я участвую».",
+        "going": "Вы участвуете",
+        "no_events": "Ближайших событий пока нет.",
         "hero_title": "Найдите своих",
         "hero_accent": "ещё до начала.",
         "hero_copy": "Выберите событие и цель. Мы подберём пять человек и подскажем, с чего начать разговор.",
@@ -118,6 +127,15 @@ UI = {
                  "cofounder": "Кофаундеры", "exchange": "Обмен опытом"},
     },
     "kk": {
+        "all_events": "Барлық іс-шаралар",
+        "my_events": "Менің іс-шараларым",
+        "attend": "Қатысамын",
+        "remove_event": "Тізімнен алып тастау",
+        "browse": "Іс-шараны таңдау",
+        "home": "Іс-шараларға оралу",
+        "mine_empty": "Қатысатын іс-шараларыңыз осында көрінеді. Каталогтан «Қатысамын» түймесін басыңыз.",
+        "going": "Сіз қатысасыз",
+        "no_events": "Алдағы іс-шаралар әзірге жоқ.",
         "hero_title": "Өз адамдарыңызды",
         "hero_accent": "алдын ала табыңыз.",
         "hero_copy": "Іс-шара мен мақсатты таңдаңыз. Біз бес адамды ұсынып, әңгімені қалай бастауға болатынын көрсетеміз.",
@@ -234,6 +252,15 @@ UI = {
                  "cofounder": "Кофаундерлер", "exchange": "Тәжірибе алмасу"},
     },
     "en": {
+        "all_events": "All events",
+        "my_events": "My events",
+        "attend": "I'm attending",
+        "remove_event": "Remove from my events",
+        "browse": "Explore events",
+        "home": "Back to events",
+        "mine_empty": "Your events will appear here. Choose “I'm attending” on an event in the catalog.",
+        "going": "You're attending",
+        "no_events": "No upcoming events yet.",
         "hero_title": "Meet your people",
         "hero_accent": "before the event.",
         "hero_copy": "Pick an event and your goal. We'll suggest five people and a way to start each conversation.",
@@ -837,9 +864,9 @@ SOCIAL = {
         "pending_hall": "Добавьте анкету в зал — иначе человек не увидит ваш запрос.",
         "toast_mutual": "Это взаимно! 🎉",
         "bingo": "Бинго",
-        "bingo_rules": "Нажимайте «Познакомиться» — подходящая клетка закроется сама. Соберите линию из трёх.",
-        "bingo_won": "БИНГО! Покажите этот экран у стойки организатора — там приз.",
-        "toast_bingo": "БИНГО! 🎉 Заберите приз у стойки организатора.",
+        "bingo_rules": "Соберите три клетки в ряд. Выполните задание со знаком «+» и нажмите на него. Знакомства отмечаются автоматически, когда вы нажимаете «Познакомиться».",
+        "bingo_won": "Бинго! Вы собрали линию из трёх клеток.",
+        "toast_bingo": "Бинго! 🎉 Первая линия собрана.",
         "dash_bingo": "Собрали бинго",
     },
     "kk": {
@@ -854,9 +881,9 @@ SOCIAL = {
         "pending_hall": "Сауалнаманы залға қосыңыз — әйтпесе адам сұранысыңызды көрмейді.",
         "toast_mutual": "Бұл өзара! 🎉",
         "bingo": "Бинго",
-        "bingo_rules": "«Танысу» батырмасын басыңыз — сәйкес ұяшық өзі жабылады. Үш ұяшықтан тұратын сызық жинаңыз.",
-        "bingo_won": "БИНГО! Бұл экранды ұйымдастырушы тұғырында көрсетіңіз — сыйлық сонда.",
-        "toast_bingo": "БИНГО! 🎉 Сыйлықты ұйымдастырушы тұғырынан алыңыз.",
+        "bingo_rules": "Бір қатарға үш ұяшық жинаңыз. «+» белгісі бар тапсырманы орындап, ұяшықты басыңыз. «Танысу» батырмасын басқанда таныстық автоматты түрде белгіленеді.",
+        "bingo_won": "Бинго! Үш ұяшықты бір қатарға жинадыңыз.",
+        "toast_bingo": "Бинго! 🎉 Бірінші қатар жиналды.",
         "dash_bingo": "Бинго жинағандар",
     },
     "en": {
@@ -871,9 +898,9 @@ SOCIAL = {
         "pending_hall": "Join the live hall, otherwise this person won't see your request.",
         "toast_mutual": "It's mutual! 🎉",
         "bingo": "Bingo",
-        "bingo_rules": "Tap “Let's meet” and the matching square closes by itself. Complete a line of three.",
-        "bingo_won": "BINGO! Show this screen at the organizer desk to get your prize.",
-        "toast_bingo": "BINGO! 🎉 Pick up your prize at the organizer desk.",
+        "bingo_rules": "Complete a line of three. Tap a + square after doing its activity. Meeting squares fill automatically when you tap “Let's meet”.",
+        "bingo_won": "Bingo! You completed a line of three.",
+        "toast_bingo": "Bingo! 🎉 Your first line is complete.",
         "dash_bingo": "Bingo winners",
     },
 }
@@ -913,6 +940,72 @@ AUTOFILL = {
         "af_check": "If something is off, tap “Edit profile”.",
     },
 }
+# Отзывы о встречах.
+REVIEWS = {
+    "ru": {
+        "fb_tab": "Отзывы",
+        "fb_remind": "Как прошла встреча с {name}? Оставьте короткий отзыв во вкладке «Отзывы».",
+        "fb_remind_n": "У вас {n} встречи без отзыва — расскажите, как всё прошло, во вкладке «Отзывы».",
+        "fb_empty": "Здесь появятся люди, с которыми вы познакомились: после встречи можно оставить отзыв.",
+        "fb_hint": "Отзыв анонимный: собеседник его не увидит, организатор видит только общую статистику.",
+        "fb_how": "Как прошла встреча?",
+        "fb_rate": "Насколько полезной была встреча?",
+        "fb_learned": "Что нового вы узнали?",
+        "fb_learned_ph": "Например: как устроен найм в финтехе, полезный инструмент, контакт…",
+        "fb_helped": "Помогло ли это знакомство вашей цели?",
+        "fb_helped_yes": "Да", "fb_helped_partly": "Отчасти", "fb_helped_no": "Нет",
+        "fb_next": "Продолжите общение?",
+        "fb_next_yes": "Да", "fb_next_maybe": "Возможно", "fb_next_no": "Нет",
+        "fb_send": "Отправить отзыв",
+        "fb_missed": "Встреча не состоялась",
+        "fb_thanks": "Спасибо за отзыв! 🙌",
+        "fb_done": "Отзывов отправлено: {n}. Спасибо — так подбор становится точнее.",
+        "fb_dash": "Отзывы о встречах",
+        "fb_dash_n": "Встреч с отзывом", "fb_dash_avg": "Средняя оценка", "fb_dash_helped": "Помогло цели",
+    },
+    "kk": {
+        "fb_tab": "Пікірлер",
+        "fb_remind": "{name} екеуіңіздің кездесуіңіз қалай өтті? «Пікірлер» бөлімінде қысқа пікір қалдырыңыз.",
+        "fb_remind_n": "Пікірі жоқ {n} кездесуіңіз бар — «Пікірлер» бөлімінде қалай өткенін айтыңыз.",
+        "fb_empty": "Мұнда танысқан адамдарыңыз шығады: кездесуден кейін пікір қалдыра аласыз.",
+        "fb_hint": "Пікір жасырын: әңгімелесушіңіз оны көрмейді, ұйымдастырушы тек жалпы статистиканы көреді.",
+        "fb_how": "Кездесу қалай өтті?",
+        "fb_rate": "Кездесу қаншалықты пайдалы болды?",
+        "fb_learned": "Қандай жаңа нәрсе білдіңіз?",
+        "fb_learned_ph": "Мысалы: финтехте жалдау қалай өтеді, пайдалы құрал, байланыс…",
+        "fb_helped": "Бұл танысу мақсатыңызға көмектесті ме?",
+        "fb_helped_yes": "Иә", "fb_helped_partly": "Ішінара", "fb_helped_no": "Жоқ",
+        "fb_next": "Әңгімені жалғастырасыз ба?",
+        "fb_next_yes": "Иә", "fb_next_maybe": "Мүмкін", "fb_next_no": "Жоқ",
+        "fb_send": "Пікір жіберу",
+        "fb_missed": "Кездесу болмады",
+        "fb_thanks": "Пікіріңізге рақмет! 🙌",
+        "fb_done": "Жіберілген пікірлер: {n}. Рақмет — іріктеу осылай дәлірек болады.",
+        "fb_dash": "Кездесулер туралы пікірлер",
+        "fb_dash_n": "Пікірі бар кездесулер", "fb_dash_avg": "Орташа баға", "fb_dash_helped": "Мақсатқа көмектесті",
+    },
+    "en": {
+        "fb_tab": "Feedback",
+        "fb_remind": "How did your meeting with {name} go? Leave a short review in the Feedback tab.",
+        "fb_remind_n": "You have {n} meetings without feedback — tell us how they went in the Feedback tab.",
+        "fb_empty": "People you meet will appear here: after the meeting you can leave feedback.",
+        "fb_hint": "Feedback is anonymous: the other person won't see it, organizers only see totals.",
+        "fb_how": "How did the meeting go?",
+        "fb_rate": "How useful was the meeting?",
+        "fb_learned": "What did you learn?",
+        "fb_learned_ph": "For example: how hiring works in fintech, a useful tool, a contact…",
+        "fb_helped": "Did this meeting help your goal?",
+        "fb_helped_yes": "Yes", "fb_helped_partly": "Partly", "fb_helped_no": "No",
+        "fb_next": "Will you keep in touch?",
+        "fb_next_yes": "Yes", "fb_next_maybe": "Maybe", "fb_next_no": "No",
+        "fb_send": "Send feedback",
+        "fb_missed": "The meeting didn't happen",
+        "fb_thanks": "Thanks for the feedback! 🙌",
+        "fb_done": "Feedback sent: {n}. Thank you — this makes matching better.",
+        "fb_dash": "Meeting feedback",
+        "fb_dash_n": "Meetings reviewed", "fb_dash_avg": "Average rating", "fb_dash_helped": "Helped the goal",
+    },
+}
 for _lang, _extra in SURVEY.items():
     UI[_lang].update(_extra)
     UI[_lang].update(GROUPS[_lang])
@@ -920,6 +1013,7 @@ for _lang, _extra in SURVEY.items():
     UI[_lang].update(FUN[_lang])
     UI[_lang].update(SOCIAL[_lang])
     UI[_lang].update(AUTOFILL[_lang])
+    UI[_lang].update(REVIEWS[_lang])
 
 
 def t(lang: str, key: str, **kwargs) -> str:

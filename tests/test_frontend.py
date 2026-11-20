@@ -23,12 +23,10 @@ def test_join_resubmit_and_organizer_clear(tmp_path, monkeypatch):
         assert not app.exception
 
     try:
-        complete_survey(app)
-        click("Добавить меня в зал")
+        complete_survey(app)  # анкета попадает в живой зал сама
         joined = app.session_state["query"]["id"]
         complete_survey(app)
         assert app.session_state["query"]["id"] == joined
-        assert not any(b.label == "Добавить меня в зал" for b in app.button)
         assert [p["id"] for p in HallStore().all()] == [joined]
 
         assert not any(r.key == "main_page" for r in app.radio)  # без кода вкладки организатора нет
@@ -46,8 +44,6 @@ def test_join_resubmit_and_organizer_clear(tmp_path, monkeypatch):
         assert HallStore().all() == []
         assert any(m.label == "Участников в живом зале" and m.value == "0" for m in app.metric)
         app.radio(key="main_page").set_value("match").run()
-        click("Добавить меня в зал")
-        assert app.session_state["query"]["id"] != joined
 
         with monkeypatch.context() as patch:
             def unavailable(*args, **kwargs):
@@ -63,6 +59,5 @@ def test_join_resubmit_and_organizer_clear(tmp_path, monkeypatch):
                 app.segmented_control(key="lang_pick").set_value(lang).run()
                 assert not app.exception
                 assert any(w.value == t(lang, "no_more") for w in app.warning)
-                assert any(s.value == t(lang, "hall_joined") for s in app.success)
     finally:
         st.cache_resource.clear()

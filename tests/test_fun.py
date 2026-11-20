@@ -62,7 +62,6 @@ def test_avatar_dice_and_hall(tmp_path, monkeypatch):
         app.button(key=f"ice_{pid}").click().run()
         assert [c.value for c in app.code] != before  # кубик меняет фразу
 
-        app.button(key="hall_join").click().run()
-        assert HallStore().all()[0]["avatar"] == "🦖"
+        assert HallStore().all()[0]["avatar"] == "🦖"  # анкета в зале сразу после опроса
     finally:
         st.cache_resource.clear()

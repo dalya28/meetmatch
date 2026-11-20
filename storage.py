@@ -19,7 +19,7 @@ from datetime import datetime
 from pathlib import Path
 from uuid import uuid4
 
-from config import FEEDBACK_PATH, HALL_PATH, MAX_HALL_SIZE
+from config import FEEDBACK_PATH, HALL_PATH, MAX_HALL_SIZE, REVIEWS_PATH
 from taxonomy import LEVELS
 
 log = logging.getLogger("meetmatch")
@@ -105,6 +105,40 @@ class FeedbackStore(JsonListStore):
 
     def going(self, group_key: str) -> int:
         return sum(1 for e in self.all() if e["action"] == "group" and e["candidate_id"] == group_key)
+
+
+class ReviewStore(JsonListStore):
+    """Отзывы о встречах: состоялась ли, оценка, что нового узнали, помогло ли, продолжат ли общение.
+    Без имён: только id собеседника и событие."""
+
+    HELPED = {"yes", "partly", "no"}
+    NEXT = {"yes", "maybe", "no"}
+
+    def __init__(self, path: Path = REVIEWS_PATH):
+        super().__init__(path)
+
+    def add(self, *, event: str, candidate_id: str, happened: bool, rating: int | None = None,
+            learned: str = "", helped: str | None = None, next_step: str | None = None) -> dict:
+        if rating is not None and not 1 <= int(rating) <= 5:
+            raise ValueError("оценка 1–5")
+        if helped is not None and helped not in self.HELPED or next_step is not None and next_step not in self.NEXT:
+            raise ValueError("неизвестный ответ")
+        item = {"time": datetime.now().isoformat(timespec="seconds"), "event": str(event)[:80],
+                "candidate_id": str(candidate_id)[:64], "happened": bool(happened),
+                "rating": int(rating) if rating is not None and happened else None,
+                "learned": str(learned or "").strip()[:500] if happened else "",
+                "helped": helped if happened else None, "next": next_step if happened else None}
+        self.append(item)
+        log.info("review event=%s happened=%s rating=%s", item["event"], item["happened"], item["rating"])
+        return item
+
+    def stats(self) -> dict:
+        items = [e for e in self.all() if e["happened"]]
+        rated = [e["rating"] for e in items if e["rating"]]
+        return {"total": len(self.all()), "happened": len(items),
+                "avg": sum(rated) / len(rated) if rated else None,
+                "helped_share": sum(e["helped"] == "yes" for e in items) / len(items) if items else None,
+                "learned": [e["learned"] for e in reversed(items) if e["learned"]][:5]}
 
 
 class HallStore(JsonListStore):

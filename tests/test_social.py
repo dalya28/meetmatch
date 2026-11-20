@@ -7,6 +7,7 @@ from streamlit.testing.v1 import AppTest
 
 import config
 from autofill import autofill, by_rules, scrub
+from events import load_events
 from matcher import load_profiles
 from social import (FREE, LINES, bingo_card, bingo_lines, bingo_tick, clean_telegram, demo_accepts, is_mutual,
                     telegram_url)
@@ -58,6 +59,35 @@ def test_one_meeting_closes_center_and_at_most_one_task():
     done = {}
     new = bingo_tick(card, done, PROFILES[0])
     assert 4 in new and len(new) <= 2
+
+
+def test_event_bingo_uses_format_and_topics():
+    boards = set()
+    for ev in load_events():
+        card = bingo_card(PROFILES, ev["id"], ev)
+        assert card == bingo_card(PROFILES, ev["id"], ev)
+        assert len(set(card)) == 9 and card[4] == FREE
+        assert f"activity:{ev['type']}:0" in card
+        assert any(f"topic:{topic}" in card for topic in ev["topics"])
+        assert tuple(card) not in boards
+        boards.add(tuple(card))
+
+
+def test_bingo_progress_survives_logo_and_event_switch(app):
+    app.run()
+    events = [b.key for b in app.button if (b.key or "").startswith("open_bingo_")]
+    first, second = events[:2]
+    app.button(key=first).click().run()
+    next(b for b in app.button if (b.key or "").startswith("activity_")).click().run()
+    progress = dict(app.session_state["bingo"]["done"])
+    assert len(progress) == 1
+    app.button(key="brand_home").click().run()
+    app.button(key=second).click().run()
+    assert not app.session_state["bingo"]["done"]
+    app.button(key="brand_home").click().run()
+    app.button(key=first).click().run()
+    assert app.session_state["bingo"]["done"] == progress
+    assert not app.exception
 
 
 # ---------------------------------------------------------------- анкета из текста

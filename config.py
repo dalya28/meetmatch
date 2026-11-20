@@ -31,6 +31,7 @@ PROFILES_PATH = DATA_DIR / "profiles.json"
 BOOTHS_PATH = DATA_DIR / "booths.json"
 FEEDBACK_PATH = STATE_DIR / "feedback.json"
 HALL_PATH = STATE_DIR / "hall.json"
+REVIEWS_PATH = STATE_DIR / "reviews.json"
 
 # ---------------------------------------------------------------- подбор
 # Веса после офлайн-оценки шага 4 (docs/04-evaluation.md): интересы 0.20 → 0.10 улучшили nDCG@5

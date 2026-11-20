@@ -66,9 +66,6 @@ def _cards(app) -> set[str]:
 def test_pick_event_fill_once_and_switch(app):
     soon = [e["id"] for e in upcoming(EVENTS, date(2026, 11, 20))]
     shown = [b.key.removeprefix("ev_go_") for b in app.button if (b.key or "").startswith("ev_go_")]
-    assert shown == soon[:6]                                    # на главной — первые шесть
-    app.button(key="events_all_btn").click().run()
-    shown = [b.key.removeprefix("ev_go_") for b in app.button if (b.key or "").startswith("ev_go_")]
     assert shown == soon
 
     app.button(key="ev_go_servercore-it-besh").click().run()  # без анкеты — сразу опрос
@@ -85,15 +82,27 @@ def test_pick_event_fill_once_and_switch(app):
 
 
 def test_group_and_hall_follow_the_event(app):
-    app.button(key="events_all_btn").click().run()
     app.button(key="ev_go_moy-realnyy-biznes").click().run()
     complete_survey(app, goal="find_cofounder", fmt="group")
     here = attendee_ids(next(e for e in EVENTS if e["id"] == "moy-realnyy-biznes"), PROFILES)
     app.button(key="group_other").click().run()
     assert set(app.session_state["group_seen"]) <= here
 
-    app.button(key="hall_join").click().run()
-    assert [p["event"] for p in HallStore().all()] == ["moy-realnyy-biznes"]
-    app.button(key="change_event").click().run()
-    app.button(key="ev_go_echai-startup-mixer").click().run()
-    assert any(b.key == "hall_join" for b in app.button)        # на другое событие — отдельная запись
+    assert [p["event"] for p in HallStore().all()] == ["moy-realnyy-biznes"]  # анкета попадает в зал сама
+
+
+def test_personal_event_list(app):
+    event = "servercore-it-besh"
+    app.radio(key="event_scope").set_value("mine").run()
+    assert not any((b.key or "").startswith("ev_go_") for b in app.button)
+    app.radio(key="event_scope").set_value("all").run()
+    app.button(key=f"attend_{event}").click().run()
+    app.radio(key="event_scope").set_value("mine").run()
+    assert [b.key for b in app.button if (b.key or "").startswith("ev_go_")] == [f"ev_go_{event}"]
+    app.button(key=f"ev_go_{event}").click().run()
+    assert app.session_state["survey_step"] == 0
+    app.button(key="survey_home").click().run()
+    app.radio(key="event_scope").set_value("mine").run()
+    app.button(key=f"attend_{event}").click().run()
+    assert app.session_state["attending"] == []
+    assert not app.exception

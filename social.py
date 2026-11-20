@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import re
 import zlib
+from taxonomy import interest_label
 
 # ---------------------------------------------------------------- Telegram
 TG_HANDLE = re.compile(r"^[A-Za-z][A-Za-z0-9_]{4,31}$")
@@ -91,11 +92,60 @@ BINGO_TASKS: dict[str, tuple[dict, callable]] = {
     "mentor": ({"ru": "Ментор", "kk": "Тәлімгер", "en": "A mentor"}, lambda p: p["goal"] == "be_mentor"),
 }
 FREE = "free"  # центр: первое знакомство
+FORMAT_ACTIVITIES = {
+    "hackathon": [
+        ("Посмотрите демо другой команды", "Басқа команданың демосын көріңіз", "Watch another team’s demo"),
+        ("Дайте отзыв о прототипе", "Прототип туралы пікір білдіріңіз", "Give feedback on a prototype")],
+    "training": [
+        ("Сравните результаты упражнения", "Жаттығу нәтижелерін салыстырыңыз", "Compare exercise results"),
+        ("Поделитесь способом применить урок", "Сабақты қолдану жолымен бөлісіңіз", "Share a way to apply the lesson")],
+    "workshop": [
+        ("Выполните задание в паре", "Тапсырманы жұппен орындаңыз", "Try an exercise with a partner"),
+        ("Сравните два решения задачи", "Екі шешімді салыстырыңыз", "Compare two ways to solve the task")],
+    "forum": [
+        ("Обсудите вопрос с панели", "Панельдегі сұрақты талқылаңыз", "Discuss a panel question"),
+        ("Сравните опыт двух компаний", "Екі компанияның тәжірибесін салыстырыңыз", "Compare practices at two companies")],
+    "meetup": [
+        ("Обменяйтесь полезными ресурсами", "Пайдалы ресурстармен алмасыңыз", "Swap useful resources"),
+        ("Обсудите недавний проект", "Жақындағы жобаны талқылаңыз", "Talk about a recent project")],
+    "summit": [
+        ("Сравните приоритеты ваших команд", "Командаларыңыздың басымдықтарын салыстырыңыз", "Compare your teams’ priorities"),
+        ("Обсудите решение из доклада", "Баяндамадағы шешімді талқылаңыз", "Discuss a decision from a talk")],
+    "conference": [
+        ("Обменяйтесь выводами из докладов", "Баяндамалардан түйгендеріңізбен бөлісіңіз", "Swap takeaways from two talks"),
+        ("Задайте вопрос после выступления", "Баяндамадан кейін сұрақ қойыңыз", "Ask a question after a talk")],
+    "general": [
+        ("Представьтесь соседу", "Жаныңыздағы адаммен танысыңыз", "Introduce yourself to someone nearby"),
+        ("Расскажите, зачем вы пришли", "Не үшін келгеніңізді айтыңыз", "Share what brought you here")],
+}
+ACTIVITIES = {f"activity:{fmt}:{i}": dict(zip(("ru", "kk", "en"), labels))
+              for fmt, items in FORMAT_ACTIVITIES.items() for i, labels in enumerate(items)}
+EXTRA_ACTIVITIES = [
+    ("Поделитесь советом", "Кеңес беріңіз", "Share a practical tip"),
+    ("Представьте двух участников друг другу", "Екі қатысушыны таныстырыңыз", "Introduce two participants"),
+    ("Найдите общий интерес", "Ортақ қызығушылық табыңыз", "Find a shared interest"),
+    ("Обменяйтесь вопросами", "Бір-біріңізге сұрақ қойыңыз", "Swap questions"),
+    ("Договоритесь о следующей встрече", "Келесі кездесуді келісіңіз", "Plan a follow-up"),
+    ("Порекомендуйте книгу", "Кітап ұсыныңыз", "Recommend a book"),
+]
+ACTIVITIES.update({f"extra:{i}": dict(zip(("ru", "kk", "en"), labels))
+                   for i, labels in enumerate(EXTRA_ACTIVITIES)})
+
+
+def is_activity(task: str) -> bool:
+    return task in ACTIVITIES or task.startswith("topic:")
+
 FREE_LABEL = {"ru": "★ Первое знакомство", "kk": "★ Алғашқы таныстық", "en": "★ Your first meeting"}
 LINES = [(0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6)]
 
 
 def bingo_label(task: str, lang: str) -> str:
+    if task.startswith("topic:"):
+        topic = interest_label(task.split(":", 1)[1], lang)
+        return {"ru": f"Обсудите тему «{topic}»", "kk": f"«{topic}» тақырыбын талқылаңыз",
+                "en": f"Discuss {topic}"}[lang]
+    if task in ACTIVITIES:
+        return ACTIVITIES[task][lang]
     labels = FREE_LABEL if task == FREE else BINGO_TASKS[task][0]
     return labels.get(lang) or labels["ru"]
 
@@ -105,9 +155,30 @@ def bingo_reach(pool: list[dict]) -> dict[str, int]:
     return {k: sum(1 for p in pool if test(p)) for k, (_, test) in BINGO_TASKS.items()}
 
 
-def bingo_card(pool: list[dict], seed: str) -> list[str]:
+def bingo_card(pool: list[dict], seed: str, event: dict | None = None) -> list[str]:
     """9 клеток, центр — «первое знакомство». Сначала задания, для которых есть ≥ 2 кандидата."""
     reach = bingo_reach(pool)
+    if event is not None:
+        fmt = event.get("type", "")
+        if fmt not in FORMAT_ACTIVITIES:
+            fmt = "general"
+        tasks = [f"activity:{fmt}:{i}" for i in range(len(FORMAT_ACTIVITIES[fmt]))]
+        topics = event.get("topics", [])
+        if topics:
+            tasks.append("topic:" + min(topics, key=lambda topic: _unit(seed, topic)))
+        preferred = set(topics) | set(event.get("roles", []))
+        if DEV & preferred:
+            preferred.add("dev")
+        if DATA & preferred:
+            preferred.add("data")
+        candidates = sorted((k for k in reach if reach[k]),
+                            key=lambda k: (k not in preferred, reach[k] < 2, _unit(seed, k)))
+        tasks.extend(candidates[:8 - len(tasks)])
+        # Small events can use in-person activities even when few profiles are available.
+        extras = sorted((k for k in ACTIVITIES if k.startswith("extra:")), key=lambda k: _unit(seed, k))
+        tasks.extend(extras[:8 - len(tasks)])
+        tasks.sort(key=lambda k: _unit(seed, "cell:" + k))
+        return tasks[:4] + [FREE] + tasks[4:]
     order = sorted(BINGO_TASKS, key=lambda k: (reach[k] < 2, reach[k] < 1, _unit(seed, k)))
     tasks = [k for k in order if reach[k] >= 1][:8]
     while len(tasks) < 8:  # совсем маленькое событие: добиваем самыми частыми заданиями
@@ -124,7 +195,7 @@ def bingo_tick(card: list[str], done: dict, profile: dict, reach: dict | None = 
         new.append(4)
     reach = reach or {}
     fits = [i for i, task in enumerate(card)
-            if task != FREE and str(i) not in done and BINGO_TASKS[task][1](profile)]
+            if task in BINGO_TASKS and str(i) not in done and BINGO_TASKS[task][1](profile)]
     if fits:
         new.append(min(fits, key=lambda i: (reach.get(card[i], 0), i)))
     for i in new:

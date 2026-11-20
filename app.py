@@ -23,14 +23,14 @@ import streamlit as st
 from config import HALL_ENABLED, setup_logging
 from claude_rank import rerank
 from matcher import Matcher, load_booths, load_profiles, plan_meetings, prepare, recommend_booths
-from storage import FeedbackStore, HallStore
+from storage import FeedbackStore, HallStore, ReviewStore
 from taxonomy import (EVENT_SLOTS, GOALS, HIREABLE_ROLES, INTERESTS, LOW_INFO_INTERESTS, ROLES,
                       STACK, STACK_ROLES, goal_label, interest_label, role_label, stack_label, years_ru)
 from autofill import autofill
 from avatars import avatar_choices, opener, photo_data_uri, profile_avatar, role_avatar, role_joke
 from events import DEFAULT_EVENT, attendee_ids, load_events, upcoming
 from groups import suggest_group
-from social import (FREE, bingo_card, bingo_label, bingo_lines, bingo_reach, bingo_tick, clean_telegram, is_mutual,
+from social import (FREE, bingo_card, bingo_label, bingo_lines, bingo_reach, bingo_tick, clean_telegram, is_activity, is_mutual,
                     telegram_url)
 from texts import GOAL_VERB, GROUP_TITLE, RECIPROCITY, UI, t
 from theme import HEATMAP_SCALE, PAIR_COLOR, PAIR_OF, PRIMARY
@@ -41,8 +41,13 @@ st.html(ASSETS / "meetmatch.css")
 
 
 @st.cache_data
-def cover_image() -> str:
-    return base64.b64encode((ASSETS / "almaty.webp").read_bytes()).decode("ascii")
+def image_data(name: str) -> str:
+    return base64.b64encode((ASSETS / f"{name}.webp").read_bytes()).decode("ascii")
+
+
+def section_art(name: str) -> None:
+    st.html(f'<img class="mm-section-art mm-{name}" alt="" '
+            f'src="data:image/webp;base64,{image_data(name)}">', width="content")
 
 
 def event_cover(lang: str) -> None:
@@ -52,10 +57,13 @@ def event_cover(lang: str) -> None:
             <div class="mm-kicker"><span class="mm-dot"></span> {t(lang, 'hero_kicker')}</div>
             <h1>{t(lang, 'hero_title')}<br><em>{t(lang, 'hero_accent')}</em></h1>
             <p>{t(lang, 'hero_copy')}</p>
-            <a class="mm-cta" href="?start=1&lang={lang}&event={html.escape(current_event()['id'])}" target="_self">{t(lang, 'hero_cta')} <span aria-hidden="true">→</span></a>
+            <div class="mm-cover-actions">
+              <a class="mm-cta" href="?start=1&amp;lang={lang}&amp;event={html.escape(current_event()['id'])}" target="_self">{t(lang, 'hero_cta')} <span aria-hidden="true">→</span></a>
+              <a class="mm-browse" href="#mm-events">{t(lang, 'browse')} <span aria-hidden="true">↓</span></a>
+            </div>
           </div>
           <div class="mm-art">
-            <img alt="" src="data:image/webp;base64,{cover_image()}">
+            <img alt="" src="data:image/webp;base64,{image_data('wingman-links-cutout')}">
             <span class="mm-place">{t(lang, 'events_count', n=len(event_list()))}</span>
           </div>
         </section>
@@ -64,6 +72,11 @@ def event_cover(lang: str) -> None:
 
 # ---------------------------------------------------------------- данные (общие для всех сессий)
 log = setup_logging()
+
+
+@st.cache_resource
+def review_store() -> ReviewStore:
+    return ReviewStore()
 
 
 @st.cache_resource
@@ -112,6 +125,7 @@ def join_hall(q: dict, lang: str) -> dict:
         profile = hall_store().join(q, lang, guest_name=t(lang, "guest"), event=event_id)
         current.add_profiles([profile])
     st.session_state.my_ids.append(profile["id"])  # свои анкеты на других событиях не показываем себе
+    set_attending(event_id, True)
     return {**q, "id": profile["id"]}
 
 
@@ -131,9 +145,53 @@ FIELDS = {"name": "", "role": "backend", "experience": 1, "stack": [], "interest
 DEFAULTS = {"form": dict(FIELDS), "excluded": [], "rejected_roles": [], "met": [], "query": None,
             "lang": "ru", "survey_step": None, "answered": set(), "skipped": [], "batch_rejected": [],
             "batch_no": 1, "group_seen": [], "group_joined": None, "organizer": None,
-            "org_attempts": 0, "event": None, "show_events": False, "my_ids": [], "ice": {}, "photo_nonce": 0, "bingo": None}
+            "org_attempts": 0, "event": None, "show_events": False, "my_ids": [], "ice": {}, "photo_nonce": 0, "bingo": None, "reviewed": []}
 for key, value in DEFAULTS.items():
     st.session_state.setdefault(key, value)
+
+# Keep only public event IDs on this device. The profile and contact details
+# stay out of the attendance cookie.
+ATTENDANCE_COOKIE = "wingman_events_v1"
+if "attending" not in st.session_state:
+    saved = set(st.context.cookies.get(ATTENDANCE_COOKIE, "").split(","))
+    saved.update(matcher.by_id[pid].get("event", DEFAULT_EVENT) for pid in st.session_state.my_ids
+                 if pid in matcher.by_id)
+    st.session_state.attending = [e["id"] for e in get_events() if e["id"] in saved]
+
+
+def set_attending(event_id: str, attending: bool) -> None:
+    ids = set(st.session_state.attending)
+    if attending:
+        ids.add(event_id)
+    else:
+        ids.discard(event_id)
+    st.session_state.attending = sorted(ids)
+    st.session_state.attendance_change = (event_id, attending)
+
+
+def persist_attendance() -> None:
+    change = st.session_state.pop("attendance_change", None)
+    if change:
+        event_id, attending = change
+        # Merge this single change with other tabs' choices before saving.
+        st.html(f"""<script>/* {time.monotonic_ns()} */
+          (() => {{
+            const key = "{ATTENDANCE_COOKIE}=";
+            const value = document.cookie.split("; ").find(x => x.startsWith(key)) || key;
+            const ids = new Set(value.slice(key.length).split(",").filter(Boolean));
+            ids.{'add' if attending else 'delete'}({json.dumps(event_id)});
+            document.cookie = key + [...ids].join(",") + "; Max-Age=31536000; Path=/; SameSite=Lax";
+          }})();
+        </script>""", unsafe_allow_javascript=True)
+
+
+def events_home() -> None:
+    st.session_state.update(show_events=True, survey_step=None, preview_bingo=False)
+
+
+def brand_home() -> None:
+    events_home()
+    st.session_state.update(main_page="match", event_scope="all")
 
 
 def wkey(field: str, lang: str) -> str:
@@ -171,7 +229,10 @@ def reset_feedback() -> None:
     s.pop("claude_result", None)
 
 
-def build_query() -> None:
+def build_query(*, publish: bool = True) -> None:
+    st.session_state.show_events = False
+    st.session_state.preview_bingo = False
+    st.session_state.activity_tabs = t(st.session_state.lang, "match_nav")
     previous_id = (st.session_state.query or {}).get("id")
     form = st.session_state.form
     query = prepare(dict(form))
@@ -182,6 +243,12 @@ def build_query() -> None:
         query["telegram"] = clean_telegram(form["telegram"])
     if previous_id in get_matcher().by_id:
         query["id"] = previous_id
+    if publish and HALL_ENABLED:
+        try:
+            query = join_hall(query, st.session_state.lang)
+        except (RuntimeError, OSError):
+            log.warning("hall_join_failed", exc_info=True)
+            st.session_state.hall_failed = True
     st.session_state.query = query
     st.session_state.focus_results = True
     st.session_state.view_pick = st.session_state.view_last = st.session_state.form.get("format", "one")
@@ -198,7 +265,7 @@ def fill_example(goal: str) -> None:
     st.session_state.answered = set(FIELDS)
     st.session_state.survey_step = None
     clear_widgets()
-    build_query()
+    build_query(publish=False)
 
 
 def pick_example() -> None:
@@ -385,8 +452,13 @@ def render_survey(lang: str) -> None:
     i = min(s.survey_step, len(steps) - 1)
     field = steps[i]
     with st.container(key="survey"):
-        st.button("← " + t(lang, "back"), on_click=step_back, key="sv_back")
+        st.button(t(lang, "back"), icon=":material/arrow_back:", on_click=step_back, key="sv_back")
+        section_art("badge")
         st.caption(t(lang, "step_of", i=i + 1, n=len(steps)))
+        if HALL_ENABLED and i == 0:
+            st.caption({"ru": "После заполнения вашу анкету увидят участники этого события.",
+                        "kk": "Толтырылған сауалнамаңызды осы іс-шараның қатысушылары көреді.",
+                        "en": "Once completed, your profile will be visible to participants at this event."}[lang])
         st.progress((i + 1) / len(steps))
         st.subheader(t(lang, f"q_{field}"), anchor=False)
 
@@ -487,15 +559,20 @@ def on_meet(pid: str, name: str, score: float = 0.0) -> None:
 
 
 # ---------------------------------------------------------------- нетворкинг-бинго
-def bingo_state(q: dict) -> dict:
-    """Карточка своя на каждое событие и цель: задания из тех, кто реально есть среди ваших кандидатов."""
+def bingo_state() -> dict:
+    """Одна карточка на событие на протяжении сессии, включая просмотр до заполнения анкеты."""
     s = st.session_state
     ev = current_event()
-    sig = f"{ev['id']}|{q['goal']}|{q['role']}"
-    if not s.bingo or s.bingo["sig"] != sig:
+    event_id = ev["id"]
+    boards = s.setdefault("bingo_boards", {})
+    if event_id not in boards:
         here = event_attendees(ev)
-        pool = [m.profile for m in matcher.recommend(q, k=60, exclude=set(s.my_ids) | (set(matcher.by_id) - here))]
-        s.bingo = {"sig": sig, "card": bingo_card(pool, sig), "reach": bingo_reach(pool), "done": {}, "won": False}
+        pool = [p for p in matcher.profiles if p["id"] in here and p["id"] not in s.my_ids]
+        if s.query:
+            pool = [m.profile for m in matcher.recommend(s.query, k=60, exclude=set(s.my_ids) | (set(matcher.by_id) - here))]
+        boards[event_id] = {"card": bingo_card(pool, event_id, ev), "reach": bingo_reach(pool),
+                            "done": {}, "won": False, "met_ids": set()}
+    s.bingo = boards[event_id]
     return s.bingo
 
 
@@ -504,27 +581,47 @@ def bingo_on_meet(p: dict) -> bool:
     q = st.session_state.query
     if not q:
         return False
-    b = bingo_state(q)
+    b = bingo_state()
+    if p["id"] in b["met_ids"]:
+        return False
+    b["met_ids"].add(p["id"])
     bingo_tick(b["card"], b["done"], p, b.get("reach"))
+    return check_bingo_win(b)
+
+
+def check_bingo_win(b: dict) -> bool:
     if not b["won"] and bingo_lines(b["done"]):
         b["won"] = True
-        feedback_store().add("bingo", current_event()["id"], q["goal"])
+        feedback_store().add("bingo", current_event()["id"], _goal())
         return True
     return False
 
 
-def render_bingo(q: dict, lang: str) -> None:
-    b = bingo_state(q)
-    cells = []
-    for i, task in enumerate(b["card"]):
-        who = b["done"].get(str(i))
-        cls = "mm-bc" + (" mm-done" if who is not None else "") + (" mm-free" if task == FREE else "")
-        mark = f"<small>✓ {html.escape(who.split()[0] if who else '')}</small>" if who is not None else ""
-        cells.append(f'<div class="{cls}"><span>{html.escape(bingo_label(task, lang))}</span>{mark}</div>')
-    st.html(f'<div class="mm-bingo">{"".join(cells)}</div>')
+def mark_activity(i: int) -> None:
+    b = bingo_state()
+    if is_activity(b["card"][i]):
+        b["done"][str(i)] = ""
+        if check_bingo_win(b):
+            st.session_state.toast = "toast_bingo"
+
+
+def render_bingo(lang: str) -> None:
+    b = bingo_state()
+    st.subheader(f'{t(lang, "bingo")} · {len(b["done"])}/9', anchor=False)
+    st.caption(t(lang, "bingo_rules"))
+    with st.container(key="bingo_grid"):
+        for i, task in enumerate(b["card"]):
+            who = b["done"].get(str(i))
+            label = bingo_label(task, lang)
+            if is_activity(task) and who is None:
+                st.button(label, key=f"activity_{current_event()['id']}_{i}", icon=":material/add:",
+                          width="stretch", on_click=mark_activity, args=(i,))
+                continue
+            cls = "mm-bc" + (" mm-done" if who is not None else "") + (" mm-free" if task == FREE else "")
+            mark = f"<small>✓ {html.escape(who.split()[0] if who else '')}</small>" if who is not None else ""
+            st.html(f'<div class="{cls}"><span>{html.escape(label)}</span>{mark}</div>')
     if b["won"]:
         st.success(t(lang, "bingo_won"), icon=":material/emoji_events:")
-    st.caption(t(lang, "bingo_rules"))
 
 
 def on_skip(pid: str, role: str) -> None:
@@ -619,15 +716,14 @@ def page_match(lang: str) -> None:
         render_survey(lang)
         return
     q = s.query
-    if q is None:
+    if (q is None and not s.get("preview_bingo")) or s.show_events:
         event_cover(lang)
-        with st.container(key="onboarding"):
-            st.pills(t(lang, "examples"), list(EXAMPLES), format_func=lambda g: t(lang, f"ex_{g}"),
-                     key="ex_pick", on_change=pick_example)
-        render_events(lang)
-        return
-    if s.show_events:
-        st.button("← " + t(lang, "back"), key="events_back", on_click=lambda: s.update(show_events=False))
+        if q is None:
+            with st.container(key="onboarding"):
+                st.pills(t(lang, "examples"), list(EXAMPLES), format_func=lambda g: t(lang, f"ex_{g}"),
+                         key="ex_pick", on_change=pick_example)
+        else:
+            st.button("← " + t(lang, "results_title"), key="events_back", on_click=lambda: s.update(show_events=False))
         render_events(lang)
         return
     render_results(q, lang)
@@ -688,21 +784,26 @@ def event_attendees(e: dict) -> set[str]:
     return attendee_ids(e, matcher.profiles)
 
 
-def on_pick_event(event_id: str) -> None:
+def on_pick_event(event_id: str, bingo: bool = False) -> None:
     """Анкета заполняется один раз: при смене события подбор просто пересчитывается."""
     s = st.session_state
     s.event, s.show_events = event_id, False
+    s.preview_bingo = bingo
+    s.activity_tabs = t(s.lang, "bingo" if bingo else "match_nav")
     s.excluded, s.skipped, s.rejected_roles, s.batch_rejected, s.met = [], [], [], [], []
     s.batch_no, s.group_seen, s.group_joined = 1, [], None
     s.pop("claude_result", None)
     log.info("event_pick event=%s has_profile=%s", event_id, s.query is not None)
     if s.query is None:
-        start_survey(fresh=True)
+        if not bingo:
+            start_survey(fresh=not s.answered)
     else:
+        s.query.pop("id", None)
+        for pid in s.my_ids:
+            if matcher.by_id.get(pid, {}).get("event") == event_id:
+                s.query["id"] = pid
+                break
         s.focus_results = True
-
-
-EVENTS_FIRST = 6  # на главной — первые шесть, остальные по кнопке: меньше шума
 
 
 GOOD_MATCH = 0.5  # «подходящий» человек: совпадение от 50% (так на ручной разметке выглядят «стоит познакомиться»)
@@ -748,54 +849,45 @@ def event_card(e: dict, lang: str, selected: bool, fit: int | None = None, best:
               <p class="mm-ev-foot mm-ev-more">{' · '.join(extra)}</p>
               {f'<span class="mm-ev-best">{t(lang, "event_best")}</span>' if best else ''}
             </div>""")
-        st.button(t(lang, "event_selected" if selected else "event_go"), key=f"ev_go_{e['id']}",
-                  type="secondary" if selected else "primary", width="stretch",
-                  icon=":material/check:" if selected else None,
+        if selected:
+            st.caption("✓ " + t(lang, "going"))
+        st.button(t(lang, "event_go"), key=f"ev_go_{e['id']}",
+                  type="primary" if selected else "secondary", width="stretch",
                   on_click=on_pick_event, args=(e["id"],))
+        st.button(t(lang, "remove_event" if selected else "attend"), key=f"attend_{e['id']}",
+                  icon=":material/remove:" if selected else ":material/add:",
+                  type="tertiary" if selected else "primary", width="stretch",
+                  on_click=set_attending, args=(e["id"], not selected))
+        st.button(t(lang, "bingo"), key=f"open_bingo_{e['id']}", type="tertiary", icon=":material/grid_view:",
+                  on_click=on_pick_event, args=(e["id"], True))
 
 
 def render_events(lang: str) -> None:
     s = st.session_state
-    chosen = current_event()["id"]
     events = event_list()
     fits = event_fits(s.query) if s.query is not None else None
     if fits:  # анкета есть — сначала события, где для вас больше людей
         events = sorted(events, key=lambda e: (-fits[e["id"]], e["start"]))
-        st.subheader(t(lang, "where_title"), anchor="mm-events")
-        st.caption(t(lang, "where_hint"))
-    else:
+    with st.container(key="events_heading"):
+        section_art("ticket")
         st.subheader(t(lang, "events_title"), anchor="mm-events")
-        st.caption(t(lang, "events_hint"))
-    shown = events if s.get("events_all") or s.show_events else events[:EVENTS_FIRST]
+    mine = [e for e in events if e["id"] in s.attending]
+    scope = st.radio(t(lang, "events_title"), ["all", "mine"],
+                     format_func=lambda v: (f"{t(lang, 'my_events')} · {len(mine)}" if v == "mine"
+                                            else f"{t(lang, 'all_events')} · {len(events)}"),
+                     horizontal=True, label_visibility="collapsed", key="event_scope")
+    shown = mine if scope == "mine" else events
+    if not shown:
+        st.caption(t(lang, "mine_empty" if scope == "mine" else "no_events"))
     top = events[0]["id"] if fits and fits[events[0]["id"]] else None
     for row in range(0, len(shown), 3):
         for col, e in zip(st.columns(3, gap="medium"), shown[row:row + 3]):
             with col:
-                event_card(e, lang, selected=e["id"] == chosen and s.query is not None,
+                event_card(e, lang, selected=e["id"] in s.attending,
                            fit=fits[e["id"]] if fits else None, best=e["id"] == top)
-    if len(shown) < len(events):
-        st.button(t(lang, "events_all", n=len(events)), key="events_all_btn",
-                  on_click=lambda: s.update(events_all=True))
 
 
 # ---------------------------------------------------------------- встреча в компании
-def hall_join_block(q: dict, lang: str) -> None:
-    if not HALL_ENABLED:
-        return
-    mine = matcher.by_id.get(q.get("id") or "")
-    if mine and mine.get("event", DEFAULT_EVENT) == current_event()["id"]:
-        st.success(t(lang, "hall_joined"))
-        return
-    st.caption(t(lang, "hall_consent"))
-    if st.button(t(lang, "hall_join"), key="hall_join"):
-        try:
-            st.session_state.query = join_hall(q, lang)
-            st.rerun()
-        except (RuntimeError, OSError):
-            log.warning("hall_join_failed", exc_info=True)
-            st.error(t(lang, "hall_error"))
-
-
 def on_group_join(key: str) -> None:
     feedback_store().add("group", key, _goal())
     st.session_state.group_joined = key
@@ -854,25 +946,98 @@ def on_view_change() -> None:
     s.view_last = s.view_pick
 
 
-def render_results(q: dict, lang: str) -> None:
+def render_results(q: dict | None, lang: str) -> None:
     s = st.session_state
     if s.get("toast"):
         st.toast(t(lang, s.pop("toast")))
-    render_af_note(q, lang)
-
-    t0 = time.perf_counter()
     ev = current_event()
     here = event_attendees(ev)
     # Заголовок, над ним — для какого события подбор; под ним — одна строка управления.
     st.html(f"<p class='mm-eyebrow'><b>{html.escape(ev['title'])}</b> · {event_date(ev, lang)} · "
             f"{t(lang, 'event_people', n=len(here))}</p>")
-    st.header(t(lang, "results_title"), anchor="mm-results")
-    view, other, bingo, edit = st.columns([2, 1, 1, 1], vertical_alignment="center")
-    done = len(bingo_state(q)["done"])
-    with bingo.popover(f"🎯 {t(lang, 'bingo')} {done}/9", width="stretch"):
-        render_bingo(q, lang)
-    other.button(t(lang, "event_change"), key="change_event", icon=":material/event:", width="stretch",
-                 on_click=lambda: s.update(show_events=True))
+    pending = pending_reviews()
+    if pending:  # оповещение: встреча была — расскажите, как прошла
+        first = pending[0][1].split()[0]
+        st.info(t(lang, "fb_remind", name=first) if len(pending) == 1 else t(lang, "fb_remind_n", n=len(pending)),
+                icon=":material/notifications_active:")
+    fb_label = t(lang, "fb_tab") + (f" · {len(pending)}" if pending else "")
+    matches, bingo, reviews = st.tabs([t(lang, "match_nav"), t(lang, "bingo"), fb_label],
+                                      key="activity_tabs", on_change="rerun")
+    with bingo:
+        render_bingo(lang)
+    with reviews:
+        render_reviews(lang)
+    if matches.open:
+        with matches:
+            if q is None:
+                st.button(t(lang, "hero_cta"), on_click=start_survey, type="primary", key="event_survey")
+            else:
+                render_matches(q, lang, ev, here)
+
+
+# ---------------------------------------------------------------- отзывы о встречах
+def _review_key(pid: str) -> str:
+    return f"{current_event()['id']}:{pid}"
+
+
+def pending_reviews() -> list[tuple[str, str]]:
+    s = st.session_state
+    return [(pid, name) for pid, name in s.met if _review_key(pid) not in s.reviewed]
+
+
+def save_review(pid: str, happened: bool) -> None:
+    s = st.session_state
+    k = f"fb_{pid}"
+    stars = s.get(f"{k}_stars")
+    review_store().add(event=current_event()["id"], candidate_id=pid, happened=happened,
+                       rating=stars + 1 if stars is not None else None, learned=s.get(f"{k}_learned", ""),
+                       helped=s.get(f"{k}_helped"), next_step=s.get(f"{k}_next"))
+    s.reviewed.append(_review_key(pid))
+    s.toast = "fb_thanks"
+
+
+def render_reviews(lang: str) -> None:
+    s = st.session_state
+    pending = pending_reviews()
+    if not s.met:
+        st.caption(t(lang, "fb_empty"))
+        return
+    st.caption(t(lang, "fb_hint"))
+    for pid, name in pending:
+        p = matcher.by_id.get(pid, {"name": name, "role": ""})
+        k = f"fb_{pid}"
+        with st.container(border=True, key=f"review_{pid}"):
+            st.html(f"""<div class="mm-person"><span class="mm-avatar">{face_html(p)}</span>
+                <div class="mm-person-body"><h3>{html.escape(name)}</h3>
+                <p>{t(lang, 'fb_how')}</p></div></div>""")
+            with st.form(f"{k}_form", border=False):
+                st.markdown(f"**{t(lang, 'fb_rate')}**")
+                st.feedback("stars", key=f"{k}_stars")
+                st.text_area(t(lang, "fb_learned"), key=f"{k}_learned", placeholder=t(lang, "fb_learned_ph"),
+                             max_chars=500, height=90)
+                st.radio(t(lang, "fb_helped"), ["yes", "partly", "no"], key=f"{k}_helped", horizontal=True,
+                         index=None, format_func=lambda v: t(lang, f"fb_helped_{v}"))
+                st.radio(t(lang, "fb_next"), ["yes", "maybe", "no"], key=f"{k}_next", horizontal=True,
+                         index=None, format_func=lambda v: t(lang, f"fb_next_{v}"))
+                st.form_submit_button(t(lang, "fb_send"), type="primary", on_click=save_review, args=(pid, True))
+            st.button(t(lang, "fb_missed"), key=f"{k}_missed", type="tertiary", on_click=save_review,
+                      args=(pid, False))
+    done = len(s.met) - len(pending)
+    if done:
+        st.success(t(lang, "fb_done", n=done), icon=":material/check_circle:")
+
+
+def render_matches(q: dict, lang: str, ev: dict, here: set[str]) -> None:
+    s = st.session_state
+    render_af_note(q, lang)
+    if s.pop("hall_failed", False):
+        st.error(t(lang, "hall_error"))
+    with st.container(key="matches_heading"):
+        section_art("conversation")
+        st.header(t(lang, "results_title"), anchor="mm-results")
+    view, other, edit = st.columns([2, 1, 1], vertical_alignment="center")
+    other.button(t(lang, "home"), key="change_event", icon=":material/event:", width="stretch",
+                 on_click=events_home)
     edit.button(f"{q.get('avatar') or role_avatar(q['role'])} {t(lang, 'edit_profile')}", key="edit_profile",
                 on_click=start_survey, width="stretch")
 
@@ -895,7 +1060,6 @@ def render_results(q: dict, lang: str) -> None:
     if s.get("view_pick") == "group":
         st.caption(t(lang, "hint_format"))
         render_group(q, lang)
-        hall_join_block(q, lang)
         return
     try:
         with st.spinner(t(lang, "loading")):
@@ -914,7 +1078,6 @@ def render_results(q: dict, lang: str) -> None:
         st.error(t(lang, "match_error"))
         st.button(t(lang, "retry"), key="retry_matches")
         return
-    elapsed = time.perf_counter() - t0
 
     st.caption(f"{t(lang, 'batch_n', n=s.batch_no)} · {RECIPROCITY[lang][q['goal']]}")
     met_ids = {pid for pid, _ in s.met}
@@ -945,9 +1108,9 @@ def render_results(q: dict, lang: str) -> None:
     if s.met:
         st.success(t(lang, "met_list", names=", ".join(name for _, name in s.met)))
 
-    hall_join_block(q, lang)
 
-    with st.expander(t(lang, "schedule_title")):
+    with st.container(border=True):
+        st.subheader(t(lang, "schedule_title"), anchor=False)
         if not q.get("slots"):
             st.caption(t(lang, "schedule_none"))
         else:
@@ -960,7 +1123,8 @@ def render_results(q: dict, lang: str) -> None:
                 st.caption(t(lang, "schedule_left", names=", ".join(m.profile["name"] for m in left)))
 
     if ev["id"] == DEFAULT_EVENT:  # стенды партнёров есть только на хакатоне
-        with st.expander(t(lang, "booths_title")):
+        with st.container(border=True):
+            st.subheader(t(lang, "booths_title"), anchor=False)
             for col, booth in zip(st.columns(2), recommend_booths(q, get_booths())):
                 with col.container(border=True):
                     st.markdown(f"**{booth['name']}**")
@@ -970,17 +1134,6 @@ def render_results(q: dict, lang: str) -> None:
                     if booth["hiring"]:
                         st.caption(t(lang, "booth_hiring",
                                      roles=", ".join(role_label(r, lang) for r in booth["hiring"])))
-
-    with st.expander(t(lang, "how_results")):
-        st.caption(t(lang, "found_in", ms=max(1, round(elapsed * 1000)), n=len(matcher.profiles)))
-        if not q["stack"] and not q["about"].strip():
-            st.caption(t(lang, "need_more"))
-        inferred = [stack_label(x) for x in q["inferred"]["stack"]] + [
-            interest_label(i, lang) for i in q["inferred"]["interests"]] + [
-            role_label(r, lang) for r in q["inferred"]["seeking"]] + q["inferred"].get("levels", [])
-        if inferred:
-            st.caption(t(lang, "inferred", tags=", ".join(inferred)))
-        st.markdown(t(lang, "how_text"))
 
 
 # ---------------------------------------------------------------- дашборд организатора
@@ -1029,6 +1182,15 @@ def page_dashboard(lang: str) -> None:
                     except OSError:
                         log.warning("hall_clear_failed", exc_info=True)
                         st.error(t(lang, "hall_clear_error"))
+
+    rv = review_store().stats()
+    st.markdown(f"#### {t(lang, 'fb_dash')}")
+    r1, r2, r3 = st.columns(3)
+    r1.metric(t(lang, "fb_dash_n"), rv["happened"])
+    r2.metric(t(lang, "fb_dash_avg"), f"{rv['avg']:.1f} ★" if rv["avg"] else "—")
+    r3.metric(t(lang, "fb_dash_helped"), f"{round(100 * rv['helped_share'])}%" if rv["helped_share"] is not None else "—")
+    for quote in rv["learned"]:
+        st.markdown(f"> {html.escape(quote)}")
 
     st.markdown(f"#### {t(lang, 'dash_events')}")
     st.dataframe(pd.DataFrame([{t(lang, "col_event"): e["title"], t(lang, "col_date"): event_date(e, lang),
@@ -1199,6 +1361,9 @@ def on_lang_change() -> None:
     """Переключатель языка нельзя «отжать»: пустой выбор возвращаем к прежнему языку."""
     if st.session_state.lang_pick is None:
         st.session_state.lang_pick = st.session_state.lang
+    if st.session_state.get("activity_tabs"):
+        in_bingo = st.session_state.activity_tabs == t(st.session_state.lang, "bingo")
+        st.session_state.activity_tabs = t(st.session_state.lang_pick, "bingo" if in_bingo else "match_nav")
     st.session_state.lang = st.session_state.lang_pick
     clear_widgets()
 
@@ -1220,18 +1385,20 @@ if "org" in st.query_params:  # личная ссылка организатор
         st.session_state.org_failed = True
 
 lang = st.session_state.lang
+persist_attendance()
 st.session_state.setdefault("lang_pick", lang)
 with st.container(key="topbar"):
     brand, nav, language = st.columns([3, 5, 2], vertical_alignment="center")
     # Знак — два круга-человека; общая часть — то, что их связывает: цель, стек, интересы.
-    brand.html('<div class="mm-brand"><span class="mm-mark" aria-hidden="true"><span class="mm-lens"></span>'
-               '</span>Wingman</div>')
+    brand.button("Wingman", key="brand_home", type="tertiary", on_click=brand_home, help=t(lang, "home"))
     page = "match"
     if st.session_state.organizer:  # вкладку видят только те, кому выдан код
         with nav:
             page = st.radio(t(lang, "navigation"), ["match", "dash"], key="main_page",
                             horizontal=True, label_visibility="collapsed",
                             format_func=lambda v: t(lang, "match_nav" if v == "match" else "org_nav"))
+    elif st.session_state.survey_step is not None:
+        nav.button(t(lang, "home"), on_click=events_home, key="survey_home", icon=":material/arrow_back:")
     with language:
         st.segmented_control("Тіл · Язык · Language", ["kk", "ru", "en"], format_func=str.upper,
                              key="lang_pick", on_change=on_lang_change, label_visibility="collapsed")
