@@ -20,6 +20,27 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+
+def _reload_changed_modules() -> None:
+    """Streamlit Cloud после git pull перезапускает только app.py, а модули проекта остаются в памяти
+    старыми — отсюда ImportError на новых именах. Модуль устарел, если его исходник новее
+    скомпилированной копии в __pycache__ (она пишется в момент импорта) — тогда перечитываем."""
+    import importlib
+    import sys
+    for name in ("config", "taxonomy", "theme", "texts", "matcher", "storage", "events", "groups",
+                 "avatars", "social", "autofill", "claude_rank"):  # порядок зависимостей
+        mod = sys.modules.get(name)
+        src = getattr(mod, "__file__", None)
+        pyc = getattr(getattr(mod, "__spec__", None), "cached", None)
+        try:
+            if src and pyc and os.path.getmtime(src) > os.path.getmtime(pyc) + 1:
+                importlib.reload(mod)
+        except OSError:
+            pass
+
+
+_reload_changed_modules()
+
 from config import HALL_ENABLED, setup_logging
 from claude_rank import rerank
 from matcher import Matcher, load_booths, load_profiles, plan_meetings, prepare, recommend_booths
