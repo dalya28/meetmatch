@@ -4,7 +4,7 @@
 
 Трек: **AI for Digital Economy & Smart Business**.
 
-- [Видеодемо, 30 секунд](demo/MeetMatch.mp4) · [Презентация](demo/MeetMatch.pdf) · [Сценарий питча](docs/10-pitch.md) · [Отчёт QA](docs/08-test-report.md)
+- [Демо для жюри, 30 секунд](https://dalya28.github.io/meetmatch/demo/) · [Презентация](demo/MeetMatch.pdf) · [Сценарий питча](docs/10-pitch.md) · [Отчёт QA](docs/08-test-report.md)
 
 ### Дополнительный режим Claude
 
