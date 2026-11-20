@@ -1354,18 +1354,31 @@ def how_it_works(lang: str) -> None:
 
 
 def render_footer(lang: str) -> None:
+    """Подвал как у обычных сайтов: о проекте слева, колонки ссылок, внизу — строка с копирайтом."""
     s = st.session_state
+    link = lambda href, text: (f'<a class="mm-fl" href="{href}" target="_blank" rel="noopener">{text}</a>')
     with st.container(key="footer"):
-        st.html(f"""<div class="mm-ridge" aria-hidden="true"></div>
-            <p class="mm-foot"><b>Wingman</b> · {t(lang, 'hero_kicker')}</p>
-            <p class="mm-foot-note">{t(lang, 'data_note', n=sum(not x.get("live") for x in matcher.profiles))}
-            {t(lang, 'event_note')}</p>""")
-        how, org = st.columns([5, 1], vertical_alignment="center")
-        with how.popover(t(lang, "how_title"), icon=":material/help:"):
-            how_it_works(lang)
-        if not s.organizer:
-            with org.popover("", icon=":material/lock:", help=t(lang, "org_login")):
-                org_login_form(lang)
+        about, product, project, org = st.columns([2.2, 1, 1, 1], gap="large")
+        about.html(f"""<div class="mm-fbrand"><span class="mm-flogo" aria-hidden="true"></span>Wingman</div>
+            <p class="mm-ftext">{t(lang, 'foot_tagline')}</p>""")
+        with product:
+            st.html(f"<p class='mm-fhead'>{t(lang, 'foot_product')}</p>")
+            with st.popover(t(lang, "how_title"), type="tertiary"):
+                how_it_works(lang)
+            st.html(link("https://dalya28.github.io/meetmatch/demo/", t(lang, "foot_demo")))
+        project.html(f"<p class='mm-fhead'>{t(lang, 'foot_project')}</p>"
+                     + link("https://github.com/dalya28/meetmatch", "GitHub")
+                     + link("https://hackathon.metu.kz/", "AI in Engineering Hackathon"))
+        with org:
+            st.html(f"<p class='mm-fhead'>{t(lang, 'foot_org')}</p>")
+            if s.organizer:
+                st.caption(t(lang, "org_hello", name=s.organizer))
+            else:
+                with st.popover(t(lang, "org_login"), type="tertiary", icon=":material/lock:"):
+                    org_login_form(lang)
+        n = sum(not x.get("live") for x in matcher.profiles)
+        st.html(f"""<div class="mm-fbottom"><span>© 2026 Wingman · AI in Engineering Hackathon, METU</span>
+            <span>{t(lang, 'data_note', n=n)} {t(lang, 'event_note')}</span></div>""")
 
 
 def org_login_form(lang: str) -> None:

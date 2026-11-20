@@ -1006,6 +1006,18 @@ REVIEWS = {
         "fb_dash_n": "Meetings reviewed", "fb_dash_avg": "Average rating", "fb_dash_helped": "Helped the goal",
     },
 }
+# Подвал сайта.
+FOOTER = {
+    "ru": {"foot_tagline": "Подбираем пять человек, с которыми стоит познакомиться на событии, — ещё до его начала.",
+           "foot_product": "Продукт", "foot_project": "Проект", "foot_org": "Организаторам",
+           "foot_demo": "Демо для жюри"},
+    "kk": {"foot_tagline": "Іс-шарада танысуға тұрарлық бес адамды ол басталмай-ақ іріктейміз.",
+           "foot_product": "Өнім", "foot_project": "Жоба", "foot_org": "Ұйымдастырушыларға",
+           "foot_demo": "Қазылар үшін демо"},
+    "en": {"foot_tagline": "We find five people worth meeting at an event — before it even starts.",
+           "foot_product": "Product", "foot_project": "Project", "foot_org": "For organizers",
+           "foot_demo": "Jury demo"},
+}
 for _lang, _extra in SURVEY.items():
     UI[_lang].update(_extra)
     UI[_lang].update(GROUPS[_lang])
@@ -1014,6 +1026,7 @@ for _lang, _extra in SURVEY.items():
     UI[_lang].update(SOCIAL[_lang])
     UI[_lang].update(AUTOFILL[_lang])
     UI[_lang].update(REVIEWS[_lang])
+    UI[_lang].update(FOOTER[_lang])
 
 
 def t(lang: str, key: str, **kwargs) -> str:
