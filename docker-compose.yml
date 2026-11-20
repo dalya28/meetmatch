@@ -1,0 +1,14 @@
+services:
+  meetmatch:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      MEETMATCH_STATE_DIR: /app/state     # отзывы и живой зал — на томе, а не в образе
+      MEETMATCH_LOG_LEVEL: INFO
+    volumes:
+      - meetmatch-state:/app/state
+    restart: unless-stopped
+
+volumes:
+  meetmatch-state:

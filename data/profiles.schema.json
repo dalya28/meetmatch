@@ -1,0 +1,274 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "MeetMatch participant profile",
+ "type": "array",
+ "minItems": 100,
+ "items": {
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+   "id",
+   "name",
+   "lang",
+   "role",
+   "experience",
+   "stack",
+   "interests",
+   "about",
+   "goal",
+   "seeking_roles",
+   "hire_levels",
+   "hire_exp_min",
+   "hire_exp_max",
+   "company",
+   "slots"
+  ],
+  "properties": {
+   "id": {
+    "type": "string",
+    "pattern": "^p\\d{3}$"
+   },
+   "name": {
+    "type": "string",
+    "pattern": "^[^\\W\\d_]+(-[^\\W\\d_]+)? [^\\W\\d_]+(-[^\\W\\d_]+)?$"
+   },
+   "lang": {
+    "enum": [
+     "ru",
+     "kk",
+     "en"
+    ]
+   },
+   "role": {
+    "enum": [
+     "backend",
+     "frontend",
+     "fullstack",
+     "mobile",
+     "gamedev",
+     "ml",
+     "data",
+     "data_engineer",
+     "devops",
+     "security",
+     "qa",
+     "pm",
+     "analyst",
+     "designer",
+     "lead",
+     "recruiter",
+     "founder",
+     "student"
+    ]
+   },
+   "experience": {
+    "type": "integer",
+    "minimum": 0,
+    "maximum": 40
+   },
+   "stack": {
+    "type": "array",
+    "items": {
+     "enum": [
+      "python",
+      "django",
+      "fastapi",
+      "java",
+      "spring",
+      "go",
+      "nodejs",
+      "csharp",
+      "dotnet",
+      "php",
+      "laravel",
+      "onec",
+      "javascript",
+      "typescript",
+      "react",
+      "vue",
+      "angular",
+      "nextjs",
+      "html_css",
+      "kotlin",
+      "swift",
+      "flutter",
+      "react_native",
+      "sql",
+      "postgresql",
+      "mongodb",
+      "redis",
+      "kafka",
+      "docker",
+      "kubernetes",
+      "aws",
+      "gcp",
+      "terraform",
+      "linux",
+      "ci_cd",
+      "pytorch",
+      "tensorflow",
+      "sklearn",
+      "llm",
+      "cv",
+      "nlp",
+      "pandas",
+      "spark",
+      "airflow",
+      "powerbi",
+      "tableau",
+      "excel",
+      "figma",
+      "user_research",
+      "selenium",
+      "playwright",
+      "postman",
+      "jira",
+      "product_analytics",
+      "unity",
+      "unreal",
+      "godot",
+      "cpp",
+      "rust",
+      "ruby",
+      "clickhouse",
+      "dbt",
+      "azure",
+      "ansible",
+      "grafana",
+      "siem",
+      "owasp",
+      "burp",
+      "bpmn",
+      "uml"
+     ]
+    },
+    "uniqueItems": true,
+    "minItems": 2,
+    "maxItems": 6
+   },
+   "interests": {
+    "type": "array",
+    "items": {
+     "enum": [
+      "ai",
+      "fintech",
+      "edtech",
+      "ecommerce",
+      "gamedev",
+      "govtech",
+      "healthtech",
+      "logistics",
+      "agritech",
+      "blockchain",
+      "security",
+      "cloud",
+      "data_science",
+      "opensource",
+      "iot",
+      "product",
+      "ux",
+      "startups",
+      "career",
+      "mentorship",
+      "community",
+      "remote"
+     ]
+    },
+    "uniqueItems": true,
+    "minItems": 1,
+    "maxItems": 4
+   },
+   "about": {
+    "type": "string",
+    "minLength": 30,
+    "maxLength": 400
+   },
+   "goal": {
+    "enum": [
+     "find_job",
+     "hire",
+     "find_mentor",
+     "be_mentor",
+     "find_cofounder",
+     "exchange"
+    ]
+   },
+   "seeking_roles": {
+    "type": "array",
+    "items": {
+     "enum": [
+      "backend",
+      "frontend",
+      "fullstack",
+      "mobile",
+      "gamedev",
+      "ml",
+      "data",
+      "data_engineer",
+      "devops",
+      "security",
+      "qa",
+      "pm",
+      "analyst",
+      "designer",
+      "lead",
+      "founder"
+     ]
+    },
+    "uniqueItems": true,
+    "minItems": 0
+   },
+   "hire_levels": {
+    "type": "array",
+    "items": {
+     "enum": [
+      "junior",
+      "middle",
+      "senior"
+     ]
+    },
+    "uniqueItems": true,
+    "minItems": 0
+   },
+   "hire_exp_min": {
+    "type": [
+     "integer",
+     "null"
+    ],
+    "minimum": 0
+   },
+   "hire_exp_max": {
+    "type": [
+     "integer",
+     "null"
+    ],
+    "minimum": 0
+   },
+   "company": {
+    "type": [
+     "string",
+     "null"
+    ]
+   },
+   "slots": {
+    "type": "array",
+    "items": {
+     "enum": [
+      "11:00",
+      "11:30",
+      "12:00",
+      "13:30",
+      "14:00",
+      "14:30",
+      "15:00",
+      "15:30",
+      "16:00",
+      "16:30"
+     ]
+    },
+    "uniqueItems": true,
+    "minItems": 1
+   }
+  }
+ }
+}

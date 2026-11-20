@@ -1,0 +1,11 @@
+.venv
+__pycache__
+.pytest_cache
+.git
+.env
+reports
+data/state
+.env.*
+.streamlit/secrets.toml
+meetmatch_handoff.zip
+HANDOFF.md

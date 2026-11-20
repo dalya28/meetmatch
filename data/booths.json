@@ -1,0 +1,196 @@
+[
+ {
+  "id": "b1",
+  "name": "Nomad Pay",
+  "desc": {
+   "ru": "Платёжная платформа: показывают, как устроен процессинг карт",
+   "kk": "Төлем платформасы: карталар процессингі қалай жұмыс істейтінін көрсетеді",
+   "en": "Payments platform: a look inside card processing"
+  },
+  "interests": [
+   "fintech",
+   "security",
+   "cloud"
+  ],
+  "stack": [
+   "java",
+   "kafka",
+   "kubernetes",
+   "postgresql"
+  ],
+  "hiring": [
+   "backend",
+   "devops",
+   "qa",
+   "analyst"
+  ]
+ },
+ {
+  "id": "b2",
+  "name": "Kok Tobe AI",
+  "desc": {
+   "ru": "Лаборатория ИИ: демо LLM-ассистентов на казахском языке",
+   "kk": "ЖИ зертханасы: қазақ тіліндегі LLM-ассистенттердің демосы",
+   "en": "AI lab: demos of Kazakh-language LLM assistants"
+  },
+  "interests": [
+   "ai",
+   "data_science",
+   "opensource"
+  ],
+  "stack": [
+   "python",
+   "pytorch",
+   "llm",
+   "nlp"
+  ],
+  "hiring": [
+   "ml",
+   "data",
+   "data_engineer"
+  ]
+ },
+ {
+  "id": "b3",
+  "name": "Zhetisu Games",
+  "desc": {
+   "ru": "Игровая студия: можно поиграть в прототипы",
+   "kk": "Ойын студиясы: прототиптерді ойнап көруге болады",
+   "en": "Game studio: play their prototypes"
+  },
+  "interests": [
+   "gamedev",
+   "ux"
+  ],
+  "stack": [
+   "unity",
+   "unreal",
+   "csharp",
+   "cpp",
+   "figma"
+  ],
+  "hiring": [
+   "gamedev",
+   "mobile",
+   "designer"
+  ]
+ },
+ {
+  "id": "b4",
+  "name": "Turan EdTech",
+  "desc": {
+   "ru": "Онлайн-образование: ищут менторов и авторов курсов",
+   "kk": "Онлайн білім беру: тәлімгерлер мен курс авторларын іздейді",
+   "en": "Online education: looking for mentors and course authors"
+  },
+  "interests": [
+   "edtech",
+   "mentorship",
+   "career"
+  ],
+  "stack": [
+   "typescript",
+   "react",
+   "python"
+  ],
+  "hiring": [
+   "frontend",
+   "pm"
+  ]
+ },
+ {
+  "id": "b5",
+  "name": "Aral Cloud",
+  "desc": {
+   "ru": "Облачный провайдер: бесплатные кредиты для стартапов",
+   "kk": "Бұлтты провайдер: стартаптарға тегін кредиттер",
+   "en": "Cloud provider: free credits for startups"
+  },
+  "interests": [
+   "cloud",
+   "startups",
+   "security"
+  ],
+  "stack": [
+   "kubernetes",
+   "terraform",
+   "linux",
+   "docker"
+  ],
+  "hiring": [
+   "devops",
+   "backend"
+  ]
+ },
+ {
+  "id": "b6",
+  "name": "Kaspian Commerce",
+  "desc": {
+   "ru": "Маркетплейс: рассказывают про рекомендации и A/B-тесты",
+   "kk": "Маркетплейс: ұсыныстар мен A/B тесттер туралы айтады",
+   "en": "Marketplace: talks on recommendations and A/B tests"
+  },
+  "interests": [
+   "ecommerce",
+   "product",
+   "data_science"
+  ],
+  "stack": [
+   "product_analytics",
+   "sql",
+   "react",
+   "kotlin",
+   "swift"
+  ],
+  "hiring": [
+   "data",
+   "mobile",
+   "pm"
+  ]
+ },
+ {
+  "id": "b7",
+  "name": "Astra Security",
+  "desc": {
+   "ru": "Кибербезопасность: мини-CTF прямо на стенде",
+   "kk": "Киберқауіпсіздік: стендте шағын CTF жарысы",
+   "en": "Cybersecurity: a mini CTF right at the booth"
+  },
+  "interests": [
+   "security",
+   "opensource"
+  ],
+  "stack": [
+   "linux",
+   "python",
+   "go",
+   "siem",
+   "owasp",
+   "burp"
+  ],
+  "hiring": [
+   "security",
+   "backend",
+   "qa"
+  ]
+ },
+ {
+  "id": "b8",
+  "name": "Steppe Labs",
+  "desc": {
+   "ru": "Акселератор: помогают найти кофаундера и первых инвесторов",
+   "kk": "Акселератор: кофаундер мен алғашқы инвесторларды табуға көмектеседі",
+   "en": "Accelerator: helps find co-founders and first investors"
+  },
+  "interests": [
+   "startups",
+   "product",
+   "fintech",
+   "agritech"
+  ],
+  "stack": [
+   "product_analytics"
+  ],
+  "hiring": []
+ }
+]

@@ -1,0 +1,8737 @@
+[
+ {
+  "id": "p001",
+  "name": "Erlan Nurlanov",
+  "lang": "en",
+  "role": "gamedev",
+  "experience": 5,
+  "stack": [
+   "unity",
+   "csharp",
+   "figma"
+  ],
+  "interests": [
+   "ux",
+   "iot",
+   "career"
+  ],
+  "about": "Open to new roles: Game developer, stack — Unity, C#, Figma. Most excited about UX research.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p002",
+  "name": "Нурлан Смирнов",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 10,
+  "stack": [
+   "python",
+   "django",
+   "docker",
+   "react"
+  ],
+  "interests": [
+   "startups",
+   "opensource",
+   "ai"
+  ],
+  "about": "Fullstack-разработчик с опытом 10 лет. Хочу обменяться опытом с коллегами: Python, Django, Docker, «Open source».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Steppe Labs",
+  "slots": [
+   "13:30",
+   "14:00",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p003",
+  "name": "Дамир Жумабаев",
+  "lang": "kk",
+  "role": "qa",
+  "experience": 7,
+  "stack": [
+   "selenium",
+   "python",
+   "postman"
+  ],
+  "interests": [
+   "edtech",
+   "fintech",
+   "govtech"
+  ],
+  "about": "Жұмыс іздеп жүрмін: QA-инженер, стек — Selenium, Python, Postman. Ең қызықты бағыт — «EdTech».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "13:30",
+   "14:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p004",
+  "name": "Азамат Кенжебаев",
+  "lang": "ru",
+  "role": "designer",
+  "experience": 1,
+  "stack": [
+   "figma",
+   "html_css"
+  ],
+  "interests": [
+   "product"
+  ],
+  "about": "UX/UI-дизайнер с опытом 1 год, последние проекты на Figma, HTML/CSS. Рассматриваю предложения, интересна тема «Продуктовый подход».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p005",
+  "name": "Назерке Попова",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 4,
+  "stack": [
+   "java",
+   "spring",
+   "kafka",
+   "csharp",
+   "dotnet",
+   "docker"
+  ],
+  "interests": [
+   "ecommerce",
+   "community",
+   "career"
+  ],
+  "about": "IT-рекрутер в Kaspian Commerce. Нанимаем: Тимлид / CTO, Backend-разработчик (junior). Стек команды — Java, Spring, Kafka.",
+  "goal": "hire",
+  "seeking_roles": [
+   "lead",
+   "backend"
+  ],
+  "hire_levels": [
+   "junior"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 2,
+  "company": "Kaspian Commerce",
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p006",
+  "name": "Меруерт Сейткали",
+  "lang": "kk",
+  "role": "designer",
+  "experience": 7,
+  "stack": [
+   "figma",
+   "user_research",
+   "html_css"
+  ],
+  "interests": [
+   "ux",
+   "startups"
+  ],
+  "about": "Стартап ашқым келеді, «UX зерттеулер» тақырыбы жақын. Мен — UX/UI дизайнер, серіктес керек: Backend-әзірлеуші, Фаундер.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "backend",
+   "founder"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p007",
+  "name": "Екатерина Туребаева",
+  "lang": "ru",
+  "role": "frontend",
+  "experience": 15,
+  "stack": [
+   "typescript",
+   "react",
+   "javascript"
+  ],
+  "interests": [
+   "fintech",
+   "opensource",
+   "ux"
+  ],
+  "about": "Frontend-разработчик в Nomad Pay, с опытом 15 лет. Хочу делиться опытом: TypeScript, React, JavaScript, тема «Финтех».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Nomad Pay",
+  "slots": [
+   "11:30",
+   "12:00",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p008",
+  "name": "Камила Абенова",
+  "lang": "kk",
+  "role": "analyst",
+  "experience": 3,
+  "stack": [
+   "uml",
+   "jira",
+   "postman",
+   "sql"
+  ],
+  "interests": [
+   "iot",
+   "govtech",
+   "edtech"
+  ],
+  "about": "Бизнес-талдаушы, 3 жыл тәжірибесі бар. Әріптестермен тәжірибе алмасқым келеді: UML, Jira, Postman, «IoT және құрылғылар».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Saryarka Systems",
+  "slots": [
+   "11:00",
+   "11:30",
+   "13:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p009",
+  "name": "Жандос Жумабаев",
+  "lang": "ru",
+  "role": "frontend",
+  "experience": 10,
+  "stack": [
+   "javascript",
+   "vue",
+   "typescript"
+  ],
+  "interests": [
+   "security",
+   "edtech",
+   "product",
+   "ecommerce"
+  ],
+  "about": "Frontend-разработчик в Astra Security, с опытом 10 лет. Хочу делиться опытом: JavaScript, Vue, TypeScript, тема «Кибербезопасность».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Astra Security",
+  "slots": [
+   "11:00",
+   "13:30",
+   "14:00",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p010",
+  "name": "Ержан Мусин",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 0,
+  "stack": [
+   "typescript",
+   "react",
+   "docker"
+  ],
+  "interests": [
+   "opensource",
+   "career"
+  ],
+  "about": "Fullstack-разработчик без коммерческого опыта. Изучаю TypeScript, React, Docker. Ищу ментора, интересна тема «Open source».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p011",
+  "name": "Дмитрий Иванов",
+  "lang": "ru",
+  "role": "qa",
+  "experience": 0,
+  "stack": [
+   "selenium",
+   "java"
+  ],
+  "interests": [
+   "fintech",
+   "ecommerce",
+   "mentorship"
+  ],
+  "about": "Хочу расти быстрее: QA-инженер, стек — Selenium, Java. Нужен опытный ментор, интересна тема «Финтех».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "13:30",
+   "14:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p012",
+  "name": "Мирас Жумабаев",
+  "lang": "ru",
+  "role": "mobile",
+  "experience": 2,
+  "stack": [
+   "kotlin",
+   "ci_cd",
+   "figma"
+  ],
+  "interests": [
+   "gamedev",
+   "product",
+   "logistics"
+  ],
+  "about": "Мобильный разработчик с опытом 2 года. Изучаю Kotlin, CI/CD, Figma. Ищу ментора, который поможет вырасти в направлении «Геймдев».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:00",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p013",
+  "name": "Виктория Тлеубаева",
+  "lang": "ru",
+  "role": "frontend",
+  "experience": 2,
+  "stack": [
+   "typescript",
+   "angular",
+   "html_css"
+  ],
+  "interests": [
+   "ecommerce",
+   "product",
+   "career"
+  ],
+  "about": "Frontend-разработчик с опытом 2 года. Работаю с TypeScript, Angular, HTML/CSS. Ищу команду, где можно расти, интересна тема «E-commerce».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:30"
+  ]
+ },
+ {
+  "id": "p014",
+  "name": "Артём Бекетов",
+  "lang": "ru",
+  "role": "devops",
+  "experience": 2,
+  "stack": [
+   "linux",
+   "ansible",
+   "docker",
+   "python"
+  ],
+  "interests": [
+   "security",
+   "cloud"
+  ],
+  "about": "Ищу работу: DevOps-инженер, стек — Linux, Ansible, Docker. Больше всего интересно направление «Кибербезопасность».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "14:30",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p015",
+  "name": "Алихан Касымов",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 5,
+  "stack": [
+   "python",
+   "spark",
+   "kafka",
+   "postgresql",
+   "typescript",
+   "react"
+  ],
+  "interests": [
+   "remote",
+   "blockchain"
+  ],
+  "about": "Собираю команду в Ulytau Mobile. Ищем: Data-инженер, Fullstack-разработчик, Продакт-менеджер; уровень — middle. Работаем с Python, Spark, Kafka, направление — «Блокчейн».",
+  "goal": "hire",
+  "seeking_roles": [
+   "data_engineer",
+   "fullstack",
+   "pm"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Ulytau Mobile",
+  "slots": [
+   "13:30",
+   "14:00",
+   "14:30",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p016",
+  "name": "Олжас Есенов",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 4,
+  "stack": [
+   "python",
+   "django",
+   "react",
+   "postgresql",
+   "docker"
+  ],
+  "interests": [
+   "healthtech",
+   "career",
+   "remote"
+  ],
+  "about": "Собираю команду в Samal Health. Ищем: Fullstack-разработчик; уровень — middle, senior. Работаем с Python, Django, React, направление — «Медтех».",
+  "goal": "hire",
+  "seeking_roles": [
+   "fullstack"
+  ],
+  "hire_levels": [
+   "middle",
+   "senior"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 15,
+  "company": "Samal Health",
+  "slots": [
+   "11:00",
+   "12:00",
+   "14:00",
+   "14:30"
+  ]
+ },
+ {
+  "id": "p017",
+  "name": "Erzhan Turebaev",
+  "lang": "en",
+  "role": "lead",
+  "experience": 13,
+  "stack": [
+   "sql",
+   "python",
+   "pandas"
+  ],
+  "interests": [
+   "logistics",
+   "opensource",
+   "ecommerce"
+  ],
+  "about": "Building the team at Irbis Logistics: looking for Data analyst, junior level. We use SQL, Python, pandas; focus — Logistics.",
+  "goal": "hire",
+  "seeking_roles": [
+   "data"
+  ],
+  "hire_levels": [
+   "junior"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 2,
+  "company": "Irbis Logistics",
+  "slots": [
+   "11:30",
+   "14:00",
+   "14:30",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p018",
+  "name": "Артём Ким",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 4,
+  "stack": [
+   "typescript",
+   "react",
+   "nodejs",
+   "postgresql"
+  ],
+  "interests": [
+   "cloud",
+   "ecommerce"
+  ],
+  "about": "Ищу работу: Fullstack-разработчик, стек — TypeScript, React, Node.js. Больше всего интересно направление «E-commerce».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "13:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p019",
+  "name": "Айбек Тлеубаев",
+  "lang": "ru",
+  "role": "pm",
+  "experience": 4,
+  "stack": [
+   "jira",
+   "product_analytics",
+   "figma",
+   "sql"
+  ],
+  "interests": [
+   "ux",
+   "remote"
+  ],
+  "about": "Продакт-менеджер с опытом 4 года. Работаю с Jira, Product Analytics, Figma. Ищу команду, где можно расти, интересна тема «UX-исследования».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:00",
+   "14:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p020",
+  "name": "Dariya Smirnova",
+  "lang": "en",
+  "role": "ml",
+  "experience": 12,
+  "stack": [
+   "python",
+   "tensorflow",
+   "cv"
+  ],
+  "interests": [
+   "opensource",
+   "ai",
+   "startups"
+  ],
+  "about": "ML engineer with 12 years of experience. I have an idea in AI and I'm looking for a co-founder: UX/UI designer, Founder.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "designer",
+   "founder"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "14:00",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p021",
+  "name": "Дамир Ким",
+  "lang": "ru",
+  "role": "founder",
+  "experience": 12,
+  "stack": [
+   "flutter",
+   "figma",
+   "ci_cd"
+  ],
+  "interests": [
+   "fintech"
+  ],
+  "about": "Собираю команду в Tulpar Tech. Ищем: Мобильный разработчик; уровень — junior, middle. Работаем с Flutter, Figma, CI/CD, направление — «Финтех».",
+  "goal": "hire",
+  "seeking_roles": [
+   "mobile"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Tulpar Tech",
+  "slots": [
+   "11:30",
+   "12:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p022",
+  "name": "Гульнара Абенова",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 11,
+  "stack": [
+   "typescript",
+   "react",
+   "docker"
+  ],
+  "interests": [
+   "data_science",
+   "cloud",
+   "opensource",
+   "agritech"
+  ],
+  "about": "Fullstack-разработчик с опытом 11 лет, сейчас в Baiterek Data. Могу менторить по TypeScript, React, Docker и помочь с карьерой в IT.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Baiterek Data",
+  "slots": [
+   "12:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p023",
+  "name": "Мадина Байжанова",
+  "lang": "kk",
+  "role": "lead",
+  "experience": 8,
+  "stack": [
+   "react",
+   "typescript",
+   "html_css",
+   "figma"
+  ],
+  "interests": [
+   "product",
+   "cloud",
+   "ai"
+  ],
+  "about": "Ulytau Mobile командасын жинап жатырмын: Frontend-әзірлеуші, деңгейі — junior. React, TypeScript, HTML/CSS қолданамыз, бағыт — «Жасанды интеллект».",
+  "goal": "hire",
+  "seeking_roles": [
+   "frontend"
+  ],
+  "hire_levels": [
+   "junior"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 2,
+  "company": "Ulytau Mobile",
+  "slots": [
+   "11:00",
+   "14:00",
+   "14:30",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p024",
+  "name": "Санжар Омаров",
+  "lang": "ru",
+  "role": "pm",
+  "experience": 11,
+  "stack": [
+   "jira",
+   "product_analytics",
+   "user_research"
+  ],
+  "interests": [
+   "ecommerce",
+   "ux",
+   "healthtech",
+   "opensource"
+  ],
+  "about": "Продакт-менеджер с опытом 11 лет. Хочу обменяться опытом с коллегами: Jira, Product Analytics, User Research, «E-commerce».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "QazCode Studio",
+  "slots": [
+   "13:30",
+   "14:00",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p025",
+  "name": "Асель Касымова",
+  "lang": "kk",
+  "role": "mobile",
+  "experience": 7,
+  "stack": [
+   "react_native",
+   "typescript",
+   "javascript"
+  ],
+  "interests": [
+   "agritech",
+   "product",
+   "ux",
+   "gamedev"
+  ],
+  "about": "Dala Agro Tech компаниясында Мобильді әзірлеуші, 7 жыл тәжірибесі бар. React Native, TypeScript, JavaScript және «Агротех» тақырыбын талқылағанды ұнатамын.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Dala Agro Tech",
+  "slots": [
+   "11:30",
+   "14:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p026",
+  "name": "Anna Ivanova",
+  "lang": "en",
+  "role": "recruiter",
+  "experience": 4,
+  "stack": [
+   "ruby",
+   "postgresql",
+   "redis",
+   "jira",
+   "figma",
+   "user_research"
+  ],
+  "interests": [
+   "healthtech",
+   "remote",
+   "community"
+  ],
+  "about": "IT recruiter at Samal Health. We're hiring: Team lead / CTO, UX/UI designer (junior, middle). Team stack — Ruby, PostgreSQL, Redis.",
+  "goal": "hire",
+  "seeking_roles": [
+   "lead",
+   "designer"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Samal Health",
+  "slots": [
+   "14:00",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p027",
+  "name": "Никита Исаев",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 14,
+  "stack": [
+   "python",
+   "spark",
+   "kafka",
+   "docker",
+   "postgresql"
+  ],
+  "interests": [
+   "logistics",
+   "cloud",
+   "govtech"
+  ],
+  "about": "Тимлид / CTO в Irbis Logistics. Нанимаем: Data-инженер (junior, middle). Стек команды — Python, Spark, Kafka.",
+  "goal": "hire",
+  "seeking_roles": [
+   "data_engineer"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Irbis Logistics",
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:30"
+  ]
+ },
+ {
+  "id": "p028",
+  "name": "Ильяс Тлеубаев",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 9,
+  "stack": [
+   "python",
+   "pytorch",
+   "docker"
+  ],
+  "interests": [
+   "gamedev",
+   "product"
+  ],
+  "about": "Собираю команду в Zhetisu Games. Ищем: ML-инженер; уровень — junior, middle. Работаем с Python, PyTorch, Docker, направление — «Геймдев».",
+  "goal": "hire",
+  "seeking_roles": [
+   "ml"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Zhetisu Games",
+  "slots": [
+   "11:00",
+   "11:30",
+   "14:30",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p029",
+  "name": "Меруерт Бекетова",
+  "lang": "ru",
+  "role": "founder",
+  "experience": 10,
+  "stack": [
+   "csharp",
+   "dotnet",
+   "docker",
+   "sql"
+  ],
+  "interests": [
+   "iot",
+   "fintech",
+   "agritech"
+  ],
+  "about": "Собираю команду в Saryarka Systems. Ищем: Backend-разработчик; уровень — middle, senior. Работаем с C#, .NET, Docker, направление — «IoT и железо».",
+  "goal": "hire",
+  "seeking_roles": [
+   "backend"
+  ],
+  "hire_levels": [
+   "middle",
+   "senior"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 15,
+  "company": "Saryarka Systems",
+  "slots": [
+   "15:00",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p030",
+  "name": "Меруерт Кенжебаева",
+  "lang": "ru",
+  "role": "gamedev",
+  "experience": 12,
+  "stack": [
+   "godot",
+   "csharp"
+  ],
+  "interests": [
+   "edtech",
+   "ux",
+   "community"
+  ],
+  "about": "Разработчик игр с опытом 12 лет. Хочу обменяться опытом с коллегами: Godot, C#, «EdTech».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "11:00",
+   "15:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p031",
+  "name": "Gulnara Ivanova",
+  "lang": "en",
+  "role": "frontend",
+  "experience": 5,
+  "stack": [
+   "react",
+   "typescript",
+   "figma"
+  ],
+  "interests": [
+   "ecommerce",
+   "edtech",
+   "ux",
+   "agritech"
+  ],
+  "about": "Frontend developer at Shanyraq Apps, with 5 years of experience. Love talking about React, TypeScript, Figma and E-commerce.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Shanyraq Apps",
+  "slots": [
+   "13:30",
+   "14:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p032",
+  "name": "Arman Pak",
+  "lang": "en",
+  "role": "pm",
+  "experience": 9,
+  "stack": [
+   "jira",
+   "excel",
+   "product_analytics"
+  ],
+  "interests": [
+   "ecommerce",
+   "fintech",
+   "ux",
+   "opensource"
+  ],
+  "about": "Product manager with 9 years of experience. Here to swap experience with peers: Jira, Excel, Product Analytics, E-commerce.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Kaspian Commerce",
+  "slots": [
+   "15:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p033",
+  "name": "Mariya Bayzhanova",
+  "lang": "en",
+  "role": "backend",
+  "experience": 4,
+  "stack": [
+   "java",
+   "spring",
+   "postgresql"
+  ],
+  "interests": [
+   "edtech",
+   "cloud",
+   "fintech"
+  ],
+  "about": "Backend developer with 4 years of experience. Here to swap experience with peers: Java, Spring, PostgreSQL, EdTech.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p034",
+  "name": "Ekaterina Esenova",
+  "lang": "en",
+  "role": "ml",
+  "experience": 5,
+  "stack": [
+   "python",
+   "tensorflow",
+   "cv"
+  ],
+  "interests": [
+   "healthtech"
+  ],
+  "about": "Open to new roles: ML engineer, stack — Python, TensorFlow, Computer Vision. Most excited about HealthTech.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p035",
+  "name": "Nikita Pak",
+  "lang": "en",
+  "role": "student",
+  "experience": 0,
+  "stack": [
+   "go",
+   "postgresql"
+  ],
+  "interests": [
+   "gamedev",
+   "ai",
+   "mentorship"
+  ],
+  "about": "Student with no commercial experience. Learning Go, PostgreSQL. Looking for a mentor to help me grow in Game dev.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "12:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p036",
+  "name": "Санжар Байжанов",
+  "lang": "ru",
+  "role": "data",
+  "experience": 7,
+  "stack": [
+   "sql",
+   "tableau",
+   "product_analytics"
+  ],
+  "interests": [
+   "govtech",
+   "fintech",
+   "product",
+   "community"
+  ],
+  "about": "Аналитик данных с опытом 7 лет. Хочу обменяться опытом с коллегами: SQL, Tableau, Product Analytics, «GovTech».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Medeu Digital",
+  "slots": [
+   "11:30",
+   "14:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p037",
+  "name": "Виктория Пак",
+  "lang": "kk",
+  "role": "recruiter",
+  "experience": 7,
+  "stack": [
+   "figma",
+   "user_research",
+   "html_css",
+   "typescript",
+   "react",
+   "nodejs"
+  ],
+  "interests": [
+   "ecommerce",
+   "career",
+   "community",
+   "fintech"
+  ],
+  "about": "Kaspian Commerce компаниясында IT-рекрутер. Маман іздейміз: UX/UI дизайнер, Fullstack-әзірлеуші, Деректер инженері (middle). Команда стегі — Figma, User Research, HTML/CSS.",
+  "goal": "hire",
+  "seeking_roles": [
+   "designer",
+   "fullstack",
+   "data_engineer"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Kaspian Commerce",
+  "slots": [
+   "11:00",
+   "12:00",
+   "14:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p038",
+  "name": "Aliya Bayzhanova",
+  "lang": "en",
+  "role": "fullstack",
+  "experience": 3,
+  "stack": [
+   "python",
+   "django",
+   "react"
+  ],
+  "interests": [
+   "startups",
+   "opensource",
+   "gamedev"
+  ],
+  "about": "Fullstack developer with 3 years of experience. I have an idea in Game dev and I'm looking for a co-founder: Product manager.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "pm"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "14:00",
+   "14:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p039",
+  "name": "Жандос Попов",
+  "lang": "kk",
+  "role": "lead",
+  "experience": 10,
+  "stack": [
+   "python",
+   "pytorch",
+   "llm"
+  ],
+  "interests": [
+   "fintech",
+   "cloud"
+  ],
+  "about": "Orda Fintech командасын жинап жатырмын: ML-инженер, деңгейі — junior, middle. Python, PyTorch, LLM қолданамыз, бағыт — «Финтех».",
+  "goal": "hire",
+  "seeking_roles": [
+   "ml"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Orda Fintech",
+  "slots": [
+   "11:00",
+   "13:30",
+   "14:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p040",
+  "name": "Viktoriya Isaeva",
+  "lang": "en",
+  "role": "pm",
+  "experience": 6,
+  "stack": [
+   "jira",
+   "product_analytics",
+   "figma"
+  ],
+  "interests": [
+   "ux",
+   "fintech",
+   "ai",
+   "startups"
+  ],
+  "about": "Product manager with 6 years of experience. I have an idea in Fintech and I'm looking for a co-founder: Mobile developer, Frontend developer.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "mobile",
+   "frontend"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "14:30",
+   "15:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p041",
+  "name": "Виктория Бекетова",
+  "lang": "ru",
+  "role": "student",
+  "experience": 0,
+  "stack": [
+   "react",
+   "typescript"
+  ],
+  "interests": [
+   "career",
+   "ai",
+   "healthtech"
+  ],
+  "about": "Студент без коммерческого опыта, учебные проекты на React, TypeScript. Рассматриваю предложения, особенно в сфере «Искусственный интеллект».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p042",
+  "name": "Gulnara Kenzhebaeva",
+  "lang": "en",
+  "role": "data_engineer",
+  "experience": 2,
+  "stack": [
+   "python",
+   "airflow",
+   "kafka"
+  ],
+  "interests": [
+   "opensource",
+   "ecommerce",
+   "career"
+  ],
+  "about": "Data engineer with 2 years of experience. I work with Python, Airflow, Kafka. Looking for a team where I can grow; interested in Open source.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "14:00",
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p043",
+  "name": "Ксения Касымова",
+  "lang": "kk",
+  "role": "student",
+  "experience": 0,
+  "stack": [
+   "sql",
+   "powerbi"
+  ],
+  "interests": [
+   "gamedev"
+  ],
+  "about": "Студент, коммерциялық тәжірибесі жоқ. SQL, Power BI үйреніп жүрмін. «Геймдев» бағытында өсуге көмектесетін тәлімгер іздеймін.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:00",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p044",
+  "name": "Мирас Сейткали",
+  "lang": "ru",
+  "role": "analyst",
+  "experience": 10,
+  "stack": [
+   "sql",
+   "bpmn",
+   "uml",
+   "jira"
+  ],
+  "interests": [
+   "govtech",
+   "edtech"
+  ],
+  "about": "Хочу запустить стартап в направлении «GovTech». Я — Бизнес-аналитик, нужен партнёр: Fullstack-разработчик.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "fullstack"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "12:00",
+   "13:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p045",
+  "name": "Ксения Цой",
+  "lang": "ru",
+  "role": "ml",
+  "experience": 2,
+  "stack": [
+   "python",
+   "pytorch",
+   "nlp",
+   "llm"
+  ],
+  "interests": [
+   "data_science",
+   "healthtech",
+   "career"
+  ],
+  "about": "Хочу расти быстрее: ML-инженер, стек — Python, PyTorch, NLP. Нужен опытный ментор, интересна тема «Data Science».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "12:00",
+   "13:30",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p046",
+  "name": "Анна Кенжебаева",
+  "lang": "ru",
+  "role": "analyst",
+  "experience": 1,
+  "stack": [
+   "sql",
+   "bpmn",
+   "jira"
+  ],
+  "interests": [
+   "govtech",
+   "healthtech",
+   "remote"
+  ],
+  "about": "Бизнес-аналитик с опытом 1 год. Работаю с SQL, BPMN, Jira. Ищу команду, где можно расти, интересна тема «GovTech».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "14:00",
+   "15:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p047",
+  "name": "Екатерина Ахметова",
+  "lang": "ru",
+  "role": "backend",
+  "experience": 6,
+  "stack": [
+   "python",
+   "django",
+   "postgresql",
+   "redis",
+   "docker"
+  ],
+  "interests": [
+   "opensource",
+   "fintech",
+   "logistics",
+   "remote"
+  ],
+  "about": "Ищу работу: Backend-разработчик, стек — Python, Django, PostgreSQL. Больше всего интересно направление «Финтех».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:00",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p048",
+  "name": "Ксения Смирнова",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 6,
+  "stack": [
+   "typescript",
+   "react",
+   "postgresql",
+   "nodejs",
+   "docker"
+  ],
+  "interests": [
+   "fintech",
+   "ecommerce",
+   "community"
+  ],
+  "about": "Fullstack-разработчик с опытом 6 лет, сейчас в Orda Fintech. Могу менторить по TypeScript, React, PostgreSQL и помочь с карьерой в IT.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Orda Fintech",
+  "slots": [
+   "11:00",
+   "11:30",
+   "13:30",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p049",
+  "name": "Арман Пак",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 6,
+  "stack": [
+   "python",
+   "django",
+   "kubernetes",
+   "jira"
+  ],
+  "interests": [
+   "cloud",
+   "ecommerce"
+  ],
+  "about": "Тимлид / CTO с опытом 6 лет, последние проекты на Python, Django, Kubernetes. Рассматриваю предложения, особенно в сфере «E-commerce».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "12:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p050",
+  "name": "Дамир Тлеубаев",
+  "lang": "ru",
+  "role": "data",
+  "experience": 2,
+  "stack": [
+   "sql",
+   "python",
+   "pandas"
+  ],
+  "interests": [
+   "ai",
+   "logistics",
+   "career"
+  ],
+  "about": "Хочу расти быстрее: Аналитик данных, стек — SQL, Python, pandas. Нужен опытный ментор, интересна тема «Искусственный интеллект».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "12:00",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p051",
+  "name": "Dinara Smirnova",
+  "lang": "en",
+  "role": "devops",
+  "experience": 6,
+  "stack": [
+   "docker",
+   "kubernetes",
+   "linux"
+  ],
+  "interests": [
+   "edtech",
+   "opensource",
+   "healthtech"
+  ],
+  "about": "DevOps engineer with 6 years of experience. Here to swap experience with peers: Docker, Kubernetes, Linux, EdTech.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:00",
+   "14:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p052",
+  "name": "Алексей Туребаев",
+  "lang": "ru",
+  "role": "analyst",
+  "experience": 2,
+  "stack": [
+   "sql",
+   "excel",
+   "jira",
+   "bpmn"
+  ],
+  "interests": [
+   "fintech",
+   "ecommerce",
+   "remote"
+  ],
+  "about": "Бизнес-аналитик с опытом 2 года, последние проекты на SQL, Excel, Jira. Рассматриваю предложения, особенно в сфере «Финтех».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "14:00"
+  ]
+ },
+ {
+  "id": "p053",
+  "name": "Асель Мусина",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 5,
+  "stack": [
+   "jira",
+   "excel",
+   "product_analytics",
+   "uml",
+   "sql",
+   "postman"
+  ],
+  "interests": [
+   "ecommerce",
+   "community",
+   "edtech"
+  ],
+  "about": "IT-рекрутер в Shanyraq Apps. Нанимаем: Продакт-менеджер, Бизнес-аналитик (middle, senior). Стек команды — Jira, Excel, Product Analytics.",
+  "goal": "hire",
+  "seeking_roles": [
+   "pm",
+   "analyst"
+  ],
+  "hire_levels": [
+   "middle",
+   "senior"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 15,
+  "company": "Shanyraq Apps",
+  "slots": [
+   "11:30",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p054",
+  "name": "Kamila Abenova",
+  "lang": "en",
+  "role": "founder",
+  "experience": 11,
+  "stack": [
+   "go",
+   "postgresql",
+   "kafka",
+   "redis"
+  ],
+  "interests": [
+   "ecommerce",
+   "agritech",
+   "fintech",
+   "edtech"
+  ],
+  "about": "Building the team at Kaspian Commerce: looking for Backend developer, middle level. We use Go, PostgreSQL, Kafka; focus — E-commerce.",
+  "goal": "hire",
+  "seeking_roles": [
+   "backend"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Kaspian Commerce",
+  "slots": [
+   "11:00",
+   "12:00",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p055",
+  "name": "Полина Мусина",
+  "lang": "ru",
+  "role": "devops",
+  "experience": 1,
+  "stack": [
+   "docker",
+   "kubernetes"
+  ],
+  "interests": [
+   "opensource",
+   "cloud",
+   "ecommerce"
+  ],
+  "about": "DevOps-инженер с опытом 1 год. Изучаю Docker, Kubernetes. Ищу ментора, который поможет вырасти в направлении «E-commerce».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "14:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p056",
+  "name": "Камила Нурланова",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 13,
+  "stack": [
+   "python",
+   "django",
+   "kubernetes"
+  ],
+  "interests": [
+   "cloud",
+   "ecommerce",
+   "community"
+  ],
+  "about": "Тимлид / CTO в Aral Cloud, с опытом 13 лет. Хочу делиться опытом: Python, Django, Kubernetes, тема «Облачные технологии».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Aral Cloud",
+  "slots": [
+   "14:30",
+   "15:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p057",
+  "name": "Арман Исаев",
+  "lang": "kk",
+  "role": "pm",
+  "experience": 10,
+  "stack": [
+   "jira",
+   "product_analytics",
+   "user_research"
+  ],
+  "interests": [
+   "agritech",
+   "ux",
+   "fintech",
+   "mentorship"
+  ],
+  "about": "Өнім менеджері, 10 жыл тәжірибесі бар, қазір Dala Agro Tech компаниясында. Jira, Product Analytics, User Research бойынша тәлімгер бола аламын, IT-дағы мансапқа көмектесемін.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Dala Agro Tech",
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p058",
+  "name": "Азамат Исаев",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 11,
+  "stack": [
+   "python",
+   "django",
+   "postgresql",
+   "jira",
+   "kubernetes"
+  ],
+  "interests": [
+   "logistics",
+   "opensource",
+   "edtech"
+  ],
+  "about": "Тимлид / CTO с опытом 11 лет, сейчас в Irbis Logistics. Могу менторить по Python, Django, PostgreSQL и помочь с карьерой в IT.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Irbis Logistics",
+  "slots": [
+   "11:00",
+   "11:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p059",
+  "name": "Айгерим Жумабаева",
+  "lang": "kk",
+  "role": "recruiter",
+  "experience": 7,
+  "stack": [
+   "burp",
+   "owasp",
+   "python",
+   "linux",
+   "kotlin",
+   "ci_cd"
+  ],
+  "interests": [
+   "security",
+   "community",
+   "blockchain"
+  ],
+  "about": "Astra Security командасын жинап жатырмын: Киберқауіпсіздік маманы, Мобильді әзірлеуші, деңгейі — middle. Burp Suite, OWASP, Python қолданамыз, бағыт — «Киберқауіпсіздік».",
+  "goal": "hire",
+  "seeking_roles": [
+   "security",
+   "mobile"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Astra Security",
+  "slots": [
+   "12:00",
+   "14:00",
+   "14:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p060",
+  "name": "Дмитрий Ахметов",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 1,
+  "stack": [
+   "python",
+   "django",
+   "react"
+  ],
+  "interests": [
+   "startups"
+  ],
+  "about": "Fullstack-разработчик с опытом 1 год. Работаю с Python, Django, React. Ищу команду, где можно расти, интересна тема «Стартапы».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "15:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p061",
+  "name": "Дмитрий Есенов",
+  "lang": "ru",
+  "role": "security",
+  "experience": 10,
+  "stack": [
+   "burp",
+   "owasp",
+   "linux",
+   "python"
+  ],
+  "interests": [
+   "cloud",
+   "security",
+   "fintech",
+   "gamedev"
+  ],
+  "about": "Специалист по кибербезопасности в Aral Cloud, с опытом 10 лет. Хочу делиться опытом: Burp Suite, OWASP, Linux, тема «Облачные технологии».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Aral Cloud",
+  "slots": [
+   "11:00",
+   "12:00",
+   "13:30",
+   "14:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p062",
+  "name": "Дана Иванова",
+  "lang": "kk",
+  "role": "gamedev",
+  "experience": 4,
+  "stack": [
+   "godot",
+   "csharp"
+  ],
+  "interests": [
+   "startups",
+   "ux",
+   "healthtech"
+  ],
+  "about": "«Медтех» бағытында стартап ашқым келеді. Мен — Ойын әзірлеушісі, серіктес керек: Фаундер, UX/UI дизайнер.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "founder",
+   "designer"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p063",
+  "name": "Мирас Тлеубаев",
+  "lang": "kk",
+  "role": "data_engineer",
+  "experience": 7,
+  "stack": [
+   "python",
+   "airflow",
+   "kafka",
+   "sql"
+  ],
+  "interests": [
+   "gamedev",
+   "fintech",
+   "ecommerce",
+   "community"
+  ],
+  "about": "Деректер инженері, 7 жыл тәжірибесі бар. Әріптестермен тәжірибе алмасқым келеді: Python, Airflow, Kafka, «Геймдев».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Zhetisu Games",
+  "slots": [
+   "13:30",
+   "14:00",
+   "14:30",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p064",
+  "name": "Sabina Esenova",
+  "lang": "en",
+  "role": "founder",
+  "experience": 7,
+  "stack": [
+   "product_analytics",
+   "figma"
+  ],
+  "interests": [
+   "fintech",
+   "product"
+  ],
+  "about": "Founder with 7 years of experience, currently at Orda Fintech. Happy to mentor on Product Analytics, Figma and IT careers.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Orda Fintech",
+  "slots": [
+   "14:00",
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p065",
+  "name": "Ксения Тлеубаева",
+  "lang": "ru",
+  "role": "ml",
+  "experience": 5,
+  "stack": [
+   "python",
+   "sklearn",
+   "sql"
+  ],
+  "interests": [
+   "startups",
+   "healthtech",
+   "agritech"
+  ],
+  "about": "ML-инженер с опытом 5 лет. Хочу обменяться опытом с коллегами: Python, scikit-learn, SQL, «Медтех».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Steppe Labs",
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p066",
+  "name": "Сабина Туребаева",
+  "lang": "ru",
+  "role": "qa",
+  "experience": 10,
+  "stack": [
+   "postman",
+   "sql",
+   "jira"
+  ],
+  "interests": [
+   "logistics",
+   "fintech",
+   "security",
+   "govtech"
+  ],
+  "about": "QA-инженер с опытом 10 лет. Хочу обменяться опытом с коллегами: Postman, SQL, Jira, «Логистика».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Irbis Logistics",
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p067",
+  "name": "Нурлан Кенжебаев",
+  "lang": "ru",
+  "role": "founder",
+  "experience": 4,
+  "stack": [
+   "excel",
+   "jira",
+   "sql"
+  ],
+  "interests": [
+   "healthtech",
+   "product",
+   "startups"
+  ],
+  "about": "Фаундер с опытом 4 года. Есть идея в сфере «Медтех», ищу кофаундера: Frontend-разработчик.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "frontend"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "14:00",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p068",
+  "name": "Алихан Ахметов",
+  "lang": "ru",
+  "role": "qa",
+  "experience": 5,
+  "stack": [
+   "playwright",
+   "typescript",
+   "javascript",
+   "ci_cd"
+  ],
+  "interests": [
+   "security",
+   "opensource",
+   "ecommerce",
+   "remote"
+  ],
+  "about": "QA-инженер с опытом 5 лет, последние проекты на Playwright, TypeScript, JavaScript. Рассматриваю предложения, особенно в сфере «Кибербезопасность».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "12:00",
+   "14:00",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p069",
+  "name": "Dmitriy Saparov",
+  "lang": "en",
+  "role": "founder",
+  "experience": 7,
+  "stack": [
+   "product_analytics",
+   "figma"
+  ],
+  "interests": [
+   "logistics",
+   "fintech"
+  ],
+  "about": "Founder with 7 years of experience, currently at Irbis Logistics. Happy to mentor on Product Analytics, Figma and IT careers.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Irbis Logistics",
+  "slots": [
+   "11:00",
+   "12:00",
+   "13:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p070",
+  "name": "Анна Смирнова",
+  "lang": "ru",
+  "role": "designer",
+  "experience": 4,
+  "stack": [
+   "figma",
+   "user_research",
+   "product_analytics"
+  ],
+  "interests": [
+   "gamedev",
+   "iot"
+  ],
+  "about": "UX/UI-дизайнер с опытом 4 года. Есть идея в сфере «Геймдев», ищу кофаундера: Фаундер, Frontend-разработчик.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "founder",
+   "frontend"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:00"
+  ]
+ },
+ {
+  "id": "p071",
+  "name": "Олжас Иванов",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 11,
+  "stack": [
+   "ruby",
+   "postgresql",
+   "redis"
+  ],
+  "interests": [
+   "fintech",
+   "startups",
+   "edtech",
+   "community"
+  ],
+  "about": "Тимлид / CTO с опытом 11 лет, сейчас в Nomad Pay. Могу менторить по Ruby, PostgreSQL, Redis и помочь с карьерой в IT.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Nomad Pay",
+  "slots": [
+   "11:00",
+   "11:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p072",
+  "name": "Askhat Musin",
+  "lang": "en",
+  "role": "founder",
+  "experience": 6,
+  "stack": [
+   "javascript",
+   "vue",
+   "html_css",
+   "typescript",
+   "csharp",
+   "dotnet"
+  ],
+  "interests": [
+   "data_science",
+   "agritech",
+   "startups",
+   "edtech"
+  ],
+  "about": "Founder at Baiterek Data. We're hiring: Frontend developer, Backend developer (junior). Team stack — JavaScript, Vue, HTML/CSS.",
+  "goal": "hire",
+  "seeking_roles": [
+   "frontend",
+   "backend"
+  ],
+  "hire_levels": [
+   "junior"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 2,
+  "company": "Baiterek Data",
+  "slots": [
+   "11:30",
+   "15:00",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p073",
+  "name": "Artyom Kenzhebaev",
+  "lang": "en",
+  "role": "data_engineer",
+  "experience": 6,
+  "stack": [
+   "python",
+   "airflow",
+   "spark"
+  ],
+  "interests": [
+   "data_science",
+   "cloud",
+   "fintech",
+   "career"
+  ],
+  "about": "Data engineer with 6 years of experience. I work with Python, Airflow, Spark. Looking for a team where I can grow; interested in Data Science.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "14:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p074",
+  "name": "Темирлан Тлеубаев",
+  "lang": "ru",
+  "role": "gamedev",
+  "experience": 1,
+  "stack": [
+   "unity",
+   "csharp"
+  ],
+  "interests": [
+   "gamedev",
+   "fintech"
+  ],
+  "about": "Хочу расти быстрее: Разработчик игр, стек — Unity, C#. Нужен опытный ментор, интересна тема «Геймдев».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p075",
+  "name": "Арман Мусин",
+  "lang": "kk",
+  "role": "pm",
+  "experience": 11,
+  "stack": [
+   "jira",
+   "product_analytics",
+   "user_research"
+  ],
+  "interests": [
+   "startups",
+   "ux",
+   "gamedev"
+  ],
+  "about": "«Геймдев» бағытында стартап ашқым келеді. Мен — Өнім менеджері, серіктес керек: Backend-әзірлеуші, Fullstack-әзірлеуші.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "backend",
+   "fullstack"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p076",
+  "name": "Miras Isaev",
+  "lang": "en",
+  "role": "recruiter",
+  "experience": 8,
+  "stack": [
+   "figma",
+   "user_research",
+   "product_analytics"
+  ],
+  "interests": [
+   "career",
+   "community",
+   "gamedev"
+  ],
+  "about": "Building the team at QazCode Studio: looking for UX/UI designer, junior level. We use Figma, User Research, Product Analytics; focus — Game dev.",
+  "goal": "hire",
+  "seeking_roles": [
+   "designer"
+  ],
+  "hire_levels": [
+   "junior"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 2,
+  "company": "QazCode Studio",
+  "slots": [
+   "11:00",
+   "12:00",
+   "13:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p077",
+  "name": "Zhandos Beketov",
+  "lang": "en",
+  "role": "analyst",
+  "experience": 11,
+  "stack": [
+   "uml",
+   "jira",
+   "sql",
+   "postman"
+  ],
+  "interests": [
+   "ecommerce",
+   "govtech",
+   "mentorship"
+  ],
+  "about": "Business analyst at Altyn Soft, with 11 years of experience. I'd like to share my experience: UML, Jira, SQL, E-commerce.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Altyn Soft",
+  "slots": [
+   "11:00",
+   "13:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p078",
+  "name": "Азамат Нурланов",
+  "lang": "kk",
+  "role": "data_engineer",
+  "experience": 10,
+  "stack": [
+   "python",
+   "spark",
+   "docker",
+   "postgresql",
+   "kafka"
+  ],
+  "interests": [
+   "ai",
+   "opensource",
+   "cloud",
+   "agritech"
+  ],
+  "about": "Kok Tobe AI компаниясында Деректер инженері, 10 жыл тәжірибесі бар. Тәжірибеммен бөліскім келеді: Python, Spark, Docker, «Жасанды интеллект» тақырыбы.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Kok Tobe AI",
+  "slots": [
+   "12:00",
+   "14:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p079",
+  "name": "Tomiris Tsoy",
+  "lang": "en",
+  "role": "lead",
+  "experience": 11,
+  "stack": [
+   "flutter",
+   "figma",
+   "ci_cd"
+  ],
+  "interests": [
+   "iot",
+   "community",
+   "opensource",
+   "ecommerce"
+  ],
+  "about": "Building the team at Saryarka Systems: looking for Mobile developer, junior, middle level. We use Flutter, Figma, CI/CD; focus — IoT & hardware.",
+  "goal": "hire",
+  "seeking_roles": [
+   "mobile"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Saryarka Systems",
+  "slots": [
+   "11:00",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p080",
+  "name": "Сабина Касымова",
+  "lang": "ru",
+  "role": "analyst",
+  "experience": 1,
+  "stack": [
+   "sql",
+   "bpmn",
+   "jira"
+  ],
+  "interests": [
+   "govtech"
+  ],
+  "about": "Хочу расти быстрее: Бизнес-аналитик, стек — SQL, BPMN, Jira. Нужен опытный ментор, интересна тема «GovTech».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "12:00",
+   "14:00",
+   "14:30"
+  ]
+ },
+ {
+  "id": "p081",
+  "name": "Айгерим Пак",
+  "lang": "ru",
+  "role": "pm",
+  "experience": 4,
+  "stack": [
+   "jira",
+   "excel",
+   "product_analytics"
+  ],
+  "interests": [
+   "ux"
+  ],
+  "about": "Продакт-менеджер с опытом 4 года. Работаю с Jira, Excel, Product Analytics. Ищу команду, где можно расти, интересна тема «UX-исследования».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:30"
+  ]
+ },
+ {
+  "id": "p082",
+  "name": "Динара Омарова",
+  "lang": "kk",
+  "role": "backend",
+  "experience": 3,
+  "stack": [
+   "go",
+   "postgresql",
+   "redis"
+  ],
+  "interests": [
+   "edtech",
+   "ecommerce",
+   "fintech",
+   "gamedev"
+  ],
+  "about": "Turan EdTech компаниясында Backend-әзірлеуші, 3 жыл тәжірибесі бар. Go, PostgreSQL, Redis және «EdTech» тақырыбын талқылағанды ұнатамын.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "11:30",
+   "13:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p083",
+  "name": "Dana Ivanova",
+  "lang": "en",
+  "role": "founder",
+  "experience": 3,
+  "stack": [
+   "excel",
+   "jira",
+   "sql"
+  ],
+  "interests": [
+   "logistics",
+   "fintech"
+  ],
+  "about": "Founder with 3 years of experience. Here to swap experience with peers: Excel, Jira, SQL, Logistics.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Irbis Logistics",
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p084",
+  "name": "Асхат Попов",
+  "lang": "ru",
+  "role": "frontend",
+  "experience": 6,
+  "stack": [
+   "typescript",
+   "react",
+   "html_css",
+   "nextjs",
+   "javascript"
+  ],
+  "interests": [
+   "product",
+   "opensource",
+   "remote"
+  ],
+  "about": "Frontend-разработчик с опытом 6 лет, последние проекты на TypeScript, React, HTML/CSS. Рассматриваю предложения, интересна тема «Продуктовый подход».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:00"
+  ]
+ },
+ {
+  "id": "p085",
+  "name": "Сабина Кенжебаева",
+  "lang": "ru",
+  "role": "designer",
+  "experience": 6,
+  "stack": [
+   "figma",
+   "html_css"
+  ],
+  "interests": [
+   "gamedev",
+   "edtech",
+   "career"
+  ],
+  "about": "Ищу работу: UX/UI-дизайнер, стек — Figma, HTML/CSS. Больше всего интересно направление «Геймдев».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p086",
+  "name": "Aygerim Smirnova",
+  "lang": "en",
+  "role": "backend",
+  "experience": 5,
+  "stack": [
+   "nodejs",
+   "typescript",
+   "mongodb"
+  ],
+  "interests": [
+   "ecommerce"
+  ],
+  "about": "Backend developer with 5 years of experience. I work with Node.js, TypeScript, MongoDB. Looking for a team where I can grow; interested in E-commerce.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "12:00",
+   "13:30",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p087",
+  "name": "Азамат Есенов",
+  "lang": "ru",
+  "role": "backend",
+  "experience": 2,
+  "stack": [
+   "python",
+   "django",
+   "docker",
+   "postgresql",
+   "redis"
+  ],
+  "interests": [
+   "ecommerce",
+   "fintech",
+   "opensource"
+  ],
+  "about": "Backend-разработчик в Shanyraq Apps, с опытом 2 года. Люблю обсуждать Python, Django, Docker и тему «E-commerce».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Shanyraq Apps",
+  "slots": [
+   "12:00",
+   "14:00",
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p088",
+  "name": "Ержан Туребаев",
+  "lang": "ru",
+  "role": "ml",
+  "experience": 6,
+  "stack": [
+   "python",
+   "llm",
+   "fastapi"
+  ],
+  "interests": [
+   "ai",
+   "data_science",
+   "agritech",
+   "fintech"
+  ],
+  "about": "ML-инженер в Kok Tobe AI, с опытом 6 лет. Хочу делиться опытом: Python, LLM, FastAPI, тема «Искусственный интеллект».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Kok Tobe AI",
+  "slots": [
+   "13:30",
+   "14:00",
+   "14:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p089",
+  "name": "Алихан Попов",
+  "lang": "kk",
+  "role": "founder",
+  "experience": 7,
+  "stack": [
+   "sql",
+   "powerbi",
+   "excel",
+   "csharp",
+   "dotnet",
+   "docker"
+  ],
+  "interests": [
+   "govtech",
+   "product",
+   "edtech"
+  ],
+  "about": "Medeu Digital командасын жинап жатырмын: Деректер талдаушысы, Backend-әзірлеуші, деңгейі — senior. SQL, Power BI, Excel қолданамыз, бағыт — «GovTech».",
+  "goal": "hire",
+  "seeking_roles": [
+   "data",
+   "backend"
+  ],
+  "hire_levels": [
+   "senior"
+  ],
+  "hire_exp_min": 5,
+  "hire_exp_max": 15,
+  "company": "Medeu Digital",
+  "slots": [
+   "12:00",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p090",
+  "name": "Темирлан Попов",
+  "lang": "kk",
+  "role": "analyst",
+  "experience": 3,
+  "stack": [
+   "sql",
+   "excel",
+   "jira",
+   "bpmn"
+  ],
+  "interests": [
+   "govtech",
+   "gamedev"
+  ],
+  "about": "Жұмыс іздеп жүрмін: Бизнес-талдаушы, стек — SQL, Excel, Jira. Ең қызықты бағыт — «GovTech».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p091",
+  "name": "Сабина Тлеубаева",
+  "lang": "ru",
+  "role": "ml",
+  "experience": 5,
+  "stack": [
+   "python",
+   "tensorflow",
+   "cv",
+   "pandas"
+  ],
+  "interests": [
+   "opensource",
+   "data_science"
+  ],
+  "about": "ML-инженер с опытом 5 лет, последние проекты на Python, TensorFlow, Computer Vision. Рассматриваю предложения, интересна тема «Open source».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "13:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p092",
+  "name": "Гульнара Мусина",
+  "lang": "kk",
+  "role": "devops",
+  "experience": 7,
+  "stack": [
+   "docker",
+   "kubernetes",
+   "gcp",
+   "linux",
+   "ci_cd"
+  ],
+  "interests": [
+   "cloud",
+   "gamedev"
+  ],
+  "about": "DevOps-инженер, 7 жыл тәжірибесі бар. Docker, Kubernetes, GCP қолданамын. Өсуге мүмкіндік беретін команда іздеймін, «Бұлтты технологиялар» тақырыбы қызықтырады.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:30",
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p093",
+  "name": "Алихан Мусин",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 5,
+  "stack": [
+   "figma",
+   "html_css",
+   "php",
+   "laravel",
+   "sql",
+   "vue"
+  ],
+  "interests": [
+   "edtech",
+   "remote"
+  ],
+  "about": "IT-рекрутер в Turan EdTech. Нанимаем: UX/UI-дизайнер, Fullstack-разработчик (middle). Стек команды — Figma, HTML/CSS, PHP.",
+  "goal": "hire",
+  "seeking_roles": [
+   "designer",
+   "fullstack"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Turan EdTech",
+  "slots": [
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p094",
+  "name": "Мирас Ахметов",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 3,
+  "stack": [
+   "unity",
+   "csharp",
+   "figma",
+   "react_native",
+   "typescript",
+   "javascript"
+  ],
+  "interests": [
+   "gamedev",
+   "remote",
+   "community",
+   "edtech"
+  ],
+  "about": "IT-рекрутер в Zhetisu Games. Нанимаем: Разработчик игр, Мобильный разработчик, QA-инженер (junior, middle). Стек команды — Unity, C#, Figma.",
+  "goal": "hire",
+  "seeking_roles": [
+   "gamedev",
+   "mobile",
+   "qa"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Zhetisu Games",
+  "slots": [
+   "11:00",
+   "13:30",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p095",
+  "name": "Айгерим Абенова",
+  "lang": "ru",
+  "role": "mobile",
+  "experience": 1,
+  "stack": [
+   "flutter",
+   "figma"
+  ],
+  "interests": [
+   "gamedev",
+   "career"
+  ],
+  "about": "Мобильный разработчик с опытом 1 год, последние проекты на Flutter, Figma. Рассматриваю предложения, особенно в сфере «Геймдев».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p096",
+  "name": "Нурлан Иванов",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 4,
+  "stack": [
+   "uml",
+   "jira",
+   "sql",
+   "go",
+   "postgresql",
+   "kubernetes"
+  ],
+  "interests": [
+   "cloud",
+   "community",
+   "healthtech"
+  ],
+  "about": "IT-рекрутер в Aral Cloud. Нанимаем: Бизнес-аналитик, Backend-разработчик (middle). Стек команды — UML, Jira, SQL.",
+  "goal": "hire",
+  "seeking_roles": [
+   "analyst",
+   "backend"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Aral Cloud",
+  "slots": [
+   "14:00",
+   "15:00",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p097",
+  "name": "Жансая Ким",
+  "lang": "kk",
+  "role": "lead",
+  "experience": 6,
+  "stack": [
+   "ruby",
+   "postgresql",
+   "jira",
+   "redis"
+  ],
+  "interests": [
+   "startups",
+   "career"
+  ],
+  "about": "Жұмыс іздеп жүрмін: Тимлид / CTO, стек — Ruby, PostgreSQL, Jira. Ең қызықты тақырып — «Стартаптар».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "13:30",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p098",
+  "name": "Miras Omarov",
+  "lang": "en",
+  "role": "analyst",
+  "experience": 0,
+  "stack": [
+   "sql",
+   "excel"
+  ],
+  "interests": [
+   "fintech",
+   "blockchain"
+  ],
+  "about": "Business analyst with no commercial experience. Learning SQL, Excel. Looking for a mentor to help me grow in Fintech.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "12:00",
+   "15:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p099",
+  "name": "Анна Попова",
+  "lang": "ru",
+  "role": "backend",
+  "experience": 6,
+  "stack": [
+   "onec",
+   "sql",
+   "excel"
+  ],
+  "interests": [
+   "ecommerce",
+   "fintech",
+   "healthtech",
+   "remote"
+  ],
+  "about": "Ищу работу: Backend-разработчик, стек — 1C, SQL, Excel. Больше всего интересно направление «E-commerce».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p100",
+  "name": "Дария Тлеубаева",
+  "lang": "ru",
+  "role": "frontend",
+  "experience": 2,
+  "stack": [
+   "react",
+   "typescript",
+   "html_css",
+   "figma"
+  ],
+  "interests": [
+   "product",
+   "edtech",
+   "gamedev",
+   "career"
+  ],
+  "about": "Frontend-разработчик с опытом 2 года. Изучаю React, TypeScript, HTML/CSS. Ищу ментора, который поможет вырасти в направлении «EdTech».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "13:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p101",
+  "name": "Асхат Сапаров",
+  "lang": "ru",
+  "role": "ml",
+  "experience": 8,
+  "stack": [
+   "python",
+   "pytorch",
+   "cv",
+   "docker"
+  ],
+  "interests": [
+   "agritech",
+   "healthtech",
+   "iot"
+  ],
+  "about": "ML-инженер с опытом 8 лет, сейчас в Dala Agro Tech. Могу менторить по Python, PyTorch, Computer Vision и помочь с карьерой в IT.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Dala Agro Tech",
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p102",
+  "name": "Жансая Мусина",
+  "lang": "ru",
+  "role": "pm",
+  "experience": 2,
+  "stack": [
+   "jira",
+   "product_analytics",
+   "user_research"
+  ],
+  "interests": [
+   "ux",
+   "ecommerce",
+   "mentorship"
+  ],
+  "about": "Хочу расти быстрее: Продакт-менеджер, стек — Jira, Product Analytics, User Research. Нужен опытный ментор, интересна тема «UX-исследования».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "14:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p103",
+  "name": "Алихан Нурланов",
+  "lang": "ru",
+  "role": "ml",
+  "experience": 1,
+  "stack": [
+   "python",
+   "pytorch",
+   "docker"
+  ],
+  "interests": [
+   "opensource",
+   "ecommerce"
+  ],
+  "about": "Хочу расти быстрее: ML-инженер, стек — Python, PyTorch, Docker. Нужен опытный ментор, интересна тема «Open source».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p104",
+  "name": "Nikita Omarov",
+  "lang": "en",
+  "role": "devops",
+  "experience": 9,
+  "stack": [
+   "kubernetes",
+   "azure",
+   "terraform",
+   "grafana",
+   "ci_cd"
+  ],
+  "interests": [
+   "opensource",
+   "cloud",
+   "healthtech"
+  ],
+  "about": "DevOps engineer at Altyn Soft, with 9 years of experience. Love talking about Kubernetes, Azure, Terraform and Open source.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Altyn Soft",
+  "slots": [
+   "13:30",
+   "14:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p105",
+  "name": "Алексей Касымов",
+  "lang": "ru",
+  "role": "designer",
+  "experience": 1,
+  "stack": [
+   "figma",
+   "user_research",
+   "html_css"
+  ],
+  "interests": [
+   "edtech",
+   "ux",
+   "ecommerce",
+   "mentorship"
+  ],
+  "about": "UX/UI-дизайнер с опытом 1 год. Изучаю Figma, User Research, HTML/CSS. Ищу ментора, который поможет вырасти в направлении «EdTech».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "14:30",
+   "15:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p106",
+  "name": "Арман Ахметов",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 5,
+  "stack": [
+   "python",
+   "sklearn",
+   "sql",
+   "javascript",
+   "vue",
+   "typescript"
+  ],
+  "interests": [
+   "remote",
+   "logistics"
+  ],
+  "about": "Собираю команду в Altyn Soft. Ищем: ML-инженер, Frontend-разработчик; уровень — middle, senior. Работаем с Python, scikit-learn, SQL, направление — «Логистика».",
+  "goal": "hire",
+  "seeking_roles": [
+   "ml",
+   "frontend"
+  ],
+  "hire_levels": [
+   "middle",
+   "senior"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 15,
+  "company": "Altyn Soft",
+  "slots": [
+   "11:00",
+   "11:30",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p107",
+  "name": "Аружан Бекетова",
+  "lang": "ru",
+  "role": "pm",
+  "experience": 11,
+  "stack": [
+   "jira",
+   "product_analytics",
+   "sql",
+   "figma"
+  ],
+  "interests": [
+   "startups",
+   "iot",
+   "opensource"
+  ],
+  "about": "Продакт-менеджер с опытом 11 лет. Хочу обменяться опытом с коллегами: Jira, Product Analytics, SQL, «IoT и железо».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Altyn Soft",
+  "slots": [
+   "11:00",
+   "12:00",
+   "14:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p108",
+  "name": "Тимур Смирнов",
+  "lang": "ru",
+  "role": "qa",
+  "experience": 11,
+  "stack": [
+   "playwright",
+   "typescript",
+   "javascript",
+   "ci_cd"
+  ],
+  "interests": [
+   "cloud",
+   "edtech",
+   "opensource",
+   "ai"
+  ],
+  "about": "QA-инженер с опытом 11 лет. Хочу обменяться опытом с коллегами: Playwright, TypeScript, JavaScript, «Облачные технологии».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Aral Cloud",
+  "slots": [
+   "11:00",
+   "11:30",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p109",
+  "name": "Sabina Tsoy",
+  "lang": "en",
+  "role": "designer",
+  "experience": 5,
+  "stack": [
+   "figma",
+   "html_css"
+  ],
+  "interests": [
+   "edtech"
+  ],
+  "about": "UX/UI designer with 5 years of experience. Here to swap experience with peers: Figma, HTML/CSS, EdTech.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Ulytau Mobile",
+  "slots": [
+   "12:00",
+   "14:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p110",
+  "name": "Asel Isaeva",
+  "lang": "en",
+  "role": "lead",
+  "experience": 11,
+  "stack": [
+   "ruby",
+   "postgresql",
+   "jira",
+   "redis"
+  ],
+  "interests": [
+   "opensource",
+   "startups",
+   "edtech"
+  ],
+  "about": "Team lead / CTO with 11 years of experience; recent projects built with Ruby, PostgreSQL, Jira. Considering offers, especially in EdTech.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p111",
+  "name": "Дмитрий Абенов",
+  "lang": "kk",
+  "role": "founder",
+  "experience": 8,
+  "stack": [
+   "excel",
+   "jira",
+   "sql"
+  ],
+  "interests": [
+   "agritech",
+   "fintech",
+   "startups"
+  ],
+  "about": "Фаундер, 8 жыл тәжірибесі бар. «Агротех» саласында идеям бар, кофаундер іздеймін: Fullstack-әзірлеуші, ML-инженер.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "fullstack",
+   "ml"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:00",
+   "15:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p112",
+  "name": "Мария Касымова",
+  "lang": "ru",
+  "role": "data",
+  "experience": 4,
+  "stack": [
+   "sql",
+   "powerbi",
+   "excel"
+  ],
+  "interests": [
+   "fintech",
+   "ai"
+  ],
+  "about": "Аналитик данных с опытом 4 года. Есть идея в сфере «Финтех», ищу кофаундера: Продакт-менеджер.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "pm"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "12:00",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p113",
+  "name": "Азамат Мусин",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 7,
+  "stack": [
+   "kubernetes",
+   "azure",
+   "grafana"
+  ],
+  "interests": [
+   "data_science",
+   "community",
+   "opensource",
+   "healthtech"
+  ],
+  "about": "Тимлид / CTO в Baiterek Data. Нанимаем: DevOps-инженер (junior). Стек команды — Kubernetes, Azure, Grafana.",
+  "goal": "hire",
+  "seeking_roles": [
+   "devops"
+  ],
+  "hire_levels": [
+   "junior"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 2,
+  "company": "Baiterek Data",
+  "slots": [
+   "14:30",
+   "15:00",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p114",
+  "name": "Темирлан Пак",
+  "lang": "kk",
+  "role": "ml",
+  "experience": 12,
+  "stack": [
+   "python",
+   "pytorch",
+   "llm"
+  ],
+  "interests": [
+   "opensource",
+   "govtech",
+   "startups"
+  ],
+  "about": "ML-инженер, 12 жыл тәжірибесі бар. «GovTech» саласында идеям бар, кофаундер іздеймін: UX/UI дизайнер.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "designer"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "13:30",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p115",
+  "name": "Мадина Кенжебаева",
+  "lang": "kk",
+  "role": "gamedev",
+  "experience": 2,
+  "stack": [
+   "unity",
+   "csharp",
+   "figma"
+  ],
+  "interests": [
+   "iot",
+   "startups",
+   "remote"
+  ],
+  "about": "Ойын әзірлеушісі, 2 жыл тәжірибесі бар. Соңғы жобаларым Unity, C#, Figma негізінде. Ұсыныстарды қарастырамын, әсіресе «IoT және құрылғылар» саласында.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p116",
+  "name": "Мадина Жумабаева",
+  "lang": "kk",
+  "role": "designer",
+  "experience": 12,
+  "stack": [
+   "figma",
+   "html_css"
+  ],
+  "interests": [
+   "data_science",
+   "edtech",
+   "ux",
+   "logistics"
+  ],
+  "about": "UX/UI дизайнер, 12 жыл тәжірибесі бар, қазір Baiterek Data компаниясында. Figma, HTML/CSS бойынша тәлімгер бола аламын, IT-дағы мансапқа көмектесемін.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Baiterek Data",
+  "slots": [
+   "13:30",
+   "14:30",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p117",
+  "name": "Арман Абенов",
+  "lang": "ru",
+  "role": "mobile",
+  "experience": 1,
+  "stack": [
+   "flutter",
+   "figma",
+   "ci_cd"
+  ],
+  "interests": [
+   "ecommerce",
+   "logistics",
+   "career"
+  ],
+  "about": "Хочу расти быстрее: Мобильный разработчик, стек — Flutter, Figma, CI/CD. Нужен опытный ментор, интересна тема «E-commerce».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "13:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p118",
+  "name": "Акмарал Исаева",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 10,
+  "stack": [
+   "ruby",
+   "postgresql",
+   "jira"
+  ],
+  "interests": [
+   "community",
+   "ai"
+  ],
+  "about": "Тимлид / CTO в QazCode Studio, с опытом 10 лет. Люблю обсуждать Ruby, PostgreSQL, Jira и тему «Искусственный интеллект».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "QazCode Studio",
+  "slots": [
+   "11:00",
+   "12:00",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p119",
+  "name": "Алия Жумабаева",
+  "lang": "ru",
+  "role": "security",
+  "experience": 1,
+  "stack": [
+   "linux",
+   "siem"
+  ],
+  "interests": [
+   "blockchain",
+   "opensource",
+   "fintech",
+   "career"
+  ],
+  "about": "Ищу работу: Специалист по кибербезопасности, стек — Linux, SIEM. Больше всего интересно направление «Блокчейн».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "13:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p120",
+  "name": "Динара Байжанова",
+  "lang": "ru",
+  "role": "security",
+  "experience": 6,
+  "stack": [
+   "burp",
+   "owasp",
+   "linux",
+   "python"
+  ],
+  "interests": [
+   "govtech",
+   "fintech",
+   "community"
+  ],
+  "about": "Специалист по кибербезопасности с опытом 6 лет. Хочу обменяться опытом с коллегами: Burp Suite, OWASP, Linux, «GovTech».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Tulpar Tech",
+  "slots": [
+   "11:00",
+   "14:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p121",
+  "name": "Madina Pak",
+  "lang": "en",
+  "role": "analyst",
+  "experience": 2,
+  "stack": [
+   "uml",
+   "jira",
+   "sql",
+   "postman"
+  ],
+  "interests": [
+   "fintech",
+   "logistics",
+   "blockchain"
+  ],
+  "about": "Want to grow faster: Business analyst, stack — UML, Jira, SQL. Looking for an experienced mentor; into Fintech.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p122",
+  "name": "Асель Байжанова",
+  "lang": "ru",
+  "role": "devops",
+  "experience": 13,
+  "stack": [
+   "linux",
+   "ansible",
+   "ci_cd",
+   "docker",
+   "python"
+  ],
+  "interests": [
+   "security",
+   "opensource",
+   "edtech"
+  ],
+  "about": "DevOps-инженер с опытом 13 лет, сейчас в Altyn Soft. Могу менторить по Linux, Ansible, CI/CD и помочь с карьерой в IT.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Altyn Soft",
+  "slots": [
+   "11:00",
+   "11:30",
+   "13:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p123",
+  "name": "Maksim Kenzhebaev",
+  "lang": "en",
+  "role": "student",
+  "experience": 0,
+  "stack": [
+   "sql",
+   "python"
+  ],
+  "interests": [
+   "edtech",
+   "career",
+   "ai"
+  ],
+  "about": "Want to grow faster: Student, stack — SQL, Python. Looking for an experienced mentor; into EdTech.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p124",
+  "name": "Алия Смирнова",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 8,
+  "stack": [
+   "go",
+   "postgresql",
+   "kafka"
+  ],
+  "interests": [
+   "logistics",
+   "product",
+   "iot"
+  ],
+  "about": "Тимлид / CTO в Irbis Logistics. Нанимаем: Backend-разработчик (junior, middle). Стек команды — Go, PostgreSQL, Kafka.",
+  "goal": "hire",
+  "seeking_roles": [
+   "backend"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Irbis Logistics",
+  "slots": [
+   "11:30",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p125",
+  "name": "Алексей Иванов",
+  "lang": "ru",
+  "role": "frontend",
+  "experience": 2,
+  "stack": [
+   "react",
+   "typescript",
+   "html_css",
+   "figma"
+  ],
+  "interests": [
+   "ecommerce",
+   "edtech"
+  ],
+  "about": "Хочу расти быстрее: Frontend-разработчик, стек — React, TypeScript, HTML/CSS. Нужен опытный ментор, интересна тема «E-commerce».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:00",
+   "14:30"
+  ]
+ },
+ {
+  "id": "p126",
+  "name": "Аружан Иванова",
+  "lang": "kk",
+  "role": "fullstack",
+  "experience": 5,
+  "stack": [
+   "php",
+   "laravel",
+   "vue",
+   "sql"
+  ],
+  "interests": [
+   "iot",
+   "ecommerce",
+   "cloud"
+  ],
+  "about": "Fullstack-әзірлеуші, 5 жыл тәжірибесі бар. Әріптестермен тәжірибе алмасқым келеді: PHP, Laravel, Vue, «IoT және құрылғылар».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Saryarka Systems",
+  "slots": [
+   "11:00",
+   "11:30",
+   "12:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p127",
+  "name": "Данияр Ахметов",
+  "lang": "ru",
+  "role": "data",
+  "experience": 15,
+  "stack": [
+   "sql",
+   "python",
+   "airflow"
+  ],
+  "interests": [
+   "security",
+   "data_science",
+   "ai",
+   "community"
+  ],
+  "about": "Аналитик данных в Astra Security, с опытом 15 лет. Хочу делиться опытом: SQL, Python, Airflow, тема «Кибербезопасность».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Astra Security",
+  "slots": [
+   "11:30",
+   "12:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p128",
+  "name": "Дмитрий Попов",
+  "lang": "ru",
+  "role": "frontend",
+  "experience": 2,
+  "stack": [
+   "react",
+   "typescript",
+   "figma",
+   "html_css"
+  ],
+  "interests": [
+   "edtech"
+  ],
+  "about": "Frontend-разработчик с опытом 2 года. Работаю с React, TypeScript, Figma. Ищу команду, где можно расти, интересна тема «EdTech».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "13:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p129",
+  "name": "Артём Тлеубаев",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 7,
+  "stack": [
+   "uml",
+   "jira",
+   "postman",
+   "sql"
+  ],
+  "interests": [
+   "fintech",
+   "community"
+  ],
+  "about": "Собираю команду в Nomad Pay. Ищем: Бизнес-аналитик; уровень — junior, middle. Работаем с UML, Jira, Postman, направление — «Финтех».",
+  "goal": "hire",
+  "seeking_roles": [
+   "analyst"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Nomad Pay",
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p130",
+  "name": "Жандос Абенов",
+  "lang": "ru",
+  "role": "student",
+  "experience": 0,
+  "stack": [
+   "swift",
+   "figma"
+  ],
+  "interests": [
+   "career",
+   "logistics",
+   "remote"
+  ],
+  "about": "Студент без коммерческого опыта. Изучаю Swift, Figma. Ищу команду, где можно расти, интересна тема «Логистика».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p131",
+  "name": "Dana Tleubaeva",
+  "lang": "en",
+  "role": "recruiter",
+  "experience": 2,
+  "stack": [
+   "jira",
+   "product_analytics",
+   "user_research",
+   "nodejs",
+   "typescript",
+   "docker"
+  ],
+  "interests": [
+   "logistics",
+   "remote"
+  ],
+  "about": "IT recruiter at Irbis Logistics. We're hiring: Product manager, Backend developer (senior). Team stack — Jira, Product Analytics, User Research.",
+  "goal": "hire",
+  "seeking_roles": [
+   "pm",
+   "backend"
+  ],
+  "hire_levels": [
+   "senior"
+  ],
+  "hire_exp_min": 5,
+  "hire_exp_max": 15,
+  "company": "Irbis Logistics",
+  "slots": [
+   "12:00",
+   "14:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p132",
+  "name": "Виктория Попова",
+  "lang": "kk",
+  "role": "founder",
+  "experience": 11,
+  "stack": [
+   "product_analytics",
+   "excel",
+   "jira"
+  ],
+  "interests": [
+   "agritech"
+  ],
+  "about": "Фаундер, 11 жыл тәжірибесі бар. «Агротех» саласында идеям бар, кофаундер іздеймін: Fullstack-әзірлеуші, Backend-әзірлеуші.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "fullstack",
+   "backend"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "13:30",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p133",
+  "name": "Санжар Бекетов",
+  "lang": "ru",
+  "role": "data_engineer",
+  "experience": 4,
+  "stack": [
+   "python",
+   "spark",
+   "postgresql"
+  ],
+  "interests": [
+   "cloud",
+   "startups"
+  ],
+  "about": "Хочу запустить стартап, близка тема «Облачные технологии». Я — Data-инженер, нужен партнёр: Фаундер.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "founder"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "12:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p134",
+  "name": "Азамат Иванов",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 13,
+  "stack": [
+   "python",
+   "sklearn",
+   "pandas",
+   "sql"
+  ],
+  "interests": [
+   "iot",
+   "cloud",
+   "product",
+   "healthtech"
+  ],
+  "about": "Тимлид / CTO в Saryarka Systems. Нанимаем: ML-инженер (junior, middle). Стек команды — Python, scikit-learn, pandas.",
+  "goal": "hire",
+  "seeking_roles": [
+   "ml"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Saryarka Systems",
+  "slots": [
+   "11:00",
+   "11:30",
+   "13:30",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p135",
+  "name": "Екатерина Нурланова",
+  "lang": "ru",
+  "role": "backend",
+  "experience": 6,
+  "stack": [
+   "go",
+   "postgresql",
+   "kubernetes",
+   "redis",
+   "kafka"
+  ],
+  "interests": [
+   "opensource",
+   "ai",
+   "remote"
+  ],
+  "about": "Backend-разработчик с опытом 6 лет. Работаю с Go, PostgreSQL, Kubernetes. Ищу команду, где можно расти, интересна тема «Open source».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "14:00",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p136",
+  "name": "Асхат Смирнов",
+  "lang": "kk",
+  "role": "lead",
+  "experience": 6,
+  "stack": [
+   "python",
+   "django",
+   "jira",
+   "kubernetes",
+   "postgresql"
+  ],
+  "interests": [
+   "cloud",
+   "startups",
+   "product",
+   "agritech"
+  ],
+  "about": "Тимлид / CTO, 6 жыл тәжірибесі бар. Әріптестермен тәжірибе алмасқым келеді: Python, Django, Jira, «Бұлтты технологиялар».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Aral Cloud",
+  "slots": [
+   "11:30",
+   "12:00",
+   "13:30"
+  ]
+ },
+ {
+  "id": "p137",
+  "name": "Максим Туребаев",
+  "lang": "kk",
+  "role": "devops",
+  "experience": 9,
+  "stack": [
+   "linux",
+   "ansible",
+   "docker"
+  ],
+  "interests": [
+   "data_science",
+   "security",
+   "opensource"
+  ],
+  "about": "Baiterek Data компаниясында DevOps-инженер, 9 жыл тәжірибесі бар. Linux, Ansible, Docker және «Data Science» тақырыбын талқылағанды ұнатамын.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Baiterek Data",
+  "slots": [
+   "13:30",
+   "14:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p138",
+  "name": "Тимур Жумабаев",
+  "lang": "ru",
+  "role": "founder",
+  "experience": 5,
+  "stack": [
+   "product_analytics",
+   "figma"
+  ],
+  "interests": [
+   "product",
+   "iot",
+   "startups"
+  ],
+  "about": "Хочу запустить стартап в направлении «IoT и железо». Я — Фаундер, нужен партнёр: Fullstack-разработчик.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "fullstack"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p139",
+  "name": "Алия Сапарова",
+  "lang": "ru",
+  "role": "frontend",
+  "experience": 8,
+  "stack": [
+   "typescript",
+   "react",
+   "nextjs",
+   "javascript",
+   "html_css"
+  ],
+  "interests": [
+   "ecommerce",
+   "ux",
+   "agritech",
+   "startups"
+  ],
+  "about": "Хочу запустить стартап в направлении «E-commerce». Я — Frontend-разработчик, нужен партнёр: UX/UI-дизайнер.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "designer"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p140",
+  "name": "Жансая Кенжебаева",
+  "lang": "ru",
+  "role": "analyst",
+  "experience": 3,
+  "stack": [
+   "sql",
+   "bpmn",
+   "uml",
+   "jira"
+  ],
+  "interests": [
+   "ecommerce",
+   "remote"
+  ],
+  "about": "Бизнес-аналитик с опытом 3 года. Работаю с SQL, BPMN, UML. Ищу команду, где можно расти, интересна тема «E-commerce».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "13:30"
+  ]
+ },
+ {
+  "id": "p141",
+  "name": "Никита Тлеубаев",
+  "lang": "ru",
+  "role": "qa",
+  "experience": 11,
+  "stack": [
+   "postman",
+   "sql",
+   "jira"
+  ],
+  "interests": [
+   "cloud",
+   "edtech",
+   "opensource",
+   "ecommerce"
+  ],
+  "about": "QA-инженер в Aral Cloud, с опытом 11 лет. Хочу делиться опытом: Postman, SQL, Jira, тема «Облачные технологии».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Aral Cloud",
+  "slots": [
+   "12:00",
+   "14:00",
+   "14:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p142",
+  "name": "Темирлан Цой",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 6,
+  "stack": [
+   "kotlin",
+   "ci_cd",
+   "figma",
+   "kubernetes",
+   "azure",
+   "terraform"
+  ],
+  "interests": [
+   "startups",
+   "community",
+   "remote",
+   "fintech"
+  ],
+  "about": "IT-рекрутер в Steppe Labs. Нанимаем: Мобильный разработчик, DevOps-инженер, ML-инженер (junior, middle). Стек команды — Kotlin, CI/CD, Figma.",
+  "goal": "hire",
+  "seeking_roles": [
+   "mobile",
+   "devops",
+   "ml"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Steppe Labs",
+  "slots": [
+   "11:00",
+   "12:00",
+   "14:30"
+  ]
+ },
+ {
+  "id": "p143",
+  "name": "Максим Ким",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 9,
+  "stack": [
+   "python",
+   "django",
+   "postgresql",
+   "kubernetes",
+   "jira"
+  ],
+  "interests": [
+   "product",
+   "iot",
+   "community"
+  ],
+  "about": "Тимлид / CTO с опытом 9 лет, сейчас в Altyn Soft. Могу менторить по Python, Django, PostgreSQL и помочь с карьерой в IT.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Altyn Soft",
+  "slots": [
+   "12:00",
+   "15:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p144",
+  "name": "Сабина Цой",
+  "lang": "ru",
+  "role": "mobile",
+  "experience": 10,
+  "stack": [
+   "react_native",
+   "typescript",
+   "javascript"
+  ],
+  "interests": [
+   "security",
+   "gamedev",
+   "ai"
+  ],
+  "about": "Мобильный разработчик в Astra Security, с опытом 10 лет. Люблю обсуждать React Native, TypeScript, JavaScript и тему «Кибербезопасность».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Astra Security",
+  "slots": [
+   "13:30",
+   "14:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p145",
+  "name": "Никита Ахметов",
+  "lang": "ru",
+  "role": "frontend",
+  "experience": 3,
+  "stack": [
+   "typescript",
+   "react",
+   "html_css",
+   "javascript",
+   "nextjs"
+  ],
+  "interests": [
+   "security",
+   "ux",
+   "product",
+   "opensource"
+  ],
+  "about": "Frontend-разработчик с опытом 3 года. Хочу обменяться опытом с коллегами: TypeScript, React, HTML/CSS, «Кибербезопасность».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Astra Security",
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:30",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p146",
+  "name": "Артём Пак",
+  "lang": "ru",
+  "role": "qa",
+  "experience": 12,
+  "stack": [
+   "postman",
+   "sql",
+   "jira"
+  ],
+  "interests": [
+   "fintech",
+   "security",
+   "healthtech"
+  ],
+  "about": "QA-инженер с опытом 12 лет. Хочу обменяться опытом с коллегами: Postman, SQL, Jira, «Финтех».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Nomad Pay",
+  "slots": [
+   "12:00",
+   "13:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p147",
+  "name": "Айбек Жумабаев",
+  "lang": "kk",
+  "role": "mobile",
+  "experience": 2,
+  "stack": [
+   "flutter",
+   "figma",
+   "ci_cd"
+  ],
+  "interests": [
+   "ecommerce",
+   "gamedev",
+   "career"
+  ],
+  "about": "Мобильді әзірлеуші, 2 жыл тәжірибесі бар. Flutter, Figma, CI/CD үйреніп жүрмін. «E-commerce» бағытында өсуге көмектесетін тәлімгер іздеймін.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:00"
+  ]
+ },
+ {
+  "id": "p148",
+  "name": "Ксения Пак",
+  "lang": "ru",
+  "role": "data_engineer",
+  "experience": 11,
+  "stack": [
+   "python",
+   "airflow",
+   "sql",
+   "spark",
+   "kafka"
+  ],
+  "interests": [
+   "edtech",
+   "cloud",
+   "govtech",
+   "community"
+  ],
+  "about": "Data-инженер в Turan EdTech, с опытом 11 лет. Хочу делиться опытом: Python, Airflow, SQL, тема «EdTech».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "11:30",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p149",
+  "name": "Askhat Isaev",
+  "lang": "en",
+  "role": "pm",
+  "experience": 0,
+  "stack": [
+   "jira",
+   "product_analytics"
+  ],
+  "interests": [
+   "fintech",
+   "startups",
+   "mentorship"
+  ],
+  "about": "Want to grow faster: Product manager, stack — Jira, Product Analytics. Looking for an experienced mentor; into Fintech.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p150",
+  "name": "Гульнара Жумабаева",
+  "lang": "ru",
+  "role": "data_engineer",
+  "experience": 2,
+  "stack": [
+   "sql",
+   "dbt",
+   "airflow",
+   "clickhouse",
+   "python"
+  ],
+  "interests": [
+   "fintech",
+   "cloud"
+  ],
+  "about": "Хочу расти быстрее: Data-инженер, стек — SQL, dbt, Airflow. Нужен опытный ментор, интересна тема «Финтех».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "14:00",
+   "14:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p151",
+  "name": "Нурлан Сейткали",
+  "lang": "ru",
+  "role": "mobile",
+  "experience": 7,
+  "stack": [
+   "kotlin",
+   "ci_cd",
+   "figma"
+  ],
+  "interests": [
+   "product",
+   "ecommerce",
+   "logistics"
+  ],
+  "about": "Мобильный разработчик с опытом 7 лет, последние проекты на Kotlin, CI/CD, Figma. Рассматриваю предложения, особенно в сфере «E-commerce».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "14:30",
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p152",
+  "name": "Олжас Сейткали",
+  "lang": "kk",
+  "role": "devops",
+  "experience": 2,
+  "stack": [
+   "kubernetes",
+   "azure",
+   "grafana",
+   "ci_cd",
+   "terraform"
+  ],
+  "interests": [
+   "healthtech",
+   "opensource",
+   "govtech"
+  ],
+  "about": "DevOps-инженер, 2 жыл тәжірибесі бар. Әріптестермен тәжірибе алмасқым келеді: Kubernetes, Azure, Grafana, «Медтех».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Samal Health",
+  "slots": [
+   "12:00",
+   "14:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p153",
+  "name": "Алексей Нурланов",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 10,
+  "stack": [
+   "typescript",
+   "react",
+   "jira",
+   "nodejs"
+  ],
+  "interests": [
+   "ecommerce",
+   "community",
+   "product",
+   "opensource"
+  ],
+  "about": "Тимлид / CTO в Kaspian Commerce, с опытом 10 лет. Люблю обсуждать TypeScript, React, Jira и тему «E-commerce».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Kaspian Commerce",
+  "slots": [
+   "14:00",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p154",
+  "name": "Руслан Кенжебаев",
+  "lang": "ru",
+  "role": "student",
+  "experience": 0,
+  "stack": [
+   "python",
+   "pytorch"
+  ],
+  "interests": [
+   "gamedev",
+   "iot",
+   "career"
+  ],
+  "about": "Студент без коммерческого опыта. Изучаю Python, PyTorch. Ищу команду, где можно расти, интересна тема «Геймдев».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p155",
+  "name": "Виктория Смирнова",
+  "lang": "ru",
+  "role": "frontend",
+  "experience": 2,
+  "stack": [
+   "typescript",
+   "angular",
+   "javascript",
+   "html_css"
+  ],
+  "interests": [
+   "opensource",
+   "iot"
+  ],
+  "about": "Хочу расти быстрее: Frontend-разработчик, стек — TypeScript, Angular, JavaScript. Нужен опытный ментор, интересна тема «Open source».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p156",
+  "name": "Ержан Нурланов",
+  "lang": "kk",
+  "role": "security",
+  "experience": 1,
+  "stack": [
+   "linux",
+   "siem",
+   "owasp"
+  ],
+  "interests": [
+   "blockchain",
+   "govtech",
+   "career"
+  ],
+  "about": "Киберқауіпсіздік маманы, 1 жыл тәжірибесі бар. Linux, SIEM, OWASP үйреніп жүрмін. «Блокчейн» бағытында өсуге көмектесетін тәлімгер іздеймін.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "14:00",
+   "14:30",
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p157",
+  "name": "Anna Zhumabaeva",
+  "lang": "en",
+  "role": "recruiter",
+  "experience": 3,
+  "stack": [
+   "sql",
+   "excel",
+   "jira",
+   "docker",
+   "kubernetes",
+   "ci_cd"
+  ],
+  "interests": [
+   "edtech",
+   "remote",
+   "gamedev"
+  ],
+  "about": "Building the team at Turan EdTech: looking for Business analyst, DevOps engineer, senior level. We use SQL, Excel, Jira; focus — EdTech.",
+  "goal": "hire",
+  "seeking_roles": [
+   "analyst",
+   "devops"
+  ],
+  "hire_levels": [
+   "senior"
+  ],
+  "hire_exp_min": 5,
+  "hire_exp_max": 15,
+  "company": "Turan EdTech",
+  "slots": [
+   "11:00",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p158",
+  "name": "Aleksey Popov",
+  "lang": "en",
+  "role": "gamedev",
+  "experience": 8,
+  "stack": [
+   "unreal",
+   "cpp",
+   "figma"
+  ],
+  "interests": [
+   "edtech",
+   "ux",
+   "gamedev",
+   "iot"
+  ],
+  "about": "Game developer at Turan EdTech, with 8 years of experience. Love talking about Unreal Engine, C++, Figma and EdTech.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "12:00",
+   "13:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p159",
+  "name": "Alikhan Smirnov",
+  "lang": "en",
+  "role": "pm",
+  "experience": 9,
+  "stack": [
+   "jira",
+   "excel",
+   "product_analytics"
+  ],
+  "interests": [
+   "startups",
+   "product",
+   "logistics"
+  ],
+  "about": "Product manager with 9 years of experience. I have an idea in Logistics and I'm looking for a co-founder: Frontend developer, Team lead / CTO.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "frontend",
+   "lead"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "14:00",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p160",
+  "name": "Сабина Есенова",
+  "lang": "ru",
+  "role": "data",
+  "experience": 1,
+  "stack": [
+   "sql",
+   "python"
+  ],
+  "interests": [
+   "data_science",
+   "product",
+   "ecommerce",
+   "career"
+  ],
+  "about": "Аналитик данных с опытом 1 год. Работаю с SQL, Python. Ищу команду, где можно расти, интересна тема «Data Science».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "12:00",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p161",
+  "name": "Mariya Smirnova",
+  "lang": "en",
+  "role": "gamedev",
+  "experience": 5,
+  "stack": [
+   "unity",
+   "csharp",
+   "figma"
+  ],
+  "interests": [
+   "iot",
+   "ecommerce",
+   "career"
+  ],
+  "about": "Game developer with 5 years of experience. I work with Unity, C#, Figma. Looking for a team where I can grow; interested in IoT & hardware.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "14:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p162",
+  "name": "Назерке Байжанова",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 6,
+  "stack": [
+   "rust",
+   "cpp",
+   "linux"
+  ],
+  "interests": [
+   "opensource",
+   "ai",
+   "startups"
+  ],
+  "about": "Хочу запустить стартап в направлении «Искусственный интеллект». Я — Тимлид / CTO, нужен партнёр: Фаундер.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "founder"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "12:00",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p163",
+  "name": "Бекзат Омаров",
+  "lang": "ru",
+  "role": "designer",
+  "experience": 13,
+  "stack": [
+   "figma",
+   "html_css"
+  ],
+  "interests": [
+   "edtech",
+   "gamedev",
+   "ecommerce",
+   "community"
+  ],
+  "about": "UX/UI-дизайнер в Turan EdTech, с опытом 13 лет. Хочу делиться опытом: Figma, HTML/CSS, тема «EdTech».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "13:30",
+   "14:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p164",
+  "name": "Виктория Жумабаева",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 2,
+  "stack": [
+   "php",
+   "laravel",
+   "redis",
+   "sql"
+  ],
+  "interests": [
+   "healthtech",
+   "community",
+   "remote",
+   "agritech"
+  ],
+  "about": "Собираю команду в Samal Health. Ищем: Backend-разработчик; уровень — middle. Работаем с PHP, Laravel, Redis, направление — «Медтех».",
+  "goal": "hire",
+  "seeking_roles": [
+   "backend"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Samal Health",
+  "slots": [
+   "11:30",
+   "13:30",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p165",
+  "name": "Dariya Isaeva",
+  "lang": "en",
+  "role": "lead",
+  "experience": 11,
+  "stack": [
+   "unreal",
+   "cpp",
+   "figma"
+  ],
+  "interests": [
+   "healthtech",
+   "community",
+   "cloud",
+   "agritech"
+  ],
+  "about": "Building the team at Samal Health: looking for Game developer, senior level. We use Unreal Engine, C++, Figma; focus — HealthTech.",
+  "goal": "hire",
+  "seeking_roles": [
+   "gamedev"
+  ],
+  "hire_levels": [
+   "senior"
+  ],
+  "hire_exp_min": 5,
+  "hire_exp_max": 15,
+  "company": "Samal Health",
+  "slots": [
+   "11:30",
+   "14:00",
+   "14:30",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p166",
+  "name": "Дария Нурланова",
+  "lang": "kk",
+  "role": "ml",
+  "experience": 6,
+  "stack": [
+   "python",
+   "pytorch",
+   "nlp",
+   "docker"
+  ],
+  "interests": [
+   "agritech",
+   "ai",
+   "govtech",
+   "startups"
+  ],
+  "about": "ML-инженер, 6 жыл тәжірибесі бар. «Агротех» саласында идеям бар, кофаундер іздеймін: Өнім менеджері, Фаундер.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "pm",
+   "founder"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p167",
+  "name": "Виктория Ким",
+  "lang": "kk",
+  "role": "fullstack",
+  "experience": 5,
+  "stack": [
+   "php",
+   "laravel",
+   "sql",
+   "vue"
+  ],
+  "interests": [
+   "ecommerce",
+   "remote"
+  ],
+  "about": "Fullstack-әзірлеуші, 5 жыл тәжірибесі бар. Соңғы жобаларым PHP, Laravel, SQL негізінде. Ұсыныстарды қарастырамын, әсіресе «E-commerce» саласында.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:00",
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p168",
+  "name": "Темирлан Исаев",
+  "lang": "ru",
+  "role": "data",
+  "experience": 3,
+  "stack": [
+   "sql",
+   "tableau",
+   "excel",
+   "product_analytics"
+  ],
+  "interests": [
+   "ecommerce",
+   "product",
+   "career"
+  ],
+  "about": "Аналитик данных с опытом 3 года. Работаю с SQL, Tableau, Excel. Ищу команду, где можно расти, интересна тема «E-commerce».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "15:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p169",
+  "name": "Nikita Isaev",
+  "lang": "en",
+  "role": "lead",
+  "experience": 8,
+  "stack": [
+   "selenium",
+   "java",
+   "jira",
+   "ci_cd"
+  ],
+  "interests": [
+   "opensource",
+   "startups"
+  ],
+  "about": "Team lead / CTO at Ulytau Mobile. We're hiring: QA engineer (junior). Team stack — Selenium, Java, Jira.",
+  "goal": "hire",
+  "seeking_roles": [
+   "qa"
+  ],
+  "hire_levels": [
+   "junior"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 2,
+  "company": "Ulytau Mobile",
+  "slots": [
+   "12:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p170",
+  "name": "Мария Пак",
+  "lang": "ru",
+  "role": "founder",
+  "experience": 8,
+  "stack": [
+   "product_analytics",
+   "excel",
+   "jira"
+  ],
+  "interests": [
+   "agritech",
+   "startups",
+   "iot",
+   "community"
+  ],
+  "about": "Фаундер в Dala Agro Tech, с опытом 8 лет. Люблю обсуждать Product Analytics, Excel, Jira и тему «Агротех».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Dala Agro Tech",
+  "slots": [
+   "11:00",
+   "12:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p171",
+  "name": "Жанна Цой",
+  "lang": "ru",
+  "role": "devops",
+  "experience": 1,
+  "stack": [
+   "docker",
+   "kubernetes",
+   "ci_cd"
+  ],
+  "interests": [
+   "cloud",
+   "iot"
+  ],
+  "about": "Хочу расти быстрее: DevOps-инженер, стек — Docker, Kubernetes, CI/CD. Нужен опытный ментор, интересна тема «Облачные технологии».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:30",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p172",
+  "name": "Темирлан Касымов",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 4,
+  "stack": [
+   "swift",
+   "ci_cd",
+   "figma",
+   "php",
+   "laravel",
+   "vue"
+  ],
+  "interests": [
+   "fintech",
+   "community"
+  ],
+  "about": "Собираю команду в Orda Fintech. Ищем: Мобильный разработчик, Fullstack-разработчик; уровень — middle. Работаем с Swift, CI/CD, Figma, направление — «Финтех».",
+  "goal": "hire",
+  "seeking_roles": [
+   "mobile",
+   "fullstack"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Orda Fintech",
+  "slots": [
+   "12:00",
+   "14:30",
+   "15:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p173",
+  "name": "Олжас Касымов",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 6,
+  "stack": [
+   "jira",
+   "excel",
+   "product_analytics",
+   "react_native",
+   "typescript",
+   "javascript"
+  ],
+  "interests": [
+   "community",
+   "blockchain"
+  ],
+  "about": "Собираю команду в Tulpar Tech. Ищем: Продакт-менеджер, Мобильный разработчик; уровень — senior. Работаем с Jira, Excel, Product Analytics, направление — «Блокчейн».",
+  "goal": "hire",
+  "seeking_roles": [
+   "pm",
+   "mobile"
+  ],
+  "hire_levels": [
+   "senior"
+  ],
+  "hire_exp_min": 5,
+  "hire_exp_max": 15,
+  "company": "Tulpar Tech",
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:00",
+   "14:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p174",
+  "name": "Anna Beketova",
+  "lang": "en",
+  "role": "frontend",
+  "experience": 7,
+  "stack": [
+   "javascript",
+   "vue",
+   "html_css",
+   "typescript"
+  ],
+  "interests": [
+   "product",
+   "ecommerce",
+   "edtech"
+  ],
+  "about": "Open to new roles: Frontend developer, stack — JavaScript, Vue, HTML/CSS. Most excited about Product thinking.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "14:00",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p175",
+  "name": "Гульнара Ким",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 6,
+  "stack": [
+   "linux",
+   "ansible",
+   "ci_cd",
+   "docker"
+  ],
+  "interests": [
+   "edtech",
+   "product",
+   "community",
+   "ai"
+  ],
+  "about": "Собираю команду в Turan EdTech. Ищем: DevOps-инженер; уровень — middle, senior. Работаем с Linux, Ansible, CI/CD, направление — «EdTech».",
+  "goal": "hire",
+  "seeking_roles": [
+   "devops"
+  ],
+  "hire_levels": [
+   "middle",
+   "senior"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 15,
+  "company": "Turan EdTech",
+  "slots": [
+   "12:00",
+   "14:30",
+   "15:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p176",
+  "name": "Меруерт Нурланова",
+  "lang": "kk",
+  "role": "lead",
+  "experience": 14,
+  "stack": [
+   "kubernetes",
+   "azure",
+   "grafana"
+  ],
+  "interests": [
+   "edtech",
+   "opensource"
+  ],
+  "about": "Turan EdTech командасын жинап жатырмын: DevOps-инженер, деңгейі — junior, middle. Kubernetes, Azure, Grafana қолданамыз, бағыт — «EdTech».",
+  "goal": "hire",
+  "seeking_roles": [
+   "devops"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Turan EdTech",
+  "slots": [
+   "11:00",
+   "14:00",
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p177",
+  "name": "Ilyas Pak",
+  "lang": "en",
+  "role": "qa",
+  "experience": 2,
+  "stack": [
+   "selenium",
+   "python",
+   "sql",
+   "jira"
+  ],
+  "interests": [
+   "edtech",
+   "security",
+   "agritech",
+   "remote"
+  ],
+  "about": "QA engineer with 2 years of experience; recent projects built with Selenium, Python, SQL. Considering offers, especially in EdTech.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "12:00",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p178",
+  "name": "Алексей Абенов",
+  "lang": "ru",
+  "role": "analyst",
+  "experience": 8,
+  "stack": [
+   "sql",
+   "bpmn",
+   "jira"
+  ],
+  "interests": [
+   "cloud",
+   "logistics",
+   "ai",
+   "community"
+  ],
+  "about": "Бизнес-аналитик с опытом 8 лет. Хочу обменяться опытом с коллегами: SQL, BPMN, Jira, «Облачные технологии».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Aral Cloud",
+  "slots": [
+   "11:30",
+   "12:00",
+   "13:30"
+  ]
+ },
+ {
+  "id": "p179",
+  "name": "Ерлан Касымов",
+  "lang": "ru",
+  "role": "ml",
+  "experience": 6,
+  "stack": [
+   "python",
+   "llm",
+   "docker",
+   "fastapi"
+  ],
+  "interests": [
+   "agritech"
+  ],
+  "about": "Ищу работу: ML-инженер, стек — Python, LLM, Docker. Больше всего интересно направление «Агротех».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "13:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p180",
+  "name": "Дмитрий Сапаров",
+  "lang": "kk",
+  "role": "designer",
+  "experience": 1,
+  "stack": [
+   "figma",
+   "html_css"
+  ],
+  "interests": [
+   "product",
+   "gamedev",
+   "career"
+  ],
+  "about": "UX/UI дизайнер, 1 жыл тәжірибесі бар. Соңғы жобаларым Figma, HTML/CSS негізінде. Ұсыныстарды қарастырамын, әсіресе «Геймдев» саласында.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:30"
+  ]
+ },
+ {
+  "id": "p181",
+  "name": "Aydana Musina",
+  "lang": "en",
+  "role": "devops",
+  "experience": 12,
+  "stack": [
+   "kubernetes",
+   "azure",
+   "ci_cd",
+   "grafana",
+   "terraform"
+  ],
+  "interests": [
+   "ai",
+   "security",
+   "govtech"
+  ],
+  "about": "DevOps engineer at Kok Tobe AI, with 12 years of experience. I'd like to share my experience: Kubernetes, Azure, CI/CD, AI.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Kok Tobe AI",
+  "slots": [
+   "11:00",
+   "11:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p182",
+  "name": "Айдана Омарова",
+  "lang": "kk",
+  "role": "security",
+  "experience": 6,
+  "stack": [
+   "siem",
+   "linux",
+   "grafana"
+  ],
+  "interests": [
+   "ai",
+   "opensource",
+   "blockchain",
+   "govtech"
+  ],
+  "about": "Киберқауіпсіздік маманы, 6 жыл тәжірибесі бар, қазір Kok Tobe AI компаниясында. SIEM, Linux, Grafana бойынша тәлімгер бола аламын, IT-дағы мансапқа көмектесемін.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Kok Tobe AI",
+  "slots": [
+   "11:00",
+   "12:00",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p183",
+  "name": "Бекзат Туребаев",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 8,
+  "stack": [
+   "linux",
+   "siem",
+   "owasp"
+  ],
+  "interests": [
+   "ecommerce",
+   "product",
+   "cloud",
+   "blockchain"
+  ],
+  "about": "Тимлид / CTO в Kaspian Commerce. Нанимаем: Специалист по кибербезопасности (junior, middle). Стек команды — Linux, SIEM, OWASP.",
+  "goal": "hire",
+  "seeking_roles": [
+   "security"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Kaspian Commerce",
+  "slots": [
+   "13:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p184",
+  "name": "Алия Ким",
+  "lang": "kk",
+  "role": "founder",
+  "experience": 12,
+  "stack": [
+   "typescript",
+   "angular",
+   "javascript",
+   "html_css",
+   "flutter",
+   "figma"
+  ],
+  "interests": [
+   "gamedev",
+   "healthtech",
+   "agritech"
+  ],
+  "about": "Zhetisu Games компаниясында Фаундер. Маман іздейміз: Frontend-әзірлеуші, Мобильді әзірлеуші (junior, middle). Команда стегі — TypeScript, Angular, JavaScript.",
+  "goal": "hire",
+  "seeking_roles": [
+   "frontend",
+   "mobile"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Zhetisu Games",
+  "slots": [
+   "11:00",
+   "13:30",
+   "14:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p185",
+  "name": "Daniyar Musin",
+  "lang": "en",
+  "role": "devops",
+  "experience": 3,
+  "stack": [
+   "kubernetes",
+   "azure",
+   "grafana"
+  ],
+  "interests": [
+   "cloud",
+   "ecommerce",
+   "remote"
+  ],
+  "about": "DevOps engineer with 3 years of experience; recent projects built with Kubernetes, Azure, Grafana. Considering offers, especially in E-commerce.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "14:00",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p186",
+  "name": "Ильяс Туребаев",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 3,
+  "stack": [
+   "php",
+   "laravel",
+   "vue"
+  ],
+  "interests": [
+   "cloud",
+   "fintech",
+   "opensource"
+  ],
+  "about": "Fullstack-разработчик с опытом 3 года. Хочу обменяться опытом с коллегами: PHP, Laravel, Vue, «Облачные технологии».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Altyn Soft",
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p187",
+  "name": "Гульнара Сейткали",
+  "lang": "ru",
+  "role": "data",
+  "experience": 1,
+  "stack": [
+   "sql",
+   "powerbi"
+  ],
+  "interests": [
+   "data_science",
+   "fintech"
+  ],
+  "about": "Аналитик данных с опытом 1 год. Изучаю SQL, Power BI. Ищу ментора, который поможет вырасти в направлении «Финтех».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p188",
+  "name": "Анна Касымова",
+  "lang": "ru",
+  "role": "frontend",
+  "experience": 4,
+  "stack": [
+   "typescript",
+   "react",
+   "javascript",
+   "html_css",
+   "nextjs"
+  ],
+  "interests": [
+   "edtech",
+   "ux",
+   "fintech",
+   "community"
+  ],
+  "about": "Frontend-разработчик с опытом 4 года. Хочу обменяться опытом с коллегами: TypeScript, React, JavaScript, «EdTech».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p189",
+  "name": "Динара Исаева",
+  "lang": "ru",
+  "role": "ml",
+  "experience": 5,
+  "stack": [
+   "python",
+   "sklearn",
+   "sql"
+  ],
+  "interests": [
+   "logistics",
+   "data_science",
+   "agritech",
+   "gamedev"
+  ],
+  "about": "ML-инженер в Irbis Logistics, с опытом 5 лет. Люблю обсуждать Python, scikit-learn, SQL и тему «Логистика».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Irbis Logistics",
+  "slots": [
+   "11:00",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p190",
+  "name": "Нурлан Попов",
+  "lang": "ru",
+  "role": "mobile",
+  "experience": 3,
+  "stack": [
+   "kotlin",
+   "ci_cd",
+   "figma"
+  ],
+  "interests": [
+   "ux",
+   "gamedev"
+  ],
+  "about": "Хочу запустить стартап в направлении «Геймдев». Я — Мобильный разработчик, нужен партнёр: Продакт-менеджер.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "pm"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p191",
+  "name": "Темирлан Есенов",
+  "lang": "kk",
+  "role": "pm",
+  "experience": 10,
+  "stack": [
+   "jira",
+   "product_analytics",
+   "user_research"
+  ],
+  "interests": [
+   "ux",
+   "ecommerce",
+   "edtech",
+   "startups"
+  ],
+  "about": "Өнім менеджері, 10 жыл тәжірибесі бар. «E-commerce» саласында идеям бар, кофаундер іздеймін: Тимлид / CTO, Fullstack-әзірлеуші.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "lead",
+   "fullstack"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "13:30",
+   "14:00",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p192",
+  "name": "Zhandos Omarov",
+  "lang": "en",
+  "role": "analyst",
+  "experience": 13,
+  "stack": [
+   "sql",
+   "bpmn",
+   "uml"
+  ],
+  "interests": [
+   "edtech",
+   "govtech",
+   "community"
+  ],
+  "about": "Business analyst with 13 years of experience, currently at Turan EdTech. Happy to mentor on SQL, BPMN, UML and IT careers.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "14:00",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p193",
+  "name": "Гульнара Иванова",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 2,
+  "stack": [
+   "typescript",
+   "react",
+   "postgresql"
+  ],
+  "interests": [
+   "cloud",
+   "ecommerce",
+   "agritech",
+   "career"
+  ],
+  "about": "Fullstack-разработчик с опытом 2 года. Изучаю TypeScript, React, PostgreSQL. Ищу ментора, который поможет вырасти в направлении «E-commerce».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p194",
+  "name": "Nurlan Kim",
+  "lang": "en",
+  "role": "data",
+  "experience": 1,
+  "stack": [
+   "sql",
+   "tableau",
+   "excel"
+  ],
+  "interests": [
+   "product",
+   "ai",
+   "remote"
+  ],
+  "about": "Open to new roles: Data analyst, stack — SQL, Tableau, Excel. Most excited about Product thinking.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p195",
+  "name": "Меруерт Исаева",
+  "lang": "kk",
+  "role": "mobile",
+  "experience": 7,
+  "stack": [
+   "flutter",
+   "figma",
+   "ci_cd"
+  ],
+  "interests": [
+   "ux",
+   "gamedev",
+   "remote"
+  ],
+  "about": "Жұмыс іздеп жүрмін: Мобильді әзірлеуші, стек — Flutter, Figma, CI/CD. Ең қызықты бағыт — «Геймдев».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p196",
+  "name": "Ксения Абенова",
+  "lang": "ru",
+  "role": "security",
+  "experience": 3,
+  "stack": [
+   "burp",
+   "owasp",
+   "python",
+   "linux"
+  ],
+  "interests": [
+   "fintech"
+  ],
+  "about": "Ищу работу: Специалист по кибербезопасности, стек — Burp Suite, OWASP, Python. Больше всего интересно направление «Финтех».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "13:30",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p197",
+  "name": "Максим Нурланов",
+  "lang": "ru",
+  "role": "data_engineer",
+  "experience": 4,
+  "stack": [
+   "python",
+   "airflow",
+   "spark",
+   "sql",
+   "kafka"
+  ],
+  "interests": [
+   "data_science",
+   "agritech",
+   "remote"
+  ],
+  "about": "Data-инженер с опытом 4 года, последние проекты на Python, Airflow, Spark. Рассматриваю предложения, особенно в сфере «Агротех».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p198",
+  "name": "Жансая Ахметова",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 3,
+  "stack": [
+   "go",
+   "kubernetes",
+   "azure"
+  ],
+  "interests": [
+   "startups",
+   "opensource",
+   "cloud",
+   "ecommerce"
+  ],
+  "about": "Тимлид / CTO с опытом 3 года. Хочу обменяться опытом с коллегами: Go, Kubernetes, Azure, «Open source».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Steppe Labs",
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:00",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p199",
+  "name": "Bekzat Abenov",
+  "lang": "en",
+  "role": "fullstack",
+  "experience": 8,
+  "stack": [
+   "python",
+   "django",
+   "docker",
+   "postgresql",
+   "react"
+  ],
+  "interests": [
+   "opensource",
+   "govtech"
+  ],
+  "about": "Fullstack developer with 8 years of experience. I have an idea in GovTech and I'm looking for a co-founder: Product manager.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "pm"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "14:00",
+   "14:30",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p200",
+  "name": "Камила Байжанова",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 3,
+  "stack": [
+   "sql",
+   "tableau",
+   "excel",
+   "csharp",
+   "dotnet",
+   "docker"
+  ],
+  "interests": [
+   "startups",
+   "community",
+   "career"
+  ],
+  "about": "IT-рекрутер в Steppe Labs. Нанимаем: Аналитик данных, Backend-разработчик (middle). Стек команды — SQL, Tableau, Excel.",
+  "goal": "hire",
+  "seeking_roles": [
+   "data",
+   "backend"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Steppe Labs",
+  "slots": [
+   "11:00",
+   "11:30",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p201",
+  "name": "Данияр Смирнов",
+  "lang": "kk",
+  "role": "data_engineer",
+  "experience": 3,
+  "stack": [
+   "sql",
+   "dbt",
+   "python",
+   "clickhouse",
+   "airflow"
+  ],
+  "interests": [
+   "iot",
+   "cloud",
+   "logistics"
+  ],
+  "about": "Saryarka Systems компаниясында Деректер инженері, 3 жыл тәжірибесі бар. SQL, dbt, Python және «IoT және құрылғылар» тақырыбын талқылағанды ұнатамын.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Saryarka Systems",
+  "slots": [
+   "11:00",
+   "14:00",
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p202",
+  "name": "Erlan Musin",
+  "lang": "en",
+  "role": "designer",
+  "experience": 1,
+  "stack": [
+   "figma",
+   "user_research"
+  ],
+  "interests": [
+   "edtech",
+   "product",
+   "gamedev",
+   "career"
+  ],
+  "about": "UX/UI designer with 1 year of experience. I work with Figma, User Research. Looking for a team where I can grow; interested in EdTech.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "14:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p203",
+  "name": "Nurlan Smirnov",
+  "lang": "en",
+  "role": "security",
+  "experience": 1,
+  "stack": [
+   "siem",
+   "linux"
+  ],
+  "interests": [
+   "opensource",
+   "gamedev",
+   "career"
+  ],
+  "about": "Security engineer with 1 year of experience. Learning SIEM, Linux. Looking for a mentor to help me grow in Game dev.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "14:00",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p204",
+  "name": "Zhansaya Kim",
+  "lang": "en",
+  "role": "security",
+  "experience": 12,
+  "stack": [
+   "burp",
+   "owasp",
+   "python",
+   "linux"
+  ],
+  "interests": [
+   "iot",
+   "govtech",
+   "blockchain",
+   "community"
+  ],
+  "about": "Security engineer with 12 years of experience. Here to swap experience with peers: Burp Suite, OWASP, Python, IoT & hardware.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Saryarka Systems",
+  "slots": [
+   "11:00",
+   "12:00",
+   "13:30",
+   "14:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p205",
+  "name": "Нурлан Мусин",
+  "lang": "kk",
+  "role": "data_engineer",
+  "experience": 2,
+  "stack": [
+   "python",
+   "spark",
+   "docker"
+  ],
+  "interests": [
+   "ecommerce",
+   "data_science"
+  ],
+  "about": "Shanyraq Apps компаниясында Деректер инженері, 2 жыл тәжірибесі бар. Python, Spark, Docker және «E-commerce» тақырыбын талқылағанды ұнатамын.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Shanyraq Apps",
+  "slots": [
+   "11:00",
+   "12:00",
+   "14:30",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p206",
+  "name": "Мария Омарова",
+  "lang": "ru",
+  "role": "data",
+  "experience": 5,
+  "stack": [
+   "sql",
+   "python",
+   "spark",
+   "pandas",
+   "airflow"
+  ],
+  "interests": [
+   "edtech",
+   "ai",
+   "blockchain",
+   "community"
+  ],
+  "about": "Аналитик данных с опытом 5 лет. Хочу обменяться опытом с коллегами: SQL, Python, Spark, «EdTech».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "11:30",
+   "14:30",
+   "15:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p207",
+  "name": "Бекзат Нурланов",
+  "lang": "ru",
+  "role": "backend",
+  "experience": 3,
+  "stack": [
+   "onec",
+   "sql",
+   "excel"
+  ],
+  "interests": [
+   "cloud",
+   "ecommerce"
+  ],
+  "about": "Backend-разработчик с опытом 3 года. Изучаю 1C, SQL, Excel. Ищу ментора, который поможет вырасти в направлении «E-commerce».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p208",
+  "name": "Динара Цой",
+  "lang": "ru",
+  "role": "student",
+  "experience": 0,
+  "stack": [
+   "php",
+   "laravel"
+  ],
+  "interests": [
+   "edtech",
+   "logistics",
+   "career"
+  ],
+  "about": "Студент без коммерческого опыта. Изучаю PHP, Laravel. Ищу ментора, который поможет вырасти в направлении «EdTech».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p209",
+  "name": "Данияр Есенов",
+  "lang": "kk",
+  "role": "gamedev",
+  "experience": 14,
+  "stack": [
+   "godot",
+   "csharp"
+  ],
+  "interests": [
+   "iot",
+   "startups",
+   "gamedev",
+   "community"
+  ],
+  "about": "Ойын әзірлеушісі, 14 жыл тәжірибесі бар, қазір Saryarka Systems компаниясында. Godot, C# бойынша тәлімгер бола аламын, IT-дағы мансапқа көмектесемін.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Saryarka Systems",
+  "slots": [
+   "12:00",
+   "14:00",
+   "14:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p210",
+  "name": "Артём Иванов",
+  "lang": "ru",
+  "role": "mobile",
+  "experience": 10,
+  "stack": [
+   "swift",
+   "ci_cd",
+   "figma"
+  ],
+  "interests": [
+   "edtech",
+   "gamedev"
+  ],
+  "about": "Мобильный разработчик в Turan EdTech, с опытом 10 лет. Хочу делиться опытом: Swift, CI/CD, Figma, тема «EdTech».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "11:30",
+   "13:30",
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p211",
+  "name": "Мадина Пак",
+  "lang": "ru",
+  "role": "security",
+  "experience": 6,
+  "stack": [
+   "linux",
+   "siem",
+   "owasp",
+   "python"
+  ],
+  "interests": [
+   "govtech",
+   "fintech",
+   "remote"
+  ],
+  "about": "Специалист по кибербезопасности с опытом 6 лет. Работаю с Linux, SIEM, OWASP. Ищу команду, где можно расти, интересна тема «GovTech».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p212",
+  "name": "Дана Исаева",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 13,
+  "stack": [
+   "php",
+   "laravel",
+   "vue"
+  ],
+  "interests": [
+   "logistics",
+   "product"
+  ],
+  "about": "Собираю команду в Irbis Logistics. Ищем: Fullstack-разработчик; уровень — middle. Работаем с PHP, Laravel, Vue, направление — «Логистика».",
+  "goal": "hire",
+  "seeking_roles": [
+   "fullstack"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Irbis Logistics",
+  "slots": [
+   "11:00",
+   "11:30",
+   "13:30",
+   "14:00"
+  ]
+ },
+ {
+  "id": "p213",
+  "name": "Tomiris Seytkali",
+  "lang": "en",
+  "role": "backend",
+  "experience": 6,
+  "stack": [
+   "onec",
+   "sql",
+   "excel"
+  ],
+  "interests": [
+   "gamedev",
+   "security",
+   "cloud"
+  ],
+  "about": "Backend developer at Zhetisu Games, with 6 years of experience. I'd like to share my experience: 1C, SQL, Excel, Game dev.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Zhetisu Games",
+  "slots": [
+   "11:30",
+   "12:00",
+   "13:30",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p214",
+  "name": "Полина Омарова",
+  "lang": "ru",
+  "role": "data",
+  "experience": 11,
+  "stack": [
+   "sql",
+   "tableau",
+   "product_analytics"
+  ],
+  "interests": [
+   "fintech"
+  ],
+  "about": "Аналитик данных с опытом 11 лет, сейчас в Ulytau Mobile. Могу менторить по SQL, Tableau, Product Analytics и помочь с карьерой в IT.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Ulytau Mobile",
+  "slots": [
+   "11:00",
+   "12:00",
+   "14:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p215",
+  "name": "Dmitriy Kasymov",
+  "lang": "en",
+  "role": "gamedev",
+  "experience": 10,
+  "stack": [
+   "unity",
+   "csharp",
+   "figma"
+  ],
+  "interests": [
+   "edtech",
+   "gamedev",
+   "ux",
+   "fintech"
+  ],
+  "about": "Game developer with 10 years of experience. Here to swap experience with peers: Unity, C#, Figma, EdTech.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "11:00",
+   "11:30",
+   "12:00",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p216",
+  "name": "Anna Popova",
+  "lang": "en",
+  "role": "recruiter",
+  "experience": 6,
+  "stack": [
+   "linux",
+   "siem",
+   "owasp"
+  ],
+  "interests": [
+   "cloud",
+   "career",
+   "remote",
+   "logistics"
+  ],
+  "about": "Building the team at Aral Cloud: looking for Security engineer, middle level. We use Linux, SIEM, OWASP; focus — Logistics.",
+  "goal": "hire",
+  "seeking_roles": [
+   "security"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Aral Cloud",
+  "slots": [
+   "14:00",
+   "14:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p217",
+  "name": "Айбек Исаев",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 13,
+  "stack": [
+   "selenium",
+   "python",
+   "postman",
+   "sql"
+  ],
+  "interests": [
+   "agritech",
+   "cloud",
+   "opensource",
+   "govtech"
+  ],
+  "about": "Собираю команду в Dala Agro Tech. Ищем: QA-инженер; уровень — junior. Работаем с Selenium, Python, Postman, направление — «Агротех».",
+  "goal": "hire",
+  "seeking_roles": [
+   "qa"
+  ],
+  "hire_levels": [
+   "junior"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 2,
+  "company": "Dala Agro Tech",
+  "slots": [
+   "12:00",
+   "14:30",
+   "15:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p218",
+  "name": "Бекзат Пак",
+  "lang": "ru",
+  "role": "qa",
+  "experience": 11,
+  "stack": [
+   "selenium",
+   "java",
+   "jira"
+  ],
+  "interests": [
+   "ecommerce",
+   "security",
+   "fintech"
+  ],
+  "about": "QA-инженер с опытом 11 лет, сейчас в Kaspian Commerce. Могу менторить по Selenium, Java, Jira и помочь с карьерой в IT.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Kaspian Commerce",
+  "slots": [
+   "15:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p219",
+  "name": "Томирис Тлеубаева",
+  "lang": "ru",
+  "role": "backend",
+  "experience": 2,
+  "stack": [
+   "go",
+   "postgresql",
+   "kubernetes",
+   "kafka",
+   "redis"
+  ],
+  "interests": [
+   "cloud",
+   "opensource",
+   "logistics",
+   "mentorship"
+  ],
+  "about": "Хочу расти быстрее: Backend-разработчик, стек — Go, PostgreSQL, Kubernetes. Нужен опытный ментор, интересна тема «Облачные технологии».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p220",
+  "name": "Kamila Kasymova",
+  "lang": "en",
+  "role": "recruiter",
+  "experience": 5,
+  "stack": [
+   "javascript",
+   "vue",
+   "typescript",
+   "python",
+   "airflow",
+   "sql"
+  ],
+  "interests": [
+   "community",
+   "fintech"
+  ],
+  "about": "Building the team at Tulpar Tech: looking for Frontend developer, Data engineer, UX/UI designer, junior, middle level. We use JavaScript, Vue, TypeScript; focus — Fintech.",
+  "goal": "hire",
+  "seeking_roles": [
+   "frontend",
+   "data_engineer",
+   "designer"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Tulpar Tech",
+  "slots": [
+   "11:00",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p221",
+  "name": "Aliya Zhumabaeva",
+  "lang": "en",
+  "role": "fullstack",
+  "experience": 9,
+  "stack": [
+   "typescript",
+   "react",
+   "docker",
+   "nodejs",
+   "postgresql"
+  ],
+  "interests": [
+   "opensource",
+   "ecommerce",
+   "startups"
+  ],
+  "about": "Want to launch a startup in E-commerce. I'm a fullstack developer; looking for a partner: Founder.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "founder"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "13:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p222",
+  "name": "Меруерт Попова",
+  "lang": "ru",
+  "role": "founder",
+  "experience": 10,
+  "stack": [
+   "product_analytics",
+   "figma"
+  ],
+  "interests": [
+   "product",
+   "edtech",
+   "startups"
+  ],
+  "about": "Хочу запустить стартап в направлении «EdTech». Я — Фаундер, нужен партнёр: Frontend-разработчик, Мобильный разработчик.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "frontend",
+   "mobile"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p223",
+  "name": "Мирас Омаров",
+  "lang": "ru",
+  "role": "gamedev",
+  "experience": 14,
+  "stack": [
+   "unreal",
+   "cpp",
+   "figma"
+  ],
+  "interests": [
+   "ai",
+   "ux"
+  ],
+  "about": "Разработчик игр с опытом 14 лет, сейчас в Kok Tobe AI. Могу менторить по Unreal Engine, C++, Figma и помочь с карьерой в IT.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Kok Tobe AI",
+  "slots": [
+   "11:00",
+   "13:30",
+   "14:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p224",
+  "name": "Artyom Ivanov",
+  "lang": "en",
+  "role": "backend",
+  "experience": 12,
+  "stack": [
+   "java",
+   "spring",
+   "docker",
+   "postgresql",
+   "kafka"
+  ],
+  "interests": [
+   "security"
+  ],
+  "about": "Backend developer with 12 years of experience. I have an idea in Cybersecurity and I'm looking for a co-founder: UX/UI designer, Founder.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "designer",
+   "founder"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p225",
+  "name": "Gulnara Kasymova",
+  "lang": "en",
+  "role": "lead",
+  "experience": 11,
+  "stack": [
+   "python",
+   "django",
+   "jira",
+   "kubernetes",
+   "postgresql"
+  ],
+  "interests": [
+   "opensource",
+   "blockchain",
+   "startups"
+  ],
+  "about": "Want to launch a startup in Blockchain. I'm a team lead / CTO; looking for a partner: Founder, UX/UI designer.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "founder",
+   "designer"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "12:00",
+   "14:30"
+  ]
+ },
+ {
+  "id": "p226",
+  "name": "Aleksey Kasymov",
+  "lang": "en",
+  "role": "data_engineer",
+  "experience": 2,
+  "stack": [
+   "python",
+   "airflow",
+   "sql",
+   "kafka",
+   "spark"
+  ],
+  "interests": [
+   "fintech",
+   "ecommerce",
+   "ai"
+  ],
+  "about": "Data engineer with 2 years of experience. Learning Python, Airflow, SQL. Looking for a mentor to help me grow in Fintech.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:30",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p227",
+  "name": "Меруерт Мусина",
+  "lang": "ru",
+  "role": "mobile",
+  "experience": 6,
+  "stack": [
+   "swift",
+   "ci_cd",
+   "figma"
+  ],
+  "interests": [
+   "gamedev",
+   "healthtech",
+   "career"
+  ],
+  "about": "Мобильный разработчик с опытом 6 лет. Работаю с Swift, CI/CD, Figma. Ищу команду, где можно расти, интересна тема «Геймдев».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:00",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p228",
+  "name": "Анна Омарова",
+  "lang": "ru",
+  "role": "designer",
+  "experience": 2,
+  "stack": [
+   "figma",
+   "html_css"
+  ],
+  "interests": [
+   "ux",
+   "fintech",
+   "mentorship"
+  ],
+  "about": "Хочу расти быстрее: UX/UI-дизайнер, стек — Figma, HTML/CSS. Нужен опытный ментор, интересна тема «UX-исследования».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p229",
+  "name": "Жандос Есенов",
+  "lang": "ru",
+  "role": "backend",
+  "experience": 11,
+  "stack": [
+   "onec",
+   "sql",
+   "excel"
+  ],
+  "interests": [
+   "ecommerce",
+   "fintech",
+   "opensource",
+   "mentorship"
+  ],
+  "about": "Backend-разработчик в Shanyraq Apps, с опытом 11 лет. Хочу делиться опытом: 1C, SQL, Excel, тема «E-commerce».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Shanyraq Apps",
+  "slots": [
+   "11:00",
+   "11:30",
+   "12:00",
+   "13:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p230",
+  "name": "Aybek Bayzhanov",
+  "lang": "en",
+  "role": "lead",
+  "experience": 5,
+  "stack": [
+   "ruby",
+   "postgresql",
+   "jira",
+   "redis"
+  ],
+  "interests": [
+   "product",
+   "healthtech",
+   "startups"
+  ],
+  "about": "Want to launch a startup in HealthTech. I'm a team lead / CTO; looking for a partner: Product manager.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "pm"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p231",
+  "name": "Анна Цой",
+  "lang": "kk",
+  "role": "mobile",
+  "experience": 15,
+  "stack": [
+   "flutter",
+   "figma",
+   "ci_cd"
+  ],
+  "interests": [
+   "ux",
+   "iot",
+   "community"
+  ],
+  "about": "Мобильді әзірлеуші, 15 жыл тәжірибесі бар, қазір Altyn Soft компаниясында. Flutter, Figma, CI/CD бойынша тәлімгер бола аламын, IT-дағы мансапқа көмектесемін.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Altyn Soft",
+  "slots": [
+   "13:30",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p232",
+  "name": "Айдана Мусина",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 2,
+  "stack": [
+   "php",
+   "laravel",
+   "vue"
+  ],
+  "interests": [
+   "startups",
+   "ecommerce",
+   "govtech",
+   "remote"
+  ],
+  "about": "Ищу работу: Fullstack-разработчик, стек — PHP, Laravel, Vue. Больше всего интересно направление «E-commerce».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "14:00",
+   "14:30",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p233",
+  "name": "Дана Байжанова",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 6,
+  "stack": [
+   "php",
+   "laravel",
+   "vue"
+  ],
+  "interests": [
+   "opensource",
+   "startups"
+  ],
+  "about": "Fullstack-разработчик с опытом 6 лет. Работаю с PHP, Laravel, Vue. Ищу команду, где можно расти, интересна тема «Open source».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p234",
+  "name": "Ержан Бекетов",
+  "lang": "ru",
+  "role": "pm",
+  "experience": 7,
+  "stack": [
+   "jira",
+   "excel",
+   "product_analytics"
+  ],
+  "interests": [
+   "agritech",
+   "fintech",
+   "edtech",
+   "community"
+  ],
+  "about": "Продакт-менеджер в Dala Agro Tech, с опытом 7 лет. Хочу делиться опытом: Jira, Excel, Product Analytics, тема «Агротех».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Dala Agro Tech",
+  "slots": [
+   "11:00",
+   "11:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p235",
+  "name": "Виктория Ахметова",
+  "lang": "ru",
+  "role": "backend",
+  "experience": 2,
+  "stack": [
+   "csharp",
+   "dotnet",
+   "docker"
+  ],
+  "interests": [
+   "iot",
+   "fintech",
+   "community"
+  ],
+  "about": "Backend-разработчик в Saryarka Systems, с опытом 2 года. Люблю обсуждать C#, .NET, Docker и тему «IoT и железо».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Saryarka Systems",
+  "slots": [
+   "11:00",
+   "12:00",
+   "13:30"
+  ]
+ },
+ {
+  "id": "p236",
+  "name": "Дария Сапарова",
+  "lang": "ru",
+  "role": "backend",
+  "experience": 3,
+  "stack": [
+   "python",
+   "django",
+   "redis"
+  ],
+  "interests": [
+   "security",
+   "ecommerce",
+   "startups"
+  ],
+  "about": "Backend-разработчик с опытом 3 года. Есть идея в сфере «Кибербезопасность», ищу кофаундера: Фаундер, UX/UI-дизайнер.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "founder",
+   "designer"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "14:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p237",
+  "name": "Sanzhar Nurlanov",
+  "lang": "en",
+  "role": "backend",
+  "experience": 1,
+  "stack": [
+   "php",
+   "laravel"
+  ],
+  "interests": [
+   "security",
+   "fintech",
+   "govtech",
+   "career"
+  ],
+  "about": "Open to new roles: Backend developer, stack — PHP, Laravel. Most excited about Cybersecurity.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p238",
+  "name": "Ксения Байжанова",
+  "lang": "kk",
+  "role": "security",
+  "experience": 9,
+  "stack": [
+   "linux",
+   "siem",
+   "owasp",
+   "python"
+  ],
+  "interests": [
+   "ai",
+   "fintech",
+   "blockchain",
+   "logistics"
+  ],
+  "about": "Kok Tobe AI компаниясында Киберқауіпсіздік маманы, 9 жыл тәжірибесі бар. Linux, SIEM, OWASP және «Жасанды интеллект» тақырыбын талқылағанды ұнатамын.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Kok Tobe AI",
+  "slots": [
+   "13:30",
+   "14:00",
+   "15:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p239",
+  "name": "Сабина Пак",
+  "lang": "kk",
+  "role": "lead",
+  "experience": 7,
+  "stack": [
+   "sql",
+   "dbt",
+   "python",
+   "airflow"
+  ],
+  "interests": [
+   "cloud",
+   "opensource"
+  ],
+  "about": "Aral Cloud компаниясында Тимлид / CTO. Маман іздейміз: Деректер инженері (middle). Команда стегі — SQL, dbt, Python.",
+  "goal": "hire",
+  "seeking_roles": [
+   "data_engineer"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Aral Cloud",
+  "slots": [
+   "11:00",
+   "12:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p240",
+  "name": "Nikita Abenov",
+  "lang": "en",
+  "role": "qa",
+  "experience": 2,
+  "stack": [
+   "selenium",
+   "python",
+   "sql"
+  ],
+  "interests": [
+   "edtech",
+   "opensource",
+   "iot"
+  ],
+  "about": "Want to grow faster: QA engineer, stack — Selenium, Python, SQL. Looking for an experienced mentor; into EdTech.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "14:00",
+   "14:30"
+  ]
+ },
+ {
+  "id": "p241",
+  "name": "Жансая Исаева",
+  "lang": "ru",
+  "role": "lead",
+  "experience": 7,
+  "stack": [
+   "python",
+   "django",
+   "react",
+   "docker",
+   "postgresql"
+  ],
+  "interests": [
+   "startups",
+   "opensource",
+   "blockchain"
+  ],
+  "about": "Тимлид / CTO в Ulytau Mobile. Нанимаем: Fullstack-разработчик (junior). Стек команды — Python, Django, React.",
+  "goal": "hire",
+  "seeking_roles": [
+   "fullstack"
+  ],
+  "hire_levels": [
+   "junior"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 2,
+  "company": "Ulytau Mobile",
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:00",
+   "14:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p242",
+  "name": "Азамат Касымов",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 7,
+  "stack": [
+   "unreal",
+   "cpp",
+   "figma"
+  ],
+  "interests": [
+   "iot",
+   "career",
+   "community",
+   "edtech"
+  ],
+  "about": "IT-рекрутер в Saryarka Systems. Нанимаем: Разработчик игр (middle). Стек команды — Unreal Engine, C++, Figma.",
+  "goal": "hire",
+  "seeking_roles": [
+   "gamedev"
+  ],
+  "hire_levels": [
+   "middle"
+  ],
+  "hire_exp_min": 2,
+  "hire_exp_max": 5,
+  "company": "Saryarka Systems",
+  "slots": [
+   "11:00",
+   "15:00",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p243",
+  "name": "Динара Нурланова",
+  "lang": "ru",
+  "role": "data",
+  "experience": 6,
+  "stack": [
+   "sql",
+   "tableau",
+   "excel",
+   "product_analytics"
+  ],
+  "interests": [
+   "ai",
+   "gamedev",
+   "opensource"
+  ],
+  "about": "Аналитик данных с опытом 6 лет. Хочу обменяться опытом с коллегами: SQL, Tableau, Excel, «Искусственный интеллект».",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Ulytau Mobile",
+  "slots": [
+   "11:00",
+   "11:30",
+   "12:00",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p244",
+  "name": "Aliya Abenova",
+  "lang": "en",
+  "role": "backend",
+  "experience": 3,
+  "stack": [
+   "onec",
+   "sql",
+   "excel"
+  ],
+  "interests": [
+   "ecommerce",
+   "edtech"
+  ],
+  "about": "Backend developer with 3 years of experience. I have an idea in E-commerce and I'm looking for a co-founder: Product manager, UX/UI designer.",
+  "goal": "find_cofounder",
+  "seeking_roles": [
+   "pm",
+   "designer"
+  ],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "13:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p245",
+  "name": "Aleksey Seytkali",
+  "lang": "en",
+  "role": "backend",
+  "experience": 6,
+  "stack": [
+   "nodejs",
+   "typescript",
+   "mongodb",
+   "redis",
+   "docker"
+  ],
+  "interests": [
+   "security",
+   "fintech",
+   "blockchain",
+   "remote"
+  ],
+  "about": "Open to new roles: Backend developer, stack — Node.js, TypeScript, MongoDB. Most excited about Cybersecurity.",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "11:30",
+   "14:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p246",
+  "name": "Мария Попова",
+  "lang": "ru",
+  "role": "pm",
+  "experience": 1,
+  "stack": [
+   "jira",
+   "product_analytics"
+  ],
+  "interests": [
+   "fintech"
+  ],
+  "about": "Продакт-менеджер с опытом 1 год, последние проекты на Jira, Product Analytics. Рассматриваю предложения, особенно в сфере «Финтех».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "14:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p247",
+  "name": "Дария Кенжебаева",
+  "lang": "ru",
+  "role": "analyst",
+  "experience": 1,
+  "stack": [
+   "uml",
+   "jira"
+  ],
+  "interests": [
+   "logistics",
+   "product",
+   "fintech"
+  ],
+  "about": "Хочу расти быстрее: Бизнес-аналитик, стек — UML, Jira. Нужен опытный ментор, интересна тема «Логистика».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p248",
+  "name": "Полина Сейткали",
+  "lang": "ru",
+  "role": "recruiter",
+  "experience": 5,
+  "stack": [
+   "selenium",
+   "java",
+   "jira",
+   "uml",
+   "sql"
+  ],
+  "interests": [
+   "govtech",
+   "community"
+  ],
+  "about": "Собираю команду в Medeu Digital. Ищем: QA-инженер, Бизнес-аналитик; уровень — junior, middle. Работаем с Selenium, Java, Jira, направление — «GovTech».",
+  "goal": "hire",
+  "seeking_roles": [
+   "qa",
+   "analyst"
+  ],
+  "hire_levels": [
+   "junior",
+   "middle"
+  ],
+  "hire_exp_min": 0,
+  "hire_exp_max": 5,
+  "company": "Medeu Digital",
+  "slots": [
+   "11:30",
+   "14:00",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p249",
+  "name": "Алия Абенова",
+  "lang": "ru",
+  "role": "ml",
+  "experience": 2,
+  "stack": [
+   "python",
+   "llm",
+   "fastapi",
+   "docker"
+  ],
+  "interests": [
+   "data_science",
+   "healthtech",
+   "iot",
+   "remote"
+  ],
+  "about": "Ищу работу: ML-инженер, стек — Python, LLM, FastAPI. Больше всего интересно направление «Медтех».",
+  "goal": "find_job",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "14:00",
+   "14:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p250",
+  "name": "Tomiris Isaeva",
+  "lang": "en",
+  "role": "gamedev",
+  "experience": 3,
+  "stack": [
+   "unity",
+   "csharp",
+   "figma"
+  ],
+  "interests": [
+   "gamedev",
+   "ecommerce",
+   "mentorship"
+  ],
+  "about": "Want to grow faster: Game developer, stack — Unity, C#, Figma. Looking for an experienced mentor; into Game dev.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "14:30",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p251",
+  "name": "Kamila Saparova",
+  "lang": "en",
+  "role": "designer",
+  "experience": 11,
+  "stack": [
+   "figma",
+   "user_research",
+   "html_css"
+  ],
+  "interests": [
+   "edtech",
+   "ux",
+   "agritech",
+   "community"
+  ],
+  "about": "UX/UI designer with 11 years of experience. Here to swap experience with peers: Figma, User Research, HTML/CSS, EdTech.",
+  "goal": "exchange",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Turan EdTech",
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:00"
+  ]
+ },
+ {
+  "id": "p252",
+  "name": "Ruslan Zhumabaev",
+  "lang": "en",
+  "role": "backend",
+  "experience": 0,
+  "stack": [
+   "go",
+   "postgresql"
+  ],
+  "interests": [
+   "fintech",
+   "ecommerce",
+   "ai",
+   "mentorship"
+  ],
+  "about": "Want to grow faster: Backend developer, stack — Go, PostgreSQL. Looking for an experienced mentor; into Fintech.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "14:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p253",
+  "name": "Жансая Сейткали",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 2,
+  "stack": [
+   "php",
+   "laravel",
+   "vue"
+  ],
+  "interests": [
+   "startups",
+   "opensource",
+   "edtech"
+  ],
+  "about": "Хочу расти быстрее: Fullstack-разработчик, стек — PHP, Laravel, Vue. Нужен опытный ментор, интересна тема «Open source».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "14:00",
+   "14:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p254",
+  "name": "Аружан Пак",
+  "lang": "kk",
+  "role": "gamedev",
+  "experience": 2,
+  "stack": [
+   "unreal",
+   "cpp",
+   "figma"
+  ],
+  "interests": [
+   "startups",
+   "iot",
+   "ecommerce"
+  ],
+  "about": "Ойын әзірлеушісі, 2 жыл тәжірибесі бар. Unreal Engine, C++, Figma үйреніп жүрмін. «IoT және құрылғылар» бағытында өсуге көмектесетін тәлімгер іздеймін.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p255",
+  "name": "Ekaterina Musina",
+  "lang": "en",
+  "role": "ml",
+  "experience": 3,
+  "stack": [
+   "python",
+   "sklearn",
+   "pandas",
+   "sql"
+  ],
+  "interests": [
+   "healthtech",
+   "opensource",
+   "fintech",
+   "career"
+  ],
+  "about": "ML engineer with 3 years of experience. Learning Python, scikit-learn, pandas. Looking for a mentor to help me grow in HealthTech.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "15:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p256",
+  "name": "Дана Есенова",
+  "lang": "kk",
+  "role": "data",
+  "experience": 1,
+  "stack": [
+   "sql",
+   "python",
+   "pandas"
+  ],
+  "interests": [
+   "product",
+   "fintech",
+   "mentorship"
+  ],
+  "about": "Деректер талдаушысы, 1 жыл тәжірибесі бар. SQL, Python, pandas үйреніп жүрмін. «Финтех» бағытында өсуге көмектесетін тәлімгер іздеймін.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:30",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p257",
+  "name": "Алихан Сапаров",
+  "lang": "ru",
+  "role": "data_engineer",
+  "experience": 1,
+  "stack": [
+   "python",
+   "airflow"
+  ],
+  "interests": [
+   "ecommerce",
+   "fintech",
+   "logistics",
+   "mentorship"
+  ],
+  "about": "Data-инженер с опытом 1 год. Изучаю Python, Airflow. Ищу ментора, который поможет вырасти в направлении «E-commerce».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p258",
+  "name": "Сабина Байжанова",
+  "lang": "ru",
+  "role": "devops",
+  "experience": 1,
+  "stack": [
+   "docker",
+   "kubernetes"
+  ],
+  "interests": [
+   "cloud",
+   "mentorship"
+  ],
+  "about": "DevOps-инженер с опытом 1 год. Изучаю Docker, Kubernetes. Ищу ментора, интересна тема «Облачные технологии».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "12:00",
+   "14:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p259",
+  "name": "Руслан Иванов",
+  "lang": "ru",
+  "role": "security",
+  "experience": 0,
+  "stack": [
+   "burp",
+   "owasp",
+   "linux"
+  ],
+  "interests": [
+   "fintech",
+   "blockchain",
+   "career"
+  ],
+  "about": "Хочу расти быстрее: Специалист по кибербезопасности, стек — Burp Suite, OWASP, Linux. Нужен опытный ментор, интересна тема «Финтех».",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "12:00",
+   "14:00",
+   "15:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p260",
+  "name": "Alikhan Nurlanov",
+  "lang": "en",
+  "role": "qa",
+  "experience": 2,
+  "stack": [
+   "selenium",
+   "python",
+   "jira"
+  ],
+  "interests": [
+   "opensource",
+   "edtech",
+   "iot",
+   "mentorship"
+  ],
+  "about": "QA engineer with 2 years of experience. Learning Selenium, Python, Jira. Looking for a mentor to help me grow in EdTech.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:00",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p261",
+  "name": "Madina Isaeva",
+  "lang": "en",
+  "role": "pm",
+  "experience": 3,
+  "stack": [
+   "jira",
+   "excel",
+   "product_analytics"
+  ],
+  "interests": [
+   "startups",
+   "fintech",
+   "iot"
+  ],
+  "about": "Want to grow faster: Product manager, stack — Jira, Excel, Product Analytics. Looking for an experienced mentor; into Fintech.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "13:30",
+   "14:00",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p262",
+  "name": "Темирлан Нурланов",
+  "lang": "kk",
+  "role": "designer",
+  "experience": 0,
+  "stack": [
+   "figma",
+   "user_research"
+  ],
+  "interests": [
+   "edtech",
+   "ux",
+   "govtech"
+  ],
+  "about": "UX/UI дизайнер, коммерциялық тәжірибесі жоқ. Figma, User Research үйреніп жүрмін. «EdTech» бағытында өсуге көмектесетін тәлімгер іздеймін.",
+  "goal": "find_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": null,
+  "slots": [
+   "11:00",
+   "13:30",
+   "14:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p263",
+  "name": "Арман Попов",
+  "lang": "ru",
+  "role": "backend",
+  "experience": 15,
+  "stack": [
+   "go",
+   "postgresql",
+   "redis",
+   "kubernetes"
+  ],
+  "interests": [
+   "cloud",
+   "opensource",
+   "ecommerce"
+  ],
+  "about": "Backend-разработчик в QazCode Studio, с опытом 15 лет. Хочу делиться опытом: Go, PostgreSQL, Redis, тема «Облачные технологии».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "QazCode Studio",
+  "slots": [
+   "12:00",
+   "14:00",
+   "14:30",
+   "15:00"
+  ]
+ },
+ {
+  "id": "p264",
+  "name": "Тимур Бекетов",
+  "lang": "kk",
+  "role": "frontend",
+  "experience": 9,
+  "stack": [
+   "typescript",
+   "react",
+   "javascript"
+  ],
+  "interests": [
+   "ai",
+   "edtech",
+   "ecommerce",
+   "blockchain"
+  ],
+  "about": "Kok Tobe AI компаниясында Frontend-әзірлеуші, 9 жыл тәжірибесі бар. Тәжірибеммен бөліскім келеді: TypeScript, React, JavaScript, «Жасанды интеллект» тақырыбы.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Kok Tobe AI",
+  "slots": [
+   "11:00",
+   "14:00",
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p265",
+  "name": "Дана Мусина",
+  "lang": "ru",
+  "role": "fullstack",
+  "experience": 8,
+  "stack": [
+   "php",
+   "laravel",
+   "sql",
+   "vue"
+  ],
+  "interests": [
+   "govtech",
+   "ecommerce",
+   "opensource",
+   "community"
+  ],
+  "about": "Fullstack-разработчик в Medeu Digital, с опытом 8 лет. Хочу делиться опытом: PHP, Laravel, SQL, тема «GovTech».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Medeu Digital",
+  "slots": [
+   "11:00",
+   "14:30",
+   "15:30",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p266",
+  "name": "Maksim Omarov",
+  "lang": "en",
+  "role": "mobile",
+  "experience": 15,
+  "stack": [
+   "kotlin",
+   "ci_cd",
+   "figma"
+  ],
+  "interests": [
+   "iot",
+   "ux",
+   "healthtech",
+   "community"
+  ],
+  "about": "Mobile developer at Saryarka Systems, with 15 years of experience. I'd like to share my experience: Kotlin, CI/CD, Figma, IoT & hardware.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Saryarka Systems",
+  "slots": [
+   "11:00",
+   "15:00",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p267",
+  "name": "Екатерина Попова",
+  "lang": "ru",
+  "role": "gamedev",
+  "experience": 6,
+  "stack": [
+   "unity",
+   "csharp",
+   "figma"
+  ],
+  "interests": [
+   "ecommerce",
+   "gamedev",
+   "govtech",
+   "mentorship"
+  ],
+  "about": "Разработчик игр в Shanyraq Apps, с опытом 6 лет. Хочу делиться опытом: Unity, C#, Figma, тема «E-commerce».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Shanyraq Apps",
+  "slots": [
+   "11:30",
+   "16:00",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p268",
+  "name": "Айбек Абенов",
+  "lang": "kk",
+  "role": "ml",
+  "experience": 12,
+  "stack": [
+   "python",
+   "tensorflow",
+   "pandas",
+   "cv"
+  ],
+  "interests": [
+   "govtech",
+   "healthtech",
+   "data_science",
+   "agritech"
+  ],
+  "about": "ML-инженер, 12 жыл тәжірибесі бар, қазір Medeu Digital компаниясында. Python, TensorFlow, pandas бойынша тәлімгер бола аламын, IT-дағы мансапқа көмектесемін.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Medeu Digital",
+  "slots": [
+   "11:00",
+   "11:30",
+   "14:00"
+  ]
+ },
+ {
+  "id": "p269",
+  "name": "Динара Пак",
+  "lang": "ru",
+  "role": "data",
+  "experience": 12,
+  "stack": [
+   "sql",
+   "python",
+   "airflow"
+  ],
+  "interests": [
+   "data_science",
+   "govtech"
+  ],
+  "about": "Аналитик данных с опытом 12 лет, сейчас в Ulytau Mobile. Могу менторить по SQL, Python, Airflow и помочь с карьерой в IT.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Ulytau Mobile",
+  "slots": [
+   "11:30",
+   "13:30",
+   "14:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p270",
+  "name": "Мадина Попова",
+  "lang": "kk",
+  "role": "data_engineer",
+  "experience": 8,
+  "stack": [
+   "python",
+   "spark",
+   "docker"
+  ],
+  "interests": [
+   "healthtech",
+   "fintech",
+   "ecommerce",
+   "edtech"
+  ],
+  "about": "Samal Health компаниясында Деректер инженері, 8 жыл тәжірибесі бар. Тәжірибеммен бөліскім келеді: Python, Spark, Docker, «Медтех» тақырыбы.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Samal Health",
+  "slots": [
+   "12:00",
+   "13:30",
+   "14:00",
+   "14:30"
+  ]
+ },
+ {
+  "id": "p271",
+  "name": "Мирас Исаев",
+  "lang": "kk",
+  "role": "devops",
+  "experience": 7,
+  "stack": [
+   "docker",
+   "kubernetes",
+   "linux",
+   "terraform"
+  ],
+  "interests": [
+   "healthtech",
+   "security",
+   "cloud",
+   "fintech"
+  ],
+  "about": "DevOps-инженер, 7 жыл тәжірибесі бар, қазір Samal Health компаниясында. Docker, Kubernetes, Linux бойынша тәлімгер бола аламын, IT-дағы мансапқа көмектесемін.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Samal Health",
+  "slots": [
+   "11:00",
+   "14:00",
+   "14:30",
+   "15:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p272",
+  "name": "Miras Seytkali",
+  "lang": "en",
+  "role": "security",
+  "experience": 12,
+  "stack": [
+   "linux",
+   "siem",
+   "python"
+  ],
+  "interests": [
+   "cloud",
+   "opensource",
+   "blockchain"
+  ],
+  "about": "Security engineer at Aral Cloud, with 12 years of experience. I'd like to share my experience: Linux, SIEM, Python, Cloud.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Aral Cloud",
+  "slots": [
+   "12:00",
+   "13:30",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p273",
+  "name": "Aliya Nurlanova",
+  "lang": "en",
+  "role": "qa",
+  "experience": 13,
+  "stack": [
+   "selenium",
+   "java",
+   "ci_cd"
+  ],
+  "interests": [
+   "ecommerce",
+   "security",
+   "mentorship"
+  ],
+  "about": "QA engineer at Kaspian Commerce, with 13 years of experience. I'd like to share my experience: Selenium, Java, CI/CD, E-commerce.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Kaspian Commerce",
+  "slots": [
+   "11:00",
+   "11:30",
+   "15:00",
+   "15:30"
+  ]
+ },
+ {
+  "id": "p274",
+  "name": "Данияр Омаров",
+  "lang": "ru",
+  "role": "pm",
+  "experience": 6,
+  "stack": [
+   "jira",
+   "product_analytics",
+   "figma"
+  ],
+  "interests": [
+   "ecommerce",
+   "iot",
+   "mentorship"
+  ],
+  "about": "Продакт-менеджер в Ulytau Mobile, с опытом 6 лет. Хочу делиться опытом: Jira, Product Analytics, Figma, тема «E-commerce».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Ulytau Mobile",
+  "slots": [
+   "11:00",
+   "11:30",
+   "13:30",
+   "14:00",
+   "16:00"
+  ]
+ },
+ {
+  "id": "p275",
+  "name": "Айдана Нурланова",
+  "lang": "ru",
+  "role": "analyst",
+  "experience": 12,
+  "stack": [
+   "sql",
+   "bpmn",
+   "uml",
+   "jira"
+  ],
+  "interests": [
+   "gamedev",
+   "ecommerce",
+   "iot",
+   "mentorship"
+  ],
+  "about": "Бизнес-аналитик в Zhetisu Games, с опытом 12 лет. Хочу делиться опытом: SQL, BPMN, UML, тема «Геймдев».",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Zhetisu Games",
+  "slots": [
+   "11:00",
+   "11:30",
+   "12:00",
+   "14:30",
+   "16:30"
+  ]
+ },
+ {
+  "id": "p276",
+  "name": "Aygerim Omarova",
+  "lang": "en",
+  "role": "designer",
+  "experience": 6,
+  "stack": [
+   "figma",
+   "html_css"
+  ],
+  "interests": [
+   "data_science",
+   "product",
+   "govtech",
+   "community"
+  ],
+  "about": "UX/UI designer with 6 years of experience, currently at Baiterek Data. Happy to mentor on Figma, HTML/CSS and IT careers.",
+  "goal": "be_mentor",
+  "seeking_roles": [],
+  "hire_levels": [],
+  "hire_exp_min": null,
+  "hire_exp_max": null,
+  "company": "Baiterek Data",
+  "slots": [
+   "14:00",
+   "15:00",
+   "16:30"
+  ]
+ }
+]
