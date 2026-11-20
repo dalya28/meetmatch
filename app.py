@@ -488,6 +488,9 @@ def render_survey(lang: str) -> None:
             return
         if field == "goal":
             render_autofill(lang)
+            with st.container(key="onboarding"):  # быстрый пример — прямо в анкете, а не на главной
+                st.pills(t(lang, "examples"), list(EXAMPLES), format_func=lambda g: t(lang, f"ex_{g}"),
+                         key="ex_pick", on_change=pick_example)
         if field in SINGLE:
             if field == "goal":
                 options, label = list(GOALS), lambda g: goal_label(g, lang)
@@ -739,11 +742,7 @@ def page_match(lang: str) -> None:
     q = s.query
     if (q is None and not s.get("preview_bingo")) or s.show_events:
         event_cover(lang)
-        if q is None:
-            with st.container(key="onboarding"):
-                st.pills(t(lang, "examples"), list(EXAMPLES), format_func=lambda g: t(lang, f"ex_{g}"),
-                         key="ex_pick", on_change=pick_example)
-        else:
+        if q is not None:
             st.button("← " + t(lang, "results_title"), key="events_back", on_click=lambda: s.update(show_events=False))
         render_events(lang)
         return
