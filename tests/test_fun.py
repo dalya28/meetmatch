@@ -10,6 +10,7 @@ from streamlit.testing.v1 import AppTest
 import config
 from avatars import FUN_OPENERS, ROLE_ANIMAL, opener, photo_data_uri, profile_avatar
 from storage import HallStore
+from survey_helper import fill_contacts
 from taxonomy import ROLES
 
 APP = str(Path(__file__).resolve().parents[1] / "app.py")
@@ -54,6 +55,8 @@ def test_avatar_dice_and_hall(tmp_path, monkeypatch):
         assert app.session_state["form"]["avatar"] == "🦖"
         while app.session_state["survey_step"] is not None:
             nxt = [b for b in app.button if (b.key or "").startswith("sv_next_") or b.key == "sv_finish"]
+            if nxt[0].key == "sv_finish":
+                fill_contacts(app)
             nxt[0].click().run()
         assert app.session_state["query"]["avatar"] == "🦖"
 

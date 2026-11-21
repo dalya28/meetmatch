@@ -76,3 +76,32 @@ def test_demo_organizer_code_opens_dashboard_without_hall_clear(tmp_path, monkey
     assert app.session_state["organizer"] == "demo"
     assert app.radio(key="main_page").value == "dash"
     assert not any(b.key == "hall_clear_btn" for b in app.button)   # публичный код не стирает зал
+
+
+def test_name_and_telegram_are_required(tmp_path, monkeypatch):
+    monkeypatch.setattr(HallStore.__init__, "__defaults__", (tmp_path / "hall.json",))
+    monkeypatch.setattr(config, "HALL_ENABLED", True)
+    st.cache_resource.clear()
+    app = AppTest.from_file(str(Path(__file__).resolve().parents[1] / "app.py"), default_timeout=30)
+    app.query_params["start"] = "1"
+    app.run()
+    for key in ("sv_goal_find_job", "sv_format_one", "sv_role_backend", "sv_experience_1"):
+        app.button(key=key).click().run()
+    while not any(b.key == "sv_finish" for b in app.button):
+        next(b for b in app.button if (b.key or "").startswith("sv_next_")).click().run()
+
+    app.button(key="sv_finish").click().run()                       # пусто — дальше не пускает
+    assert app.session_state["survey_step"] is not None and len(app.error) == 2
+    app.text_input(key="sv_name_ru").set_value("Дана")
+    app.text_input(key="sv_tg_ru").set_value("@ab").run()           # слишком короткий ник
+    app.button(key="sv_finish").click().run()
+    assert app.session_state["survey_step"] is not None and len(app.error) == 1
+    assert HallStore().all() == []
+
+    app.text_input(key="sv_tg_ru").set_value("@dana_design").run()
+    app.button(key="sv_finish").click().run()
+    assert not app.exception and app.session_state["survey_step"] is None
+    q = app.session_state["query"]
+    assert q["name"] == "Дана" and q["telegram"] == "dana_design"
+    assert HallStore().all()[0]["telegram"] == "dana_design"
+    st.cache_resource.clear()

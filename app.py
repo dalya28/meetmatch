@@ -56,7 +56,7 @@ from storage import FeedbackStore, HallStore, ReviewStore, feedback_stats, revie
 from taxonomy import (EVENT_SLOTS, GOALS, HIREABLE_ROLES, INTERESTS, LOW_INFO_INTERESTS, ROLES,
                       STACK, STACK_ROLES, goal_label, interest_label, role_label, stack_label, years_ru)
 from autofill import autofill
-from avatars import avatar_choices, opener, photo_data_uri, profile_avatar, role_avatar, role_joke
+from avatars import EXTRA_AVATARS, avatar_choices, opener, photo_data_uri, profile_avatar, role_avatar, role_joke
 from events import DEFAULT_EVENT, attendee_ids, load_events, upcoming
 from groups import suggest_group
 from social import (FREE, bingo_card, bingo_label, bingo_lines, bingo_reach, bingo_tick, clean_telegram, is_activity, is_mutual,
@@ -369,9 +369,16 @@ def answer_multi(field: str, *keys: str) -> None:
 
 
 def answer_about(about_key: str, name_key: str, tg_key: str) -> None:
-    st.session_state.form["name"] = st.session_state.get(name_key, "")
-    st.session_state.form["telegram"] = clean_telegram(st.session_state.get(tg_key, ""))
-    answer("about", st.session_state.get(about_key, ""))
+    """Имя и Telegram обязательны: без них после взаимного мэтча человеку не написать."""
+    s = st.session_state
+    s.form["name"] = (s.get(name_key) or "").strip()
+    s.form["telegram"] = clean_telegram(s.get(tg_key, ""))
+    s.form["about"] = s.get(about_key, "")
+    missing = [f for f in ("name", "telegram") if not s.form[f]]
+    if missing:
+        s.about_missing = missing
+        return
+    answer("about", s.form["about"])
 
 
 def step_back() -> None:
@@ -538,11 +545,16 @@ def render_survey(lang: str) -> None:
             st.caption(t(lang, "hint_about"))
             st.text_area(t(lang, "about"), key=about_key, placeholder=t(lang, "about_ph"), height=110,
                          label_visibility="collapsed")
-            st.text_input(t(lang, "name"), key=name_key)
+            missing = s.pop("about_missing", [])
+            st.text_input(t(lang, "name"), key=name_key, max_chars=40)
+            if "name" in missing:
+                st.error(t(lang, "name_required"), icon=":material/person:")
             tg_key = f"sv_tg_{lang}"
             s.setdefault(tg_key, s.form.get("telegram", ""))
             st.text_input(t(lang, "tg_label"), key=tg_key, placeholder="@username", help=t(lang, "tg_help"))
-            if s.get(tg_key) and not clean_telegram(s.get(tg_key)):
+            if "telegram" in missing:
+                st.error(t(lang, "tg_bad" if s.get(tg_key) else "tg_required"), icon=":material/send:")
+            elif s.get(tg_key) and not clean_telegram(s.get(tg_key)):
                 st.caption(t(lang, "tg_bad"))
             finish = "submit_group" if s.form.get("format") == "group" else "submit"
             st.button(t(lang, finish), type="primary", width="stretch", key="sv_finish",
@@ -704,28 +716,50 @@ CONFETTI = [(-210, -120), (-150, -170), (-60, -190), (40, -185), (140, -160), (2
             (-250, -30), (-190, 70), (200, 80), (-100, 120), (110, 125), (0, -140), (-30, 150)]
 
 
-def render_match(p: dict, m, lang: str, me: str, first: str) -> None:
-    """Яркий момент мэтча: чёрный блок, наклейка «МЭТЧ», два аватара, сцепленные как звенья логотипа."""
-    s = st.session_state
-    seen = s.setdefault("match_seen", [])
-    burst = p["id"] not in seen
+def distinct_faces(people: list[dict]) -> list[str]:
+    """Аватары компании без повторов: у одной роли один зверь, и четыре бобра подряд не различить.
+    Свой выбор и фото не трогаем — меняем только зверя по умолчанию."""
+    faces, used = [], set()
+    for p in people:
+        face = face_html(p)
+        if face in used and not p.get("avatar") and not PHOTO_URI.match(p.get("photo") or ""):
+            face = next((a for a in EXTRA_AVATARS if a not in used), face)
+        used.add(face)
+        faces.append(face)
+    return faces
+
+
+def match_panel(key: str, faces: list[str], sticker: str, title: str, sub: str, chips: list[str]) -> None:
+    """Яркий момент «договорились»: чёрный блок, наклейка, аватары внахлёст, как звенья логотипа.
+    Разлёт точек — один раз на каждый мэтч или компанию, а не при каждом обновлении страницы."""
+    seen = st.session_state.setdefault("match_seen", [])
+    burst = key not in seen
     if burst:
-        seen.append(p["id"])
+        seen.append(key)
     dots = "".join(
         f'<i class="mm-dot-c{n % 3}" style="--x:{x}px; --y:{y}px; --d:{n * 25}ms"></i>'
         for n, (x, y) in enumerate(CONFETTI)) if burst else ""
+    sides = ["mm-mf-a"] + ["mm-mf-b"] * (len(faces) - 1)
+    faces_html = "".join(f'<span class="mm-mf {c}">{f}</span>' for c, f in zip(sides, faces))
+    chips_html = "".join(f'<span class="mm-match-chip">{html.escape(x)}</span>' for x in chips)
+    many = " mm-match-many" if len(faces) > 2 else ""
+    st.html(f"""<div class="mm-match{many}{' mm-burst' if burst else ''}" role="status">
+        <div class="mm-confetti" aria-hidden="true">{dots}</div>
+        <span class="mm-match-sticker">{sticker}</span>
+        <div class="mm-match-faces" aria-hidden="true">{faces_html}</div>
+        <p class="mm-match-title">{title}</p>
+        <p class="mm-match-sub">{sub}</p>
+        <div class="mm-match-chips">{chips_html}</div>
+        </div>""")
+
+
+def render_match(p: dict, m, lang: str, me: str, first: str) -> None:
+    """Взаимный мэтч 1:1: что у вас общего — стек, интересы, общее свободное время."""
     tags = [stack_label(x) for x in m.shared_stack[:3]] + [interest_label(i, lang) for i in m.shared_interests[:2]]
     if m.common_slots:
         tags.append("🕑 " + ", ".join(m.common_slots[:2]))
-    chips_html = "".join(f'<span class="mm-match-chip">{html.escape(x)}</span>' for x in tags)
-    st.html(f"""<div class="mm-match{' mm-burst' if burst else ''}" role="status">
-        <div class="mm-confetti" aria-hidden="true">{dots}</div>
-        <span class="mm-match-sticker">{t(lang, 'match_sticker')}</span>
-        <div class="mm-match-faces" aria-hidden="true"><span class="mm-mf mm-mf-a">{me}</span><span class="mm-mf mm-mf-b">{face_html(p)}</span></div>
-        <p class="mm-match-title">{t(lang, 'match_title')}</p>
-        <p class="mm-match-sub">{t(lang, 'match_sub', name=html.escape(first))}</p>
-        <div class="mm-match-chips">{chips_html}</div>
-        </div>""")
+    match_panel(p["id"], [me, face_html(p)], t(lang, "match_sticker"), t(lang, "match_title"),
+                t(lang, "match_sub", name=html.escape(first)), tags)
 
 
 def render_card(m, lang: str, position: int, count: int, met: bool) -> None:
@@ -1000,7 +1034,12 @@ def render_group(q: dict, lang: str) -> None:
         if going:
             st.caption(t(lang, "group_going", n=going))
         if s.group_joined == g.key:
-            st.success(t(lang, "group_joined", table=g.table, slot=g.slot or "—"), icon=":material/groups:")
+            names = ", ".join(m["name"].split()[0] for m in g.members)
+            chips = ([f"🕑 {g.slot}"] if g.slot else []) + [t(lang, "group_table_chip", table=g.table), topic]
+            match_panel("group:" + g.key, distinct_faces([q] + g.members),
+                        t(lang, "group_sticker"), t(lang, "group_title"),
+                        html.escape(t(lang, "group_match_sub", names=names, n=len(everyone))), chips)
+            st.caption(t(lang, "group_joined", table=g.table, slot=g.slot or "—"))
         else:
             b1, b2 = st.columns(2)
             b1.button(t(lang, "group_join"), type="primary", width="stretch", key="group_join",

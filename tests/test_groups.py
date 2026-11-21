@@ -47,7 +47,7 @@ def test_group_view_join_and_other(feedback_file):
     assert app.session_state["view_pick"] == "group"
     assert not any((b.key or "").startswith("skip_") for b in app.button)  # вместо 5 карточек — компания
     app.button(key="group_join").click().run()
-    assert not app.exception and app.success
+    assert not app.exception and any("Вы записаны" in c.value for c in app.caption)  # яркий блок + подсказка
     assert FeedbackStore().stats()["groups"] == 1
     assert not any(b.key == "group_join" for b in app.button)  # повторно записаться нельзя
     app.segmented_control(key="view_pick").set_value("one").run()  # можно вернуться к знакомствам 1:1

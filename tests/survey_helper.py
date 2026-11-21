@@ -20,9 +20,16 @@ def complete_survey(app, goal: str = "find_job", lang: str = "ru", about: str | 
             app.text_area(key=f"sv_about_{lang}").set_value(about)
         finish = [b for b in app.button if b.key == "sv_finish"]
         if finish:
+            fill_contacts(app, lang)
             finish[0].click().run()
         else:
             next(b for b in app.button if (b.key or "").startswith("sv_next_")).click().run()
         assert not app.exception
     assert app.session_state["survey_step"] is None
     return app
+
+
+def fill_contacts(app, lang: str = "ru", name: str = "Тест Гость", telegram: str = "wm_tester"):
+    """Имя и Telegram обязательны на последнем шаге анкеты."""
+    app.text_input(key=f"sv_name_{lang}").set_value(name)
+    app.text_input(key=f"sv_tg_{lang}").set_value(telegram)

@@ -282,3 +282,7 @@ h1,h2,h3,h4 {letter-spacing:-.035em;}
 @keyframes mm-slide-l {from{transform:translateX(-120px);opacity:0}}
 @keyframes mm-slide-r {from{transform:translateX(120px);opacity:0}}
 @media (prefers-reduced-motion:reduce) {.mm-burst *, .mm-burst {animation:none!important;}}
+/* компания: 3–4 аватара внахлёст — чуть меньше, чтобы цепочка влезла на телефоне */
+.mm-match-many .mm-mf {width:76px;height:76px;font-size:2.4rem;}
+.mm-match-many .mm-mf-b {margin-left:-20px;}
+.mm-match-many .mm-mf-b:nth-child(odd) {background:#3A2F7A;}
