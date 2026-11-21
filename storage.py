@@ -94,17 +94,21 @@ class FeedbackStore(JsonListStore):
         return item
 
     def stats(self) -> dict:
-        items = self.all()
-        met = sum(1 for e in items if e["action"] == "met")
-        not_fit = sum(1 for e in items if e["action"] == "not_fit")
-        groups = sum(1 for e in items if e["action"] == "group")
-        rated = met + not_fit
-        bingo = sum(1 for e in items if e["action"] == "bingo")
-        return {"total": rated, "met": met, "not_fit": not_fit, "groups": groups, "bingo": bingo,
-                "met_share": met / rated if rated else None}
+        return feedback_stats(self.all())
 
     def going(self, group_key: str) -> int:
         return sum(1 for e in self.all() if e["action"] == "group" and e["candidate_id"] == group_key)
+
+
+def feedback_stats(items: list[dict]) -> dict:
+    """Сводка откликов. Отдельная функция: дашборд считает живые события вместе с демо."""
+    met = sum(1 for e in items if e["action"] == "met")
+    not_fit = sum(1 for e in items if e["action"] == "not_fit")
+    groups = sum(1 for e in items if e["action"] == "group")
+    rated = met + not_fit
+    bingo = sum(1 for e in items if e["action"] == "bingo")
+    return {"total": rated, "met": met, "not_fit": not_fit, "groups": groups, "bingo": bingo,
+            "met_share": met / rated if rated else None}
 
 
 class ReviewStore(JsonListStore):
@@ -133,12 +137,17 @@ class ReviewStore(JsonListStore):
         return item
 
     def stats(self) -> dict:
-        items = [e for e in self.all() if e["happened"]]
-        rated = [e["rating"] for e in items if e["rating"]]
-        return {"total": len(self.all()), "happened": len(items),
-                "avg": sum(rated) / len(rated) if rated else None,
-                "helped_share": sum(e["helped"] == "yes" for e in items) / len(items) if items else None,
-                "learned": [e["learned"] for e in reversed(items) if e["learned"]][:5]}
+        return review_stats(self.all())
+
+
+def review_stats(all_items: list[dict]) -> dict:
+    """Сводка отзывов о встречах (живые и демо вместе)."""
+    items = [e for e in all_items if e["happened"]]
+    rated = [e["rating"] for e in items if e["rating"]]
+    return {"total": len(all_items), "happened": len(items),
+            "avg": sum(rated) / len(rated) if rated else None,
+            "helped_share": sum(e["helped"] == "yes" for e in items) / len(items) if items else None,
+            "learned": list(dict.fromkeys(e["learned"] for e in reversed(items) if e["learned"]))[:5]}  # без повторов
 
 
 class HallStore(JsonListStore):

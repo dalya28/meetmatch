@@ -37,6 +37,7 @@ def test_join_resubmit_and_organizer_clear(tmp_path, monkeypatch):
         click("Войти")
         assert app.session_state["organizer"] == "organizer"
         assert app.radio(key="main_page").value == "dash"
+        app.toggle(key="dash_demo").set_value(False).run()  # считаем только реальных людей
         assert any(m.label == "Участников в живом зале" and m.value == "1" for m in app.metric)
         assert next(b for b in app.button if b.key == "hall_clear_btn").disabled  # сначала подтверждение
         app.checkbox(key="hall_confirm").check().run()

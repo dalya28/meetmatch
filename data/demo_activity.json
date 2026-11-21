@@ -1,0 +1,1963 @@
+{
+ "event": "metu-ai-hackathon",
+ "people": [
+  "p228",
+  "p266",
+  "p198",
+  "p151",
+  "p110",
+  "p072",
+  "p214",
+  "p055",
+  "p218",
+  "p069",
+  "p065",
+  "p159",
+  "p112",
+  "p240",
+  "p189",
+  "p170",
+  "p081",
+  "p154",
+  "p046",
+  "p259",
+  "p028",
+  "p030",
+  "p184",
+  "p089",
+  "p148",
+  "p233",
+  "p201",
+  "p103",
+  "p095",
+  "p260",
+  "p097",
+  "p177",
+  "p094",
+  "p248",
+  "p004",
+  "p199",
+  "p141",
+  "p273",
+  "p062",
+  "p091"
+ ],
+ "feedback": [
+  {
+   "time": "2026-11-20T10:01:00",
+   "action": "met",
+   "candidate_id": "p163",
+   "goal": "find_mentor",
+   "from": "p228"
+  },
+  {
+   "time": "2026-11-20T10:02:00",
+   "action": "not_fit",
+   "candidate_id": "p116",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T10:03:00",
+   "action": "not_fit",
+   "candidate_id": "p276",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T10:04:00",
+   "action": "not_fit",
+   "candidate_id": "p064",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T10:05:00",
+   "action": "not_fit",
+   "candidate_id": "p069",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T10:06:00",
+   "action": "not_fit",
+   "candidate_id": "p012",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:07:00",
+   "action": "not_fit",
+   "candidate_id": "p117",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:08:00",
+   "action": "not_fit",
+   "candidate_id": "p147",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:09:00",
+   "action": "not_fit",
+   "candidate_id": "p254",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:10:00",
+   "action": "not_fit",
+   "candidate_id": "p250",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:11:00",
+   "action": "not_fit",
+   "candidate_id": "p136",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T10:12:00",
+   "action": "not_fit",
+   "candidate_id": "p152",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T10:13:00",
+   "action": "not_fit",
+   "candidate_id": "p104",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T10:14:00",
+   "action": "met",
+   "candidate_id": "p153",
+   "goal": "exchange",
+   "from": "p198"
+  },
+  {
+   "time": "2026-11-20T10:15:00",
+   "action": "not_fit",
+   "candidate_id": "p051",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T10:16:00",
+   "action": "not_fit",
+   "candidate_id": "p142",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T10:17:00",
+   "action": "met",
+   "candidate_id": "p079",
+   "goal": "find_job",
+   "from": "p151"
+  },
+  {
+   "time": "2026-11-20T10:18:00",
+   "action": "not_fit",
+   "candidate_id": "p172",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T10:19:00",
+   "action": "not_fit",
+   "candidate_id": "p021",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T10:20:00",
+   "action": "met",
+   "candidate_id": "p059",
+   "goal": "find_job",
+   "from": "p151"
+  },
+  {
+   "time": "2026-11-20T10:21:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T10:22:00",
+   "action": "met",
+   "candidate_id": "p026",
+   "goal": "find_job",
+   "from": "p110"
+  },
+  {
+   "time": "2026-11-20T10:23:00",
+   "action": "not_fit",
+   "candidate_id": "p157",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T10:24:00",
+   "action": "met",
+   "candidate_id": "p089",
+   "goal": "find_job",
+   "from": "p110"
+  },
+  {
+   "time": "2026-11-20T10:25:00",
+   "action": "met",
+   "candidate_id": "p131",
+   "goal": "find_job",
+   "from": "p110"
+  },
+  {
+   "time": "2026-11-20T10:26:00",
+   "action": "met",
+   "candidate_id": "p054",
+   "goal": "find_job",
+   "from": "p110"
+  },
+  {
+   "time": "2026-11-20T10:27:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T10:28:00",
+   "action": "not_fit",
+   "candidate_id": "p128",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T10:29:00",
+   "action": "not_fit",
+   "candidate_id": "p013",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T10:30:00",
+   "action": "met",
+   "candidate_id": "p174",
+   "goal": "hire",
+   "from": "p072"
+  },
+  {
+   "time": "2026-11-20T10:31:00",
+   "action": "not_fit",
+   "candidate_id": "p041",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T10:32:00",
+   "action": "met",
+   "candidate_id": "p237",
+   "goal": "hire",
+   "from": "p072"
+  },
+  {
+   "time": "2026-11-20T10:33:00",
+   "action": "not_fit",
+   "candidate_id": "p187",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:34:00",
+   "action": "met",
+   "candidate_id": "p256",
+   "goal": "be_mentor",
+   "from": "p214"
+  },
+  {
+   "time": "2026-11-20T10:35:00",
+   "action": "not_fit",
+   "candidate_id": "p123",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:36:00",
+   "action": "not_fit",
+   "candidate_id": "p043",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:37:00",
+   "action": "not_fit",
+   "candidate_id": "p149",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:38:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:39:00",
+   "action": "not_fit",
+   "candidate_id": "p271",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T10:40:00",
+   "action": "not_fit",
+   "candidate_id": "p122",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T10:41:00",
+   "action": "not_fit",
+   "candidate_id": "p263",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T10:42:00",
+   "action": "not_fit",
+   "candidate_id": "p181",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T10:43:00",
+   "action": "met",
+   "candidate_id": "p056",
+   "goal": "find_mentor",
+   "from": "p055"
+  },
+  {
+   "time": "2026-11-20T10:44:00",
+   "action": "not_fit",
+   "candidate_id": "p011",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:45:00",
+   "action": "met",
+   "candidate_id": "p260",
+   "goal": "be_mentor",
+   "from": "p218"
+  },
+  {
+   "time": "2026-11-20T10:46:00",
+   "action": "met",
+   "candidate_id": "p240",
+   "goal": "be_mentor",
+   "from": "p218"
+  },
+  {
+   "time": "2026-11-20T10:47:00",
+   "action": "not_fit",
+   "candidate_id": "p121",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:48:00",
+   "action": "not_fit",
+   "candidate_id": "p247",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:49:00",
+   "action": "met",
+   "candidate_id": "p149",
+   "goal": "be_mentor",
+   "from": "p069"
+  },
+  {
+   "time": "2026-11-20T10:50:00",
+   "action": "not_fit",
+   "candidate_id": "p261",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:51:00",
+   "action": "not_fit",
+   "candidate_id": "p102",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:52:00",
+   "action": "met",
+   "candidate_id": "p228",
+   "goal": "be_mentor",
+   "from": "p069"
+  },
+  {
+   "time": "2026-11-20T10:53:00",
+   "action": "not_fit",
+   "candidate_id": "p105",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:54:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T10:55:00",
+   "action": "not_fit",
+   "candidate_id": "p189",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T10:56:00",
+   "action": "not_fit",
+   "candidate_id": "p136",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T10:57:00",
+   "action": "met",
+   "candidate_id": "p206",
+   "goal": "exchange",
+   "from": "p065"
+  },
+  {
+   "time": "2026-11-20T10:58:00",
+   "action": "met",
+   "candidate_id": "p063",
+   "goal": "exchange",
+   "from": "p065"
+  },
+  {
+   "time": "2026-11-20T10:59:00",
+   "action": "not_fit",
+   "candidate_id": "p201",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T11:00:00",
+   "action": "not_fit",
+   "candidate_id": "p230",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T11:01:00",
+   "action": "not_fit",
+   "candidate_id": "p225",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T11:02:00",
+   "action": "not_fit",
+   "candidate_id": "p020",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T11:03:00",
+   "action": "met",
+   "candidate_id": "p199",
+   "goal": "find_cofounder",
+   "from": "p159"
+  },
+  {
+   "time": "2026-11-20T11:04:00",
+   "action": "met",
+   "candidate_id": "p224",
+   "goal": "find_cofounder",
+   "from": "p159"
+  },
+  {
+   "time": "2026-11-20T11:05:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T11:06:00",
+   "action": "not_fit",
+   "candidate_id": "p111",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T11:07:00",
+   "action": "not_fit",
+   "candidate_id": "p067",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T11:08:00",
+   "action": "met",
+   "candidate_id": "p040",
+   "goal": "find_cofounder",
+   "from": "p112"
+  },
+  {
+   "time": "2026-11-20T11:09:00",
+   "action": "not_fit",
+   "candidate_id": "p159",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T11:10:00",
+   "action": "not_fit",
+   "candidate_id": "p044",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T11:11:00",
+   "action": "not_fit",
+   "candidate_id": "p273",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T11:12:00",
+   "action": "not_fit",
+   "candidate_id": "p141",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T11:13:00",
+   "action": "not_fit",
+   "candidate_id": "p058",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T11:14:00",
+   "action": "not_fit",
+   "candidate_id": "p229",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T11:15:00",
+   "action": "met",
+   "candidate_id": "p218",
+   "goal": "find_mentor",
+   "from": "p240"
+  },
+  {
+   "time": "2026-11-20T11:16:00",
+   "action": "not_fit",
+   "candidate_id": "p065",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T11:17:00",
+   "action": "met",
+   "candidate_id": "p136",
+   "goal": "exchange",
+   "from": "p189"
+  },
+  {
+   "time": "2026-11-20T11:18:00",
+   "action": "not_fit",
+   "candidate_id": "p201",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T11:19:00",
+   "action": "not_fit",
+   "candidate_id": "p206",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T11:20:00",
+   "action": "not_fit",
+   "candidate_id": "p063",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T11:21:00",
+   "action": "met",
+   "candidate_id": "p032",
+   "goal": "exchange",
+   "from": "p170"
+  },
+  {
+   "time": "2026-11-20T11:22:00",
+   "action": "met",
+   "candidate_id": "p107",
+   "goal": "exchange",
+   "from": "p170"
+  },
+  {
+   "time": "2026-11-20T11:23:00",
+   "action": "met",
+   "candidate_id": "p036",
+   "goal": "exchange",
+   "from": "p170"
+  },
+  {
+   "time": "2026-11-20T11:24:00",
+   "action": "not_fit",
+   "candidate_id": "p243",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T11:25:00",
+   "action": "met",
+   "candidate_id": "p024",
+   "goal": "exchange",
+   "from": "p170"
+  },
+  {
+   "time": "2026-11-20T11:26:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T11:27:00",
+   "action": "not_fit",
+   "candidate_id": "p053",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T11:28:00",
+   "action": "met",
+   "candidate_id": "p173",
+   "goal": "find_job",
+   "from": "p081"
+  },
+  {
+   "time": "2026-11-20T11:29:00",
+   "action": "not_fit",
+   "candidate_id": "p131",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T11:30:00",
+   "action": "not_fit",
+   "candidate_id": "p015",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T11:31:00",
+   "action": "met",
+   "candidate_id": "p089",
+   "goal": "find_job",
+   "from": "p081"
+  },
+  {
+   "time": "2026-11-20T11:32:00",
+   "action": "met",
+   "candidate_id": "p094",
+   "goal": "find_job",
+   "from": "p154"
+  },
+  {
+   "time": "2026-11-20T11:33:00",
+   "action": "met",
+   "candidate_id": "p220",
+   "goal": "find_job",
+   "from": "p154"
+  },
+  {
+   "time": "2026-11-20T11:34:00",
+   "action": "not_fit",
+   "candidate_id": "p039",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T11:35:00",
+   "action": "met",
+   "candidate_id": "p242",
+   "goal": "find_job",
+   "from": "p154"
+  },
+  {
+   "time": "2026-11-20T11:36:00",
+   "action": "not_fit",
+   "candidate_id": "p028",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T11:37:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T11:38:00",
+   "action": "not_fit",
+   "candidate_id": "p248",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T11:39:00",
+   "action": "met",
+   "candidate_id": "p129",
+   "goal": "find_job",
+   "from": "p046"
+  },
+  {
+   "time": "2026-11-20T11:40:00",
+   "action": "met",
+   "candidate_id": "p096",
+   "goal": "find_job",
+   "from": "p046"
+  },
+  {
+   "time": "2026-11-20T11:41:00",
+   "action": "met",
+   "candidate_id": "p053",
+   "goal": "find_job",
+   "from": "p046"
+  },
+  {
+   "time": "2026-11-20T11:42:00",
+   "action": "met",
+   "candidate_id": "p157",
+   "goal": "find_job",
+   "from": "p046"
+  },
+  {
+   "time": "2026-11-20T11:43:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T11:44:00",
+   "action": "not_fit",
+   "candidate_id": "p061",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T11:45:00",
+   "action": "not_fit",
+   "candidate_id": "p182",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T11:46:00",
+   "action": "not_fit",
+   "candidate_id": "p272",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T11:47:00",
+   "action": "met",
+   "candidate_id": "p271",
+   "goal": "find_mentor",
+   "from": "p259"
+  },
+  {
+   "time": "2026-11-20T11:48:00",
+   "action": "met",
+   "candidate_id": "p122",
+   "goal": "find_mentor",
+   "from": "p259"
+  },
+  {
+   "time": "2026-11-20T11:49:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T11:50:00",
+   "action": "met",
+   "candidate_id": "p154",
+   "goal": "hire",
+   "from": "p028"
+  },
+  {
+   "time": "2026-11-20T11:51:00",
+   "action": "not_fit",
+   "candidate_id": "p249",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T11:52:00",
+   "action": "not_fit",
+   "candidate_id": "p179",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T11:53:00",
+   "action": "not_fit",
+   "candidate_id": "p091",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T11:54:00",
+   "action": "not_fit",
+   "candidate_id": "p049",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T11:55:00",
+   "action": "met",
+   "candidate_id": "p215",
+   "goal": "exchange",
+   "from": "p030"
+  },
+  {
+   "time": "2026-11-20T11:56:00",
+   "action": "met",
+   "candidate_id": "p158",
+   "goal": "exchange",
+   "from": "p030"
+  },
+  {
+   "time": "2026-11-20T11:57:00",
+   "action": "not_fit",
+   "candidate_id": "p235",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T11:58:00",
+   "action": "not_fit",
+   "candidate_id": "p118",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T11:59:00",
+   "action": "met",
+   "candidate_id": "p153",
+   "goal": "exchange",
+   "from": "p030"
+  },
+  {
+   "time": "2026-11-20T12:00:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T12:01:00",
+   "action": "not_fit",
+   "candidate_id": "p013",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T12:02:00",
+   "action": "met",
+   "candidate_id": "p095",
+   "goal": "hire",
+   "from": "p184"
+  },
+  {
+   "time": "2026-11-20T12:03:00",
+   "action": "not_fit",
+   "candidate_id": "p128",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T12:04:00",
+   "action": "not_fit",
+   "candidate_id": "p041",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T12:05:00",
+   "action": "not_fit",
+   "candidate_id": "p195",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T12:06:00",
+   "action": "not_fit",
+   "candidate_id": "p099",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T12:07:00",
+   "action": "met",
+   "candidate_id": "p168",
+   "goal": "hire",
+   "from": "p089"
+  },
+  {
+   "time": "2026-11-20T12:08:00",
+   "action": "not_fit",
+   "candidate_id": "p047",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T12:09:00",
+   "action": "not_fit",
+   "candidate_id": "p110",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T12:10:00",
+   "action": "met",
+   "candidate_id": "p194",
+   "goal": "hire",
+   "from": "p089"
+  },
+  {
+   "time": "2026-11-20T12:11:00",
+   "action": "met",
+   "candidate_id": "p226",
+   "goal": "be_mentor",
+   "from": "p148"
+  },
+  {
+   "time": "2026-11-20T12:12:00",
+   "action": "met",
+   "candidate_id": "p257",
+   "goal": "be_mentor",
+   "from": "p148"
+  },
+  {
+   "time": "2026-11-20T12:13:00",
+   "action": "met",
+   "candidate_id": "p150",
+   "goal": "be_mentor",
+   "from": "p148"
+  },
+  {
+   "time": "2026-11-20T12:14:00",
+   "action": "not_fit",
+   "candidate_id": "p123",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T12:15:00",
+   "action": "not_fit",
+   "candidate_id": "p050",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T12:16:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T12:17:00",
+   "action": "not_fit",
+   "candidate_id": "p212",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:18:00",
+   "action": "not_fit",
+   "candidate_id": "p172",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:19:00",
+   "action": "met",
+   "candidate_id": "p093",
+   "goal": "find_job",
+   "from": "p233"
+  },
+  {
+   "time": "2026-11-20T12:20:00",
+   "action": "not_fit",
+   "candidate_id": "p016",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:21:00",
+   "action": "not_fit",
+   "candidate_id": "p241",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:22:00",
+   "action": "met",
+   "candidate_id": "p063",
+   "goal": "exchange",
+   "from": "p201"
+  },
+  {
+   "time": "2026-11-20T12:23:00",
+   "action": "met",
+   "candidate_id": "p205",
+   "goal": "exchange",
+   "from": "p201"
+  },
+  {
+   "time": "2026-11-20T12:24:00",
+   "action": "not_fit",
+   "candidate_id": "p189",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T12:25:00",
+   "action": "not_fit",
+   "candidate_id": "p065",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T12:26:00",
+   "action": "not_fit",
+   "candidate_id": "p206",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T12:27:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "exchange"
+  },
+  {
+   "time": "2026-11-20T12:28:00",
+   "action": "not_fit",
+   "candidate_id": "p101",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T12:29:00",
+   "action": "not_fit",
+   "candidate_id": "p058",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T12:30:00",
+   "action": "not_fit",
+   "candidate_id": "p056",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T12:31:00",
+   "action": "not_fit",
+   "candidate_id": "p088",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T12:32:00",
+   "action": "met",
+   "candidate_id": "p270",
+   "goal": "find_mentor",
+   "from": "p103"
+  },
+  {
+   "time": "2026-11-20T12:33:00",
+   "action": "not_fit",
+   "candidate_id": "p021",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:34:00",
+   "action": "not_fit",
+   "candidate_id": "p184",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:35:00",
+   "action": "not_fit",
+   "candidate_id": "p079",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:36:00",
+   "action": "met",
+   "candidate_id": "p142",
+   "goal": "find_job",
+   "from": "p095"
+  },
+  {
+   "time": "2026-11-20T12:37:00",
+   "action": "met",
+   "candidate_id": "p094",
+   "goal": "find_job",
+   "from": "p095"
+  },
+  {
+   "time": "2026-11-20T12:38:00",
+   "action": "not_fit",
+   "candidate_id": "p218",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T12:39:00",
+   "action": "met",
+   "candidate_id": "p141",
+   "goal": "find_mentor",
+   "from": "p260"
+  },
+  {
+   "time": "2026-11-20T12:40:00",
+   "action": "met",
+   "candidate_id": "p058",
+   "goal": "find_mentor",
+   "from": "p260"
+  },
+  {
+   "time": "2026-11-20T12:41:00",
+   "action": "met",
+   "candidate_id": "p273",
+   "goal": "find_mentor",
+   "from": "p260"
+  },
+  {
+   "time": "2026-11-20T12:42:00",
+   "action": "not_fit",
+   "candidate_id": "p143",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T12:43:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "find_mentor"
+  },
+  {
+   "time": "2026-11-20T12:44:00",
+   "action": "not_fit",
+   "candidate_id": "p026",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:45:00",
+   "action": "not_fit",
+   "candidate_id": "p054",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:46:00",
+   "action": "not_fit",
+   "candidate_id": "p096",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:47:00",
+   "action": "not_fit",
+   "candidate_id": "p124",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:48:00",
+   "action": "met",
+   "candidate_id": "p157",
+   "goal": "find_job",
+   "from": "p097"
+  },
+  {
+   "time": "2026-11-20T12:49:00",
+   "action": "met",
+   "candidate_id": "p217",
+   "goal": "find_job",
+   "from": "p177"
+  },
+  {
+   "time": "2026-11-20T12:50:00",
+   "action": "not_fit",
+   "candidate_id": "p248",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:51:00",
+   "action": "not_fit",
+   "candidate_id": "p169",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T12:52:00",
+   "action": "met",
+   "candidate_id": "p094",
+   "goal": "find_job",
+   "from": "p177"
+  },
+  {
+   "time": "2026-11-20T12:53:00",
+   "action": "met",
+   "candidate_id": "p106",
+   "goal": "find_job",
+   "from": "p177"
+  },
+  {
+   "time": "2026-11-20T12:54:00",
+   "action": "not_fit",
+   "candidate_id": "p115",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T12:55:00",
+   "action": "not_fit",
+   "candidate_id": "p001",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T12:56:00",
+   "action": "not_fit",
+   "candidate_id": "p161",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T12:57:00",
+   "action": "not_fit",
+   "candidate_id": "p095",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T12:58:00",
+   "action": "met",
+   "candidate_id": "p130",
+   "goal": "hire",
+   "from": "p094"
+  },
+  {
+   "time": "2026-11-20T12:59:00",
+   "action": "not_fit",
+   "candidate_id": "p046",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T13:00:00",
+   "action": "met",
+   "candidate_id": "p140",
+   "goal": "hire",
+   "from": "p248"
+  },
+  {
+   "time": "2026-11-20T13:01:00",
+   "action": "not_fit",
+   "candidate_id": "p177",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T13:02:00",
+   "action": "met",
+   "candidate_id": "p090",
+   "goal": "hire",
+   "from": "p248"
+  },
+  {
+   "time": "2026-11-20T13:03:00",
+   "action": "not_fit",
+   "candidate_id": "p052",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T13:04:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "hire"
+  },
+  {
+   "time": "2026-11-20T13:05:00",
+   "action": "not_fit",
+   "candidate_id": "p093",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T13:06:00",
+   "action": "not_fit",
+   "candidate_id": "p037",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T13:07:00",
+   "action": "met",
+   "candidate_id": "p023",
+   "goal": "find_job",
+   "from": "p004"
+  },
+  {
+   "time": "2026-11-20T13:08:00",
+   "action": "met",
+   "candidate_id": "p076",
+   "goal": "find_job",
+   "from": "p004"
+  },
+  {
+   "time": "2026-11-20T13:09:00",
+   "action": "not_fit",
+   "candidate_id": "p184",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T13:10:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T13:11:00",
+   "action": "not_fit",
+   "candidate_id": "p159",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T13:12:00",
+   "action": "not_fit",
+   "candidate_id": "p044",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T13:13:00",
+   "action": "not_fit",
+   "candidate_id": "p040",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T13:14:00",
+   "action": "not_fit",
+   "candidate_id": "p191",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T13:15:00",
+   "action": "not_fit",
+   "candidate_id": "p132",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T13:16:00",
+   "action": "met",
+   "candidate_id": "p260",
+   "goal": "be_mentor",
+   "from": "p141"
+  },
+  {
+   "time": "2026-11-20T13:17:00",
+   "action": "not_fit",
+   "candidate_id": "p240",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T13:18:00",
+   "action": "met",
+   "candidate_id": "p121",
+   "goal": "be_mentor",
+   "from": "p141"
+  },
+  {
+   "time": "2026-11-20T13:19:00",
+   "action": "met",
+   "candidate_id": "p207",
+   "goal": "be_mentor",
+   "from": "p141"
+  },
+  {
+   "time": "2026-11-20T13:20:00",
+   "action": "not_fit",
+   "candidate_id": "p011",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T13:21:00",
+   "action": "bingo",
+   "candidate_id": "metu-ai-hackathon",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T13:22:00",
+   "action": "not_fit",
+   "candidate_id": "p011",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T13:23:00",
+   "action": "met",
+   "candidate_id": "p260",
+   "goal": "be_mentor",
+   "from": "p273"
+  },
+  {
+   "time": "2026-11-20T13:24:00",
+   "action": "not_fit",
+   "candidate_id": "p240",
+   "goal": "be_mentor"
+  },
+  {
+   "time": "2026-11-20T13:25:00",
+   "action": "met",
+   "candidate_id": "p252",
+   "goal": "be_mentor",
+   "from": "p273"
+  },
+  {
+   "time": "2026-11-20T13:26:00",
+   "action": "met",
+   "candidate_id": "p035",
+   "goal": "be_mentor",
+   "from": "p273"
+  },
+  {
+   "time": "2026-11-20T13:27:00",
+   "action": "met",
+   "candidate_id": "p075",
+   "goal": "find_cofounder",
+   "from": "p062"
+  },
+  {
+   "time": "2026-11-20T13:28:00",
+   "action": "not_fit",
+   "candidate_id": "p006",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T13:29:00",
+   "action": "met",
+   "candidate_id": "p111",
+   "goal": "find_cofounder",
+   "from": "p062"
+  },
+  {
+   "time": "2026-11-20T13:30:00",
+   "action": "met",
+   "candidate_id": "p067",
+   "goal": "find_cofounder",
+   "from": "p062"
+  },
+  {
+   "time": "2026-11-20T13:31:00",
+   "action": "not_fit",
+   "candidate_id": "p191",
+   "goal": "find_cofounder"
+  },
+  {
+   "time": "2026-11-20T13:32:00",
+   "action": "met",
+   "candidate_id": "p134",
+   "goal": "find_job",
+   "from": "p091"
+  },
+  {
+   "time": "2026-11-20T13:33:00",
+   "action": "not_fit",
+   "candidate_id": "p028",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T13:34:00",
+   "action": "not_fit",
+   "candidate_id": "p106",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T13:35:00",
+   "action": "not_fit",
+   "candidate_id": "p039",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T13:36:00",
+   "action": "not_fit",
+   "candidate_id": "p142",
+   "goal": "find_job"
+  },
+  {
+   "time": "2026-11-20T13:37:00",
+   "action": "group",
+   "candidate_id": "p240+p259+p260",
+   "goal": "find_mentor",
+   "from": "p228"
+  },
+  {
+   "time": "2026-11-20T13:38:00",
+   "action": "group",
+   "candidate_id": "p240+p259+p260",
+   "goal": "find_mentor",
+   "from": "p259"
+  },
+  {
+   "time": "2026-11-20T13:39:00",
+   "action": "group",
+   "candidate_id": "p240+p259+p260",
+   "goal": "find_mentor",
+   "from": "p260"
+  },
+  {
+   "time": "2026-11-20T13:40:00",
+   "action": "group",
+   "candidate_id": "p240+p259+p260",
+   "goal": "find_mentor",
+   "from": "p240"
+  },
+  {
+   "time": "2026-11-20T13:41:00",
+   "action": "group",
+   "candidate_id": "p069+p214",
+   "goal": "be_mentor",
+   "from": "p266"
+  },
+  {
+   "time": "2026-11-20T13:42:00",
+   "action": "group",
+   "candidate_id": "p069+p214",
+   "goal": "be_mentor",
+   "from": "p069"
+  },
+  {
+   "time": "2026-11-20T13:43:00",
+   "action": "group",
+   "candidate_id": "p069+p214",
+   "goal": "be_mentor",
+   "from": "p214"
+  },
+  {
+   "time": "2026-11-20T13:44:00",
+   "action": "group",
+   "candidate_id": "p065+p189",
+   "goal": "exchange",
+   "from": "p198"
+  },
+  {
+   "time": "2026-11-20T13:45:00",
+   "action": "group",
+   "candidate_id": "p065+p189",
+   "goal": "exchange",
+   "from": "p065"
+  },
+  {
+   "time": "2026-11-20T13:46:00",
+   "action": "group",
+   "candidate_id": "p065+p189",
+   "goal": "exchange",
+   "from": "p189"
+  },
+  {
+   "time": "2026-11-20T13:47:00",
+   "action": "group",
+   "candidate_id": "p095+p097",
+   "goal": "find_job",
+   "from": "p151"
+  },
+  {
+   "time": "2026-11-20T13:48:00",
+   "action": "group",
+   "candidate_id": "p095+p097",
+   "goal": "find_job",
+   "from": "p095"
+  },
+  {
+   "time": "2026-11-20T13:49:00",
+   "action": "group",
+   "candidate_id": "p095+p097",
+   "goal": "find_job",
+   "from": "p097"
+  },
+  {
+   "time": "2026-11-20T13:50:00",
+   "action": "group",
+   "candidate_id": "p081+p177",
+   "goal": "find_job",
+   "from": "p110"
+  },
+  {
+   "time": "2026-11-20T13:51:00",
+   "action": "group",
+   "candidate_id": "p081+p177",
+   "goal": "find_job",
+   "from": "p081"
+  },
+  {
+   "time": "2026-11-20T13:52:00",
+   "action": "group",
+   "candidate_id": "p081+p177",
+   "goal": "find_job",
+   "from": "p177"
+  },
+  {
+   "time": "2026-11-20T13:53:00",
+   "action": "group",
+   "candidate_id": "p094+p184",
+   "goal": "hire",
+   "from": "p072"
+  },
+  {
+   "time": "2026-11-20T13:54:00",
+   "action": "group",
+   "candidate_id": "p094+p184",
+   "goal": "hire",
+   "from": "p094"
+  },
+  {
+   "time": "2026-11-20T13:55:00",
+   "action": "group",
+   "candidate_id": "p094+p184",
+   "goal": "hire",
+   "from": "p184"
+  },
+  {
+   "time": "2026-11-20T13:56:00",
+   "action": "group",
+   "candidate_id": "p141+p273",
+   "goal": "be_mentor",
+   "from": "p218"
+  },
+  {
+   "time": "2026-11-20T13:57:00",
+   "action": "group",
+   "candidate_id": "p141+p273",
+   "goal": "be_mentor",
+   "from": "p273"
+  },
+  {
+   "time": "2026-11-20T13:58:00",
+   "action": "group",
+   "candidate_id": "p141+p273",
+   "goal": "be_mentor",
+   "from": "p141"
+  },
+  {
+   "time": "2026-11-20T13:59:00",
+   "action": "group",
+   "candidate_id": "p062+p112+p199",
+   "goal": "find_cofounder",
+   "from": "p159"
+  },
+  {
+   "time": "2026-11-20T14:00:00",
+   "action": "group",
+   "candidate_id": "p062+p112+p199",
+   "goal": "find_cofounder",
+   "from": "p112"
+  },
+  {
+   "time": "2026-11-20T14:01:00",
+   "action": "group",
+   "candidate_id": "p062+p112+p199",
+   "goal": "find_cofounder",
+   "from": "p199"
+  },
+  {
+   "time": "2026-11-20T14:02:00",
+   "action": "group",
+   "candidate_id": "p062+p112+p199",
+   "goal": "find_cofounder",
+   "from": "p062"
+  }
+ ],
+ "reviews": [
+  {
+   "time": "2026-11-20T14:03:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p079",
+   "happened": true,
+   "rating": 4,
+   "learned": "Нашли общий интерес к финтеху, обменялись Telegram.",
+   "helped": "yes",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:04:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p089",
+   "happened": true,
+   "rating": 3,
+   "learned": "",
+   "helped": "partly",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:05:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p131",
+   "happened": true,
+   "rating": 3,
+   "learned": "Рассказали, как они нанимают джунов и что смотрят в GitHub.",
+   "helped": "yes",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:06:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p174",
+   "happened": false,
+   "rating": null,
+   "learned": "",
+   "helped": null,
+   "next": null
+  },
+  {
+   "time": "2026-11-20T14:07:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p237",
+   "happened": true,
+   "rating": 5,
+   "learned": "Получила совет, какие пет-проекты показывать на собеседовании.",
+   "helped": "partly",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:08:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p256",
+   "happened": true,
+   "rating": 5,
+   "learned": "",
+   "helped": "yes",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:09:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p240",
+   "happened": true,
+   "rating": 3,
+   "learned": "",
+   "helped": "yes",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:10:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p063",
+   "happened": true,
+   "rating": 5,
+   "learned": "Договорились о тестовом задании на стажировку.",
+   "helped": "yes",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:11:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p206",
+   "happened": true,
+   "rating": 3,
+   "learned": "Ментор разобрал моё резюме за 10 минут — очень полезно.",
+   "helped": "partly",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:12:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p199",
+   "happened": true,
+   "rating": 5,
+   "learned": "Узнал, как в их команде устроено код-ревью — заберу идею к себе.",
+   "helped": "yes",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:13:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p224",
+   "happened": true,
+   "rating": 5,
+   "learned": "Договорились о тестовом задании на стажировку.",
+   "helped": "yes",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:14:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p218",
+   "happened": true,
+   "rating": 3,
+   "learned": "",
+   "helped": "yes",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:15:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p136",
+   "happened": true,
+   "rating": 4,
+   "learned": "Поняла, какие навыки нужны для перехода в аналитику данных.",
+   "helped": "yes",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:16:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p024",
+   "happened": true,
+   "rating": 4,
+   "learned": "",
+   "helped": "yes",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:17:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p032",
+   "happened": false,
+   "rating": null,
+   "learned": "",
+   "helped": null,
+   "next": null
+  },
+  {
+   "time": "2026-11-20T14:18:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p036",
+   "happened": true,
+   "rating": 5,
+   "learned": "",
+   "helped": "yes",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:19:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p107",
+   "happened": true,
+   "rating": 4,
+   "learned": "",
+   "helped": "partly",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:20:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p173",
+   "happened": true,
+   "rating": 5,
+   "learned": "Ментор разобрал моё резюме за 10 минут — очень полезно.",
+   "helped": "yes",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:21:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p220",
+   "happened": true,
+   "rating": 4,
+   "learned": "Договорились о тестовом задании на стажировку.",
+   "helped": "partly",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:22:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p242",
+   "happened": true,
+   "rating": 5,
+   "learned": "Ментор разобрал моё резюме за 10 минут — очень полезно.",
+   "helped": "yes",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:23:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p096",
+   "happened": false,
+   "rating": null,
+   "learned": "",
+   "helped": null,
+   "next": null
+  },
+  {
+   "time": "2026-11-20T14:24:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p129",
+   "happened": true,
+   "rating": 3,
+   "learned": "",
+   "helped": "yes",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:25:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p157",
+   "happened": true,
+   "rating": 4,
+   "learned": "",
+   "helped": "yes",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:26:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p122",
+   "happened": true,
+   "rating": 5,
+   "learned": "Договорились о тестовом задании на стажировку.",
+   "helped": "partly",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:27:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p271",
+   "happened": true,
+   "rating": 3,
+   "learned": "",
+   "helped": "yes",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:28:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p168",
+   "happened": true,
+   "rating": 3,
+   "learned": "Поняла, какие навыки нужны для перехода в аналитику данных.",
+   "helped": "yes",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:29:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p226",
+   "happened": true,
+   "rating": 5,
+   "learned": "Получила совет, какие пет-проекты показывать на собеседовании.",
+   "helped": "partly",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:30:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p270",
+   "happened": true,
+   "rating": 4,
+   "learned": "Получила совет, какие пет-проекты показывать на собеседовании.",
+   "helped": "yes",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:31:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p157",
+   "happened": true,
+   "rating": 4,
+   "learned": "",
+   "helped": "partly",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:32:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p217",
+   "happened": true,
+   "rating": 3,
+   "learned": "Обсудили идею стартапа, встречаемся ещё раз во вторник.",
+   "helped": "yes",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:33:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p130",
+   "happened": true,
+   "rating": 5,
+   "learned": "Обсудили идею стартапа, встречаемся ещё раз во вторник.",
+   "helped": "yes",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:34:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p023",
+   "happened": true,
+   "rating": 5,
+   "learned": "Получила совет, какие пет-проекты показывать на собеседовании.",
+   "helped": "partly",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:35:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p076",
+   "happened": true,
+   "rating": 3,
+   "learned": "",
+   "helped": "partly",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:36:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p252",
+   "happened": true,
+   "rating": 4,
+   "learned": "",
+   "helped": "partly",
+   "next": "maybe"
+  },
+  {
+   "time": "2026-11-20T14:37:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p075",
+   "happened": true,
+   "rating": 5,
+   "learned": "Поняла, какие навыки нужны для перехода в аналитику данных.",
+   "helped": "yes",
+   "next": "yes"
+  },
+  {
+   "time": "2026-11-20T14:38:00",
+   "event": "metu-ai-hackathon",
+   "candidate_id": "p111",
+   "happened": true,
+   "rating": 5,
+   "learned": "",
+   "helped": "yes",
+   "next": "yes"
+  }
+ ]
+}

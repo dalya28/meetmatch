@@ -23,20 +23,27 @@ import streamlit as st
 
 def _reload_changed_modules() -> None:
     """Streamlit Cloud после git pull перезапускает только app.py, а модули проекта остаются в памяти
-    старыми — отсюда ImportError на новых именах. Модуль устарел, если его исходник новее
-    скомпилированной копии в __pycache__ (она пишется в момент импорта) — тогда перечитываем."""
+    старыми — отсюда ImportError на новых именах. Запоминаем время изменения каждого модуля при первом
+    запуске в процессе; если файл с тех пор поменялся — перечитываем. (Сравнение с __pycache__ не годится:
+    при PYTHONDONTWRITEBYTECODE .pyc не обновляется, и модули перечитывались бы на каждом запуске.)"""
     import importlib
     import sys
+    seen = getattr(sys, "_wingman_mtimes", None)
+    if seen is None:
+        seen = sys._wingman_mtimes = {}
     for name in ("config", "taxonomy", "theme", "texts", "matcher", "storage", "events", "groups",
-                 "avatars", "social", "autofill", "claude_rank"):  # порядок зависимостей
+                 "avatars", "social", "autofill", "claude_rank", "demo_activity"):  # порядок зависимостей
         mod = sys.modules.get(name)
         src = getattr(mod, "__file__", None)
-        pyc = getattr(getattr(mod, "__spec__", None), "cached", None)
+        if not src:
+            continue
         try:
-            if src and pyc and os.path.getmtime(src) > os.path.getmtime(pyc) + 1:
-                importlib.reload(mod)
+            mtime = os.path.getmtime(src)
         except OSError:
-            pass
+            continue
+        if name in seen and mtime != seen[name]:
+            importlib.reload(mod)
+        seen[name] = mtime
 
 
 _reload_changed_modules()
@@ -44,7 +51,8 @@ _reload_changed_modules()
 from config import HALL_ENABLED, setup_logging
 from claude_rank import rerank
 from matcher import Matcher, load_booths, load_profiles, plan_meetings, prepare, recommend_booths
-from storage import FeedbackStore, HallStore, ReviewStore
+from demo_activity import load_demo
+from storage import FeedbackStore, HallStore, ReviewStore, feedback_stats, review_stats
 from taxonomy import (EVENT_SLOTS, GOALS, HIREABLE_ROLES, INTERESTS, LOW_INFO_INTERESTS, ROLES,
                       STACK, STACK_ROLES, goal_label, interest_label, role_label, stack_label, years_ru)
 from autofill import autofill
@@ -108,6 +116,12 @@ def review_store() -> ReviewStore:
 @st.cache_resource
 def hall_store() -> HallStore:
     return HallStore()
+
+
+@st.cache_resource
+def demo_activity() -> dict:
+    """Симуляция события на синтетических анкетах (demo_activity.py) — чтобы дашборд не был пустым."""
+    return load_demo()
 
 
 @st.cache_resource
@@ -1204,12 +1218,19 @@ def page_dashboard(lang: str) -> None:
         st.info(t(lang, "org_login"))
         return
     df = pd.DataFrame(matcher.profiles)
-    events = feedback_store().all()
-    stats = feedback_store().stats()
+    demo = demo_activity()
 
-    who, out = st.columns([4, 1], vertical_alignment="center")
+    who, show, out = st.columns([3, 2, 1], vertical_alignment="center")
     who.caption(t(lang, "org_hello", name=st.session_state.organizer))
+    with_demo = show.toggle(t(lang, "demo_toggle"), value=True, key="dash_demo",
+                            disabled=not demo["feedback"], help=t(lang, "demo_help"))
     out.button(t(lang, "org_logout"), key="org_logout", on_click=org_sign_out, width="stretch")
+    if not with_demo:
+        demo = {"people": [], "feedback": [], "reviews": []}
+    events = demo["feedback"] + feedback_store().all()  # реальные — последними: в ленте они сверху
+    stats = feedback_stats(events)
+    if demo["feedback"]:
+        st.caption(t(lang, "demo_note", n=len(demo["people"])))
 
     c1, c2, c3, c4, c5 = st.columns(5)
     c1.metric(t(lang, "dash_people"), len(df))
@@ -1221,7 +1242,8 @@ def page_dashboard(lang: str) -> None:
 
     if HALL_ENABLED:
         live_count = sum(p.get("live") is True for p in matcher.profiles)
-        st.metric(t(lang, "hall_count"), live_count)
+        st.metric(t(lang, "hall_count"), live_count + len(demo["people"]),
+                  help=t(lang, "demo_hall", live=live_count, n=len(demo["people"])) if demo["people"] else None)
         if st.session_state.pop("hall_cleared", False):
             st.success(t(lang, "hall_cleared"))
         if live_count and st.session_state.organizer != DEMO_ORGANIZER:
@@ -1240,7 +1262,7 @@ def page_dashboard(lang: str) -> None:
                         log.warning("hall_clear_failed", exc_info=True)
                         st.error(t(lang, "hall_clear_error"))
 
-    rv = review_store().stats()
+    rv = review_stats(review_store().all() + demo["reviews"])
     st.markdown(f"#### {t(lang, 'fb_dash')}")
     r1, r2, r3 = st.columns(3)
     r1.metric(t(lang, "fb_dash_n"), rv["happened"])
