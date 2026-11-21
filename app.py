@@ -685,6 +685,35 @@ def next_opener(pid: str) -> None:
     st.session_state.ice[pid] = st.session_state.ice.get(pid, 0) + 1
 
 
+# лаймовые и синие точки разлетаются из центра один раз — в момент мэтча
+CONFETTI = [(-210, -120), (-150, -170), (-60, -190), (40, -185), (140, -160), (220, -110), (250, -20),
+            (-250, -30), (-190, 70), (200, 80), (-100, 120), (110, 125), (0, -140), (-30, 150)]
+
+
+def render_match(p: dict, m, lang: str, me: str, first: str) -> None:
+    """Яркий момент мэтча: чёрный блок, наклейка «МЭТЧ», два аватара, сцепленные как звенья логотипа."""
+    s = st.session_state
+    seen = s.setdefault("match_seen", [])
+    burst = p["id"] not in seen
+    if burst:
+        seen.append(p["id"])
+    dots = "".join(
+        f'<i class="mm-dot-c{n % 3}" style="--x:{x}px; --y:{y}px; --d:{n * 25}ms"></i>'
+        for n, (x, y) in enumerate(CONFETTI)) if burst else ""
+    tags = [stack_label(x) for x in m.shared_stack[:3]] + [interest_label(i, lang) for i in m.shared_interests[:2]]
+    if m.common_slots:
+        tags.append("🕑 " + ", ".join(m.common_slots[:2]))
+    chips_html = "".join(f'<span class="mm-match-chip">{html.escape(x)}</span>' for x in tags)
+    st.html(f"""<div class="mm-match{' mm-burst' if burst else ''}" role="status">
+        <div class="mm-confetti" aria-hidden="true">{dots}</div>
+        <span class="mm-match-sticker">{t(lang, 'match_sticker')}</span>
+        <div class="mm-match-faces" aria-hidden="true"><span class="mm-mf mm-mf-a">{me}</span><span class="mm-mf mm-mf-b">{face_html(p)}</span></div>
+        <p class="mm-match-title">{t(lang, 'match_title')}</p>
+        <p class="mm-match-sub">{t(lang, 'match_sub', name=html.escape(first))}</p>
+        <div class="mm-match-chips">{chips_html}</div>
+        </div>""")
+
+
 def render_card(m, lang: str, position: int, count: int, met: bool) -> None:
     p = m.profile
     meta = " · ".join(x for x in (role_label(p["role"], lang), exp_short(p["experience"], lang),
@@ -716,11 +745,12 @@ def render_card(m, lang: str, position: int, count: int, met: bool) -> None:
             mutual = mutual_with(p, m.score)
             first = p["name"].split()[0]
             me = face_html(s.query or {})
-            st.html(f"""<div class="mm-met{'' if mutual else ' mm-wait'}" aria-hidden="true">
-                <span class="mm-met-a">{me}</span><span class="mm-met-h">{'🤝' if mutual else '⏳'}</span>
-                <span class="mm-met-b">{face_html(p)}</span></div>""")
+            if not mutual:
+                st.html(f"""<div class="mm-met mm-wait" aria-hidden="true">
+                    <span class="mm-met-a">{me}</span><span class="mm-met-h">⏳</span>
+                    <span class="mm-met-b">{face_html(p)}</span></div>""")
             if mutual:
-                st.success(t(lang, "mutual", name=first), icon=":material/favorite:")
+                render_match(p, m, lang, me, first)
                 url = telegram_url(p.get("telegram", ""))
                 if url:
                     st.link_button(t(lang, "tg_write"), url, type="primary", width="stretch", icon=":material/send:")
