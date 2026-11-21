@@ -61,3 +61,17 @@ def test_join_resubmit_and_organizer_clear(tmp_path, monkeypatch):
                 assert any(w.value == t(lang, "no_more") for w in app.warning)
     finally:
         st.cache_resource.clear()
+
+
+def test_demo_organizer_code_opens_dashboard_without_hall_clear(tmp_path, monkeypatch):
+    monkeypatch.setattr(HallStore.__init__, "__defaults__", (tmp_path / "hall.json",))
+    monkeypatch.setattr(config, "HALL_ENABLED", True)
+    st.cache_resource.clear()
+    app = AppTest.from_file(str(Path(__file__).resolve().parents[1] / "app.py")).run()
+    complete_survey(app)                                  # в зале есть человек — кнопка очистки была бы видна
+    app.text_input(key="org_code").set_value("admin")
+    next(b for b in app.button if b.label == "Войти").click().run()
+    assert not app.exception
+    assert app.session_state["organizer"] == "demo"
+    assert app.radio(key="main_page").value == "dash"
+    assert not any(b.key == "hall_clear_btn" for b in app.button)   # публичный код не стирает зал

@@ -1224,7 +1224,7 @@ def page_dashboard(lang: str) -> None:
         st.metric(t(lang, "hall_count"), live_count)
         if st.session_state.pop("hall_cleared", False):
             st.success(t(lang, "hall_cleared"))
-        if live_count:
+        if live_count and st.session_state.organizer != DEMO_ORGANIZER:
             with st.expander(t(lang, "hall_clear")):
                 st.caption(t(lang, "hall_clear_note"))
                 sure = st.checkbox(t(lang, "hall_confirm"), key="hall_confirm")
@@ -1331,6 +1331,11 @@ def page_dashboard(lang: str) -> None:
 MAX_ORG_ATTEMPTS = 5
 
 
+# Общий демо-вход в панель организатора на время хакатона. Под ним видна вся статистика,
+# но кнопки «Очистить зал» нет: этот код публичный.
+DEMO_ORGANIZER, DEMO_ORG_CODE = "demo", "admin"
+
+
 def organizer_codes() -> dict[str, str]:
     """Имя организатора → личный код. Коды лежат в секретах Streamlit ([organizers]), не в репозитории.
     MEETMATCH_ORGANIZER_CODE — запасной общий код из переменной окружения (Docker, локальный запуск)."""
@@ -1343,6 +1348,7 @@ def organizer_codes() -> dict[str, str]:
     env = os.environ.get("MEETMATCH_ORGANIZER_CODE", "").strip()
     if env:
         codes.setdefault("organizer", env)
+    codes.setdefault(DEMO_ORGANIZER, DEMO_ORG_CODE)  # общий код для показа жюри; зал им очистить нельзя
     return codes
 
 
